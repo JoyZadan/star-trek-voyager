@@ -5,14 +5,25 @@ body {
     margin: 0;
 }
 
-.home-bg {
-    background-image: url(../images/spaceship.webp);
+.home-bg,
+.quiz-bg {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
+.home-bg {
+    background-image: url(../images/spaceship.webp);    
+}
+
+.quiz-bg {
+    background-image: url(../images/quiz-bg.webp);
+}
+
+.find-bg {
+    background-color: #600;
+}
 h1,
 h2,
 h3 {
@@ -36,6 +47,7 @@ p {
     text-transform: uppercase;
     margin: 0 auto;
     padding: 1rem;
+    text-decoration: none;
 }
 
 .header-container {
@@ -129,6 +141,7 @@ p {
     display: flex;
     justify-content: center;
     margin: 1rem auto;
+    cursor: pointer;
 }
 
 

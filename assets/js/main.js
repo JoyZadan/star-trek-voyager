@@ -14,6 +14,16 @@ quizLink.addEventListener("click", changeBackground => {
     }, 3000); 
 });
 
+// This changes the background color of the quotes link when clicked
+quotesLink.addEventListener("click", changeBackground => {
+    quotesLink.style.backgroundColor = "#efb200";
+
+    // This reverts the background color of the quiz link after 3 seconds
+    window.setTimeout(() => {
+        quotes.style.backgroundColor = "#600";
+    }, 3000); 
+});
+
 mapLink.addEventListener("click", openMap => {
     window.location.href = "find.html";
 })

@@ -6,7 +6,8 @@ body {
 }
 
 .home-bg,
-.quiz-bg {
+.quiz-bg,
+.quotes-bg {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -19,6 +20,10 @@ body {
 
 .quiz-bg {
     background-image: url(../images/quiz-bg.webp);
+}
+
+.quotes-bg {
+    background-image: url(../images/quotes-bg.webp);
 }
 
 .find-bg {

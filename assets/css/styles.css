@@ -142,17 +142,67 @@ p {
 }
 .map-link {
     font-weight: bold;
-    color: #fff;
+    color: #000;
     display: flex;
     justify-content: center;
     margin: 1rem auto;
     cursor: pointer;
 }
 
+/* Styling for quiz game */
+.mission-container {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.mission-intro {
+    font-family: "Orbitron", sans-serif;
+    color: #d08504;
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    /* adding text animation */
+    animation-name: slide;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    animation-iteration-count: 2;
+    -webkit-animation-iteration-count: 2;
+    -moz-animation-iteration-count: 2;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: fowards;
+    -o-animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+    0% {transform: rotateX(45deg)}
+    33% {transform: rotateX(90deg)}
+    66% {transform: rotateX(145deg)}
+    100% {transfor: rotateX(180deg)}
+}
+
+
+
+
+
+
 
 @media screen and (max-width: 38.75em) {
     .heading {
         font-size: 2rem; 
+    }
+
+    .mission-intro {
+        font-size: 1.5rem;
     }
    
 }

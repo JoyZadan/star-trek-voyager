@@ -19,7 +19,7 @@
 
 ### Design
 ### Wireframes
-### Teacher Liza's Portal of Quizzes Flow Chart
+### Trekkies Games Flow Charts
 ### Features
 
 ## Technologies Used
@@ -40,6 +40,7 @@
 ## Credits
 ### Code
 ### Content
+* PNG - pngegg for the Voyager spaceship png
 ### Media
 
 ## Acknowledgements

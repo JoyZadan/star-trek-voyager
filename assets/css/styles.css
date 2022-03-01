@@ -3,7 +3,14 @@
 body {
     padding: 0;
     margin: 0;
+}
+
+.home-bg {
     background-image: url(../images/spaceship.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 h1,
@@ -91,7 +98,7 @@ p {
     text-decoration: none;
     text-transform: uppercase;
     border: none;
-    border-radius: 0.75rem;
+    border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 0.2rem rgba(255, 255, 255, 0.3);
 }

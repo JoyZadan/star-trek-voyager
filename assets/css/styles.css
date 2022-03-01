@@ -1,57 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;1,100;1,200;1,400&family=Orbitron:wght@400;500&display=swap');
 
 body {
     padding: 0;
     margin: 0;
-    min-height: 100vh;
     background-image: url(../images/spaceship.webp);
 }
 
 h1,
 h2,
-h3,
+h3 {
+    font-family: "Orbitron", sans-serif;
+}
+
 h4,
 p {
-    font-family: "Khand", sans-serif;
+    font-family: "Exo 2", sans-serif;
 }
 
 .heading {
-    font-family: "Khand", sans-serif;
+    font-family: "Orbitron", sans-serif;
     color: #efb200;
-    font-size: 3rem;
+    text-shadow: 5px 5px 5px black;
+    font-weight: 700;
+    font-size: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
-.container {
-    width: auto;
-    max-width: 40rem;
+.header-container {
+    width: 80vw;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 10px 10px 10px rgba(255, 255, 255, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: 3rem auto;
-}
-
-.questions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.question-item,
-.option-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    padding: 1rem;
     margin: 0 auto;
-    color: white;
+    padding: 1rem;
+}
+
+.header-container h2 {
+    color: #efb200;
+}
+
+.header-container h3 {
+    color: #efb200;
+    margin-top: 3rem;
+    font-weight: bold;
+}
+
+.header-container p {
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+.games {
+    padding: 1rem;
+    margin: 2rem 1rem 2rem;
+}
+
+.quiz-link {
+    background: #29407c;
+    color: #fff;
+}
+
+.quotes-link {
+    background: #600;
+    color: #fff;
+}
+
+.rescue-link {
+    background: #29407c;
+    color: #fff;
+}
+
+.quiz-link,
+.quotes-link,
+.rescue-link {
+    padding: 1rem;
+    margin: 1rem;
+    font-family: "Exo 2", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    box-shadow: 0 0.2rem rgba(255, 255, 255, 0.3);
+}
+
+.quiz-link:hover,
+.quotes-link:hover,
+.rescue-link:hover {
+    filter: brightness(120%);
+}
+
+.quiz-link:active,
+.quotes-link:active,
+.rescue-link:active {
+    transform: translate(0, 0.2rem);
+    box-shadow: 0 0.1rem rgb(239, 178, 0, 0.5);
+}
+
+.footer {
+    background: #d08504;
+    width: 100%;
+    bottom: 0;
+    position: fixed; 
+    
+}
+.map-link {
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+}
+
+
+@media screen and (max-width: 38.75em) {
+    .heading {
+        font-size: 2rem; 
+    }
+   
+}
+
+@media screen and (max-width: 43em) {
+    .games {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }

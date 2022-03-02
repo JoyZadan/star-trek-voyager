@@ -134,14 +134,13 @@ p {
     box-shadow: 0 0.1rem rgb(239, 178, 0, 0.5);
 }
 
+/* Styling for quiz game */
 .instructions-container,
 .quiz-container {
-    width: 50vw;
+    width: 60vw;
     border-radius: 5px;
-    background-color: #29407c;
-    color: #fff;
+    background-color: rgba(38, 55, 99, 0.8);
     font-family: "Exo 2", sans-serif;
-    /* box-shadow: 0 10px 10px 10px rgba(255, 255, 255, 0.2); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,6 +152,14 @@ p {
 
 .instructions-title {
     font-weight: 500;
+    font-size: 1.75rem;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.instructions-list {
+    font-weight: 400;
+    font-size: 1.5rem;
     color: #fff;
 }
 
@@ -189,6 +196,7 @@ p {
     flex-direction: column;
     align-items: center;
     font-weight: 600;
+    color: #fff;
 }
 
 
@@ -273,6 +281,20 @@ p {
 
     .mission-intro {
         font-size: 1.25rem;
+    }
+
+    .instructions-title {
+        font-size: 1.25rem;
+        margin-bottom: 0;
+    }
+
+    .instructions-list {
+        font-size: 1rem;
+    }
+
+    .instructions-container,
+    .quiz-container {
+        width: 80vw;
     }
 
     .games {

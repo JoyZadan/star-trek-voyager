@@ -58,7 +58,6 @@ p {
 .header-container {
     width: 80vw;
     border-radius: 5px;
-    color: #fff;
     background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 10px 10px 10px rgba(255, 255, 255, 0.2);
     display: flex;
@@ -67,22 +66,47 @@ p {
     flex-wrap: wrap;
     flex-direction: column;
     margin: 0 auto;
-    padding: 1rem;
+    margin-bottom: 3.5rem;
+    padding: 0 1rem;
 }
 
-.header-container h2 {
+.welcome-text {
     color: #efb200;
+    padding: 0 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+    /* animation-name: slide-in;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1; */
+}
+
+/* @keyframes slide-in {
+    0% {
+        transform: skewX(180deg) translateX(50vw);
+    }
+    100% {
+        transform: skew(0deg);
+    } */
 }
 
 .header-container h3 {
     color: #efb200;
     margin-top: 3rem;
-    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
 .header-container p {
     font-weight: bold;
-    margin: 0.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    color: #fff;
+    align-content: center;
 }
 
 .games {
@@ -93,16 +117,19 @@ p {
 .quiz-link {
     background: #29407c;
     color: #fff;
+    margin-bottom: 0.25rem;
 }
 
 .quotes-link {
     background: #600;
     color: #fff;
+    margin-bottom: 0.25rem;
 }
 
 .rescue-link {
     background: #29407c;
     color: #fff;
+    margin-bottom: 0.25rem;
 }
 
 .quiz-link,
@@ -110,7 +137,7 @@ p {
 .rescue-link,
 .start-quiz {
     padding: 1rem;
-    margin: 1rem;
+    margin: 0 0.5rem 0.5rem; 
     font-family: "Exo 2", sans-serif;
     font-weight: bold;
     text-decoration: none;
@@ -203,7 +230,6 @@ p {
     color: #fff;
 }
 
-
 .footer {
     background: #d08504;
     width: 100%;
@@ -211,6 +237,7 @@ p {
     position: fixed; 
     
 }
+
 .map-link {
     font-weight: bold;
     color: #000;
@@ -262,7 +289,15 @@ p {
 }
 
 
+@media screen and (max-width: 29.4375em) {
+    .heading {
+        font-size: 1.5rem; 
+    }
 
+    .welcome-text {
+        font-size: 1.25rem;
+    }
+}
 
 
 
@@ -272,15 +307,24 @@ p {
         font-size: 2rem; 
     }
 
-    .mission-intro {
+    .welcome-text {
         font-size: 1.5rem;
+    }
+
+    .mission-intro {
+        font-size: 1.25rem;
     }
    
 }
 
-@media screen and (max-width: 43em) {
+@media screen and (max-width: 44.875em) {
     .heading {
-        font-size: 1.75rem; 
+        font-size: 2.5rem; 
+    }
+
+    .header-container p {
+        font-weight: 400;
+        font-size: 1rem;
     }
 
     .mission-intro {
@@ -299,12 +343,13 @@ p {
     .instructions-container,
     .quiz-container {
         width: 80vw;
-    }
+    } 
 
     .games {
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: space-between;
+        margin-bottom: 0.25rem;
     }
 }

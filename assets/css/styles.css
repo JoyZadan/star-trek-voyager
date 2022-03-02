@@ -59,7 +59,7 @@ p {
     width: 80vw;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 0 10px 10px 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 10px 10px rgba(4, 215, 252, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,13 +179,31 @@ p {
     padding: 1rem;
 }
 
-.instructions-title {
+.instructions-title,
+.question-text {
     font-weight: 500;
     font-size: 1.75rem;
     color: #fff;
     margin-bottom: 0;
 }
 
+.options-list {
+    display: flex;
+    justify-content: left;
+    align-self: flex-start;
+    flex-direction: column;
+}
+
+.options-list ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+}
+
+.answer,
 .instructions-list {
     font-weight: 400;
     font-size: 1.5rem;

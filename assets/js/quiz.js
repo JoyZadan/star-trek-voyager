@@ -1,7 +1,7 @@
 // adding the questions array and storing it in a variable
 const quizQuestions = [
     {
-        question: "In Star Trek Voyager episode 'Death Wish', Q is pursuing a rogue member of the Continuum named:",
+        question: "In Star Trek Voyager episode 'Death Wish', who was the rogue member of the Continuum being pursued by Q?",
         answers: [
             { option: "Quintin", correct: false },
             { option: "Quin", correct: true },
@@ -98,11 +98,36 @@ console.log(quizQuestions);
 const startQuiz = document.querySelector(".start-quiz");
 const instructionsContainer = document.querySelector(".instructions-container");
 const quizContainer = document.querySelector(".quiz-container");
+const questionText = document.querySelector(".question-text");
 const resultsContainer = document.querySelector(".results-container");
 const buttonsContainer = document.querySelector(".buttons-container");
 const buttonExit = document.querySelector(".btn-exit");
 const buttonContinue = document.querySelector(".btn-continue");
 const mapLink = document.querySelector(".map-link");
+
+// loading the quiz questions function
+const loadQuestion = () => {
+    questionText.innerText = quizQuestions[0].question;
+}
+
+loadQuestion();
+
+const loadAnswers = () => {
+    for (key in quizQuestions.answers) {
+        console.log(`${key}: ${answers[key]}`);
+    }
+}
+
+
+console.log(loadAnswers);
+
+// for (key in quizQuestions.answers) {
+//     console.log(`${key}: ${answers[key]}`);
+// }
+
+
+
+
 
 
 
@@ -125,3 +150,7 @@ const mapLink = document.querySelector(".map-link");
 mapLink.addEventListener("click", openMap => {
     window.location.href = "find.html";
 })
+function newFunction() {
+    console.log(quizQuestions[0].question);
+}
+

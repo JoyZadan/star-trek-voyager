@@ -39,20 +39,36 @@
     </div>
     
     <!-- start quiz container -->
-    <div class="quiz-container hide">
+    <div class="quiz-container">
         <div class="timer">
             <div class="timer-title">Time Remaining:</div>
             <div class="countdown">10</div>
         </div>
-        <div class="quiz-question">
- 
-        </div>
+        <div class="question-text"></div>
         <div class="options-list">
+            <ul>
+                <li>
+                    <input type="radio" name="answer" class="answer" id="option-one">
+                    <label for="option-one" id="answer-one" class="answer">Answer:</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" class="answer" id="option-two">
+                    <label for="option-two" id="answer-two" class="answer">Answer:</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" class="answer" id="option-three">
+                    <label for="option-three" id="answer-three" class="answer">Answer:</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" class="answer" id="option-four">
+                    <label for="option-four" id="answer-four" class="answer">Answer:</label>
+                </li>
+            </ul>
 
         </div>
     </div>
     <!-- show results container -->
-    <div class="results-container hide">
+    <div class="results-container ">
         <div>
             <h3 class="results-content">Congratulations, Trekkie! You scored:</h3>
             <div>
@@ -63,9 +79,9 @@
     </div>
 
     <!-- buttons for games navigation -->
-    <div class="buttons-container hide">
-        <button class="btn-exit hide">Exit Quiz</button>
-        <button class="btn-continue hide">Continue to Next Mission</button>
+    <div class="buttons-container ">
+        <button class="btn-exit ">Exit Quiz</button>
+        <button class="btn-continue ">Continue to Next Mission</button>
     </div>
 
 

@@ -92,6 +92,8 @@ const quizQuestions = [
     },
 ]
 
+console.log(quizQuestions);
+
 // setting up the quiz game structure
 const startQuiz = document.querySelector(".start-quiz");
 const buttonsContainer = document.querySelector(".buttons-container");

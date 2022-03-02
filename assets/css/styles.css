@@ -139,7 +139,7 @@ p {
 .quiz-container {
     width: 60vw;
     border-radius: 5px;
-    background-color: rgba(38, 55, 99, 0.8);
+    background-color: rgba(38, 55, 99, 0.9);
     font-family: "Exo 2", sans-serif;
     display: flex;
     justify-content: center;

@@ -20,7 +20,17 @@ quotesLink.addEventListener("click", changeBackground => {
 
     // This reverts the background color of the quiz link after 3 seconds
     window.setTimeout(() => {
-        quotes.style.backgroundColor = "#600";
+        quotesLink.style.backgroundColor = "#600";
+    }, 3000); 
+});
+
+// This changes the background color of the rescue mission link when clicked
+rescueLink.addEventListener("click", changeBackground => {
+    rescueLink.style.backgroundColor = "#efb200";
+
+    // This reverts the background color of the rescue mission link after 3 seconds
+    window.setTimeout(() => {
+        rescueLink.style.backgroundColor = "#efb200";
     }, 3000); 
 });
 

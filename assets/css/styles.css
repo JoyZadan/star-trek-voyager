@@ -107,7 +107,8 @@ p {
 
 .quiz-link,
 .quotes-link,
-.rescue-link {
+.rescue-link,
+.start-quiz {
     padding: 1rem;
     margin: 1rem;
     font-family: "Exo 2", sans-serif;
@@ -132,6 +133,64 @@ p {
     transform: translate(0, 0.2rem);
     box-shadow: 0 0.1rem rgb(239, 178, 0, 0.5);
 }
+
+.instructions-container,
+.quiz-container {
+    width: 50vw;
+    border-radius: 5px;
+    background-color: #29407c;
+    color: #fff;
+    font-family: "Exo 2", sans-serif;
+    /* box-shadow: 0 10px 10px 10px rgba(255, 255, 255, 0.2); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.instructions-title {
+    font-weight: 500;
+    color: #fff;
+}
+
+.start-quiz {
+    background-color: #d08504;
+    padding: 0.5rem;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.exit,
+.continue {
+    background-color: #600;
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: #fff;
+    margin: 0.5rem;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 500;
+}
+
+.timer-title, 
+.countdown {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+}
+
 
 .footer {
     background: #d08504;
@@ -166,17 +225,17 @@ p {
     font-weight: 400;
     font-size: 2rem;
     margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
 
     /* adding text animation */
     animation-name: slide;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-timing-function: linear;
     -webkit-animation-timing-function: linear;
     -moz-animation-timing-function: linear;
-    animation-iteration-count: 2;
-    -webkit-animation-iteration-count: 2;
-    -moz-animation-iteration-count: 2;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
     -moz-animation-fill-mode: fowards;
@@ -208,6 +267,14 @@ p {
 }
 
 @media screen and (max-width: 43em) {
+    .heading {
+        font-size: 1.75rem; 
+    }
+
+    .mission-intro {
+        font-size: 1.25rem;
+    }
+
     .games {
         display: flex;
         align-items: center;

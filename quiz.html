@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <title>Star Trek Voyager: Quiz</title> 
+    <title>Trekkies Quiz</title> 
 </head>
 <body class="quiz-bg">
     <div>
@@ -26,9 +26,36 @@
             </h2>
         </div>    
     </div>
-    <div>
-
+    <!-- quiz instructions -->
+    <div class="instructions-container">
+        <h3 class="instructions-title">Quiz Rules</h3>
+        <ol>
+            <li>You have 10 seconds to answer each question.</li>
+            <li>A submitted answer is the final answer.</li>
+            <li>Every correct answer is equivalent to 10 points.</li>
+        </ol>
+    <!-- start quiz button -->
+        <button class="start-quiz">Start Quiz</button>
     </div>
+    <div class="buttons-container">
+        <button class="exit">Exit Quiz</button>
+        <button class="continue">Continue to Next Mission</button>
+    </div>
+    <!-- start quiz container -->
+    <div class="quiz-container">
+        <div class="timer">
+            <div class="timer-title">Time Remaining:</div>
+            <div class="countdown">10</div>
+        </div>
+        <div class="question">
+
+        </div>
+        <div class="options-list">
+
+        </div>
+    </div>
+
+
 
 
 
@@ -43,5 +70,6 @@
         <p class="map-link">Find fellow trekkies near you</p>
     </div> 
 
+    <script src="./assets/js/quiz.js" defer></script>
 </body>
 </html>

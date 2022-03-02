@@ -94,7 +94,7 @@ const quizQuestions = [
 
 console.log(quizQuestions);
 
-// setting up the quiz game structure
+// selecting all required elements
 const startQuiz = document.querySelector(".start-quiz");
 const instructionsContainer = document.querySelector(".instructions-container");
 const quizContainer = document.querySelector(".quiz-container");
@@ -104,6 +104,32 @@ const buttonsContainer = document.querySelector(".buttons-container");
 const buttonExit = document.querySelector(".btn-exit");
 const buttonContinue = document.querySelector(".btn-continue");
 const mapLink = document.querySelector(".map-link");
+
+// setting up the quiz game structure
+
+function startQuiz() {
+
+}
+
+function loadQuestion() {
+
+}
+
+function selectAnswer() {
+
+}
+
+function startTimer() {
+
+}
+
+function showScore() {
+    
+}
+
+function quizControls() {
+    
+}
 
 // loading the quiz questions function
 const loadQuestion = () => {

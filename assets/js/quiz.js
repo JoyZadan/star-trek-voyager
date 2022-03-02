@@ -98,6 +98,7 @@ console.log(quizQuestions);
 const startQuiz = document.querySelector(".start-quiz");
 const instructionsContainer = document.querySelector(".instructions-container");
 const quizContainer = document.querySelector(".quiz-container");
+const resultsContainer = document.querySelector(".results-container");
 const buttonsContainer = document.querySelector(".buttons-container");
 const buttonExit = document.querySelector(".btn-exit");
 const buttonContinue = document.querySelector(".btn-continue");

@@ -289,7 +289,7 @@ p {
 }
 
 
-@media screen and (max-width: 29.4375em) {
+@media screen and (max-width: 29.5em) {
     .heading {
         font-size: 1.5rem; 
     }
@@ -297,14 +297,15 @@ p {
     .welcome-text {
         font-size: 1.25rem;
     }
+
+    .mission-intro {
+        background-color: rgba(0, 0, 0, 0.6);
+    }        
 }
-
-
-
 
 @media screen and (max-width: 38.75em) {
     .heading {
-        font-size: 2rem; 
+        font-size: 1.75rem; 
     }
 
     .welcome-text {
@@ -313,13 +314,14 @@ p {
 
     .mission-intro {
         font-size: 1.25rem;
+        background-color: rgba(0, 0, 0, 0.6);
     }
    
 }
 
-@media screen and (max-width: 44.875em) {
+@media screen and (max-width: 45em) {
     .heading {
-        font-size: 2.5rem; 
+        font-size: 1.75rem; 
     }
 
     .header-container p {

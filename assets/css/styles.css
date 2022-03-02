@@ -75,25 +75,25 @@ p {
     padding: 0 1rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    font-size: 2rem;
 
-    /* animation-name: slide-in;
+    /* adding text animation */
+    animation-name: slide-in;
     animation-duration: 3s;
     animation-timing-function: ease-in;
     -webkit-animation-timing-function: ease-in;
     -moz-animation-timing-function: ease-in;
     animation-iteration-count: 1;
     -webkit-animation-iteration-count: 1;
-    -moz-animation-iteration-count: 1; */
+    -moz-animation-iteration-count: 1;
 }
 
-/* @keyframes slide-in {
-    0% {
-        transform: skewX(180deg) translateX(50vw);
-    }
-    100% {
-        transform: skew(0deg);
-    } */
-}
+@keyframes slide-in {
+    0% {transform: rotateX(45deg)}
+    33% {transform: rotateX(90deg)}
+    66% {transform: rotateX(145deg)}
+    100% {transfor: rotateX(180deg)}
+}    
 
 .header-container h3 {
     color: #efb200;

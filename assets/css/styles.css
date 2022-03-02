@@ -163,6 +163,10 @@ p {
     color: #fff;
 }
 
+.hide {
+    display: none;
+}
+
 .start-quiz {
     background-color: #d08504;
     padding: 0.5rem;
@@ -178,8 +182,8 @@ p {
     padding: 1rem;
 }
 
-.exit,
-.continue {
+.btn-exit,
+.btn-continue {
     background-color: #600;
     padding: 0.5rem;
     border-radius: 5px;

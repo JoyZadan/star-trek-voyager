@@ -164,7 +164,8 @@ p {
 
 /* Styling for quiz game */
 .instructions-container,
-.quiz-container {
+.quiz-container,
+.results-container {
     width: 60vw;
     border-radius: 5px;
     background-color: rgba(38, 55, 99, 0.9);
@@ -189,6 +190,25 @@ p {
     font-weight: 400;
     font-size: 1.5rem;
     color: #fff;
+}
+
+.results-container {
+    color: #d08504;
+}
+
+.results-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.quiz-score {
+    color: #d08504;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hide {
@@ -302,7 +322,14 @@ p {
 
     .mission-intro {
         background-color: rgba(0, 0, 0, 0.6);
-    }        
+    }
+    
+    .results-content {
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 38.75em) {

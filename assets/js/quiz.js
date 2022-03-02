@@ -96,6 +96,8 @@ console.log(quizQuestions);
 
 // setting up the quiz game structure
 const startQuiz = document.querySelector(".start-quiz");
+const instructionsContainer = document.querySelector(".instructions-container");
+const quizContainer = document.querySelector(".quiz-container");
 const buttonsContainer = document.querySelector(".buttons-container");
 const buttonExit = document.querySelector(".btn-exit");
 const buttonContinue = document.querySelector(".btn-continue");

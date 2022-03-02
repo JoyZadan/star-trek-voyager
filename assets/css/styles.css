@@ -90,9 +90,10 @@ p {
 
 @keyframes slide-in {
     0% {transform: rotateX(45deg)}
-    33% {transform: rotateX(90deg)}
-    66% {transform: rotateX(145deg)}
-    100% {transfor: rotateX(180deg)}
+    25% {transform: rotateX(90deg)}
+    50% {transform: rotateX(145deg)}
+    75% {transform: rotateX(180deg)}
+    100% {transform: rotateX(360deg)}
 }    
 
 .header-container h3 {
@@ -283,9 +284,10 @@ p {
 
 @keyframes slide {
     0% {transform: rotateX(45deg)}
-    33% {transform: rotateX(90deg)}
-    66% {transform: rotateX(145deg)}
-    100% {transfor: rotateX(180deg)}
+    25% {transform: rotateX(90deg)}
+    50% {transform: rotateX(145deg)}
+    75% {transform: rotateX(180deg)}
+    100% {transform: rotateX(360deg)}
 }
 
 

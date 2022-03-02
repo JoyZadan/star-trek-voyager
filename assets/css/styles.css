@@ -162,6 +162,14 @@ p {
     box-shadow: 0 0.1rem rgb(239, 178, 0, 0.5);
 }
 
+.instructions-container.activeInfo,
+.quiz-container.activeQuiz,
+.results-container.activeResult {
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+}
+
 /* Styling for quiz game */
 .instructions-container,
 .quiz-container,
@@ -179,6 +187,9 @@ p {
     padding: 1rem;
 }
 
+.quiz-container {
+    display: none;
+}
 .instructions-title,
 .question-text {
     font-weight: 500;
@@ -186,6 +197,7 @@ p {
     color: #fff;
     margin-bottom: 0;
 }
+
 
 .options-list {
     display: flex;
@@ -257,6 +269,10 @@ p {
     margin: 0.5rem;
     font-family: "Exo 2", sans-serif;
     font-weight: 500;
+}
+
+.timer {
+    margin-bottom: 1rem;
 }
 
 .timer-title, 

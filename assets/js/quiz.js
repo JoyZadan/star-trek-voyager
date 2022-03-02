@@ -92,12 +92,12 @@ const quizQuestions = [
     },
 ]
 
-console.log(quizQuestions);
+// console.log(quizQuestions);
 
 // selecting all required elements
 const startQuiz = document.querySelector(".start-quiz");
-const instructionsContainer = document.querySelector(".instructions-container");
-const quizContainer = document.querySelector(".quiz-container");
+// const instructionsContainer = document.querySelector(".instructions-container");
+// const quizContainer = document.querySelector(".quiz-container");
 const questionText = document.querySelector(".question-text");
 const resultsContainer = document.querySelector(".results-container");
 const buttonsContainer = document.querySelector(".buttons-container");
@@ -105,53 +105,114 @@ const buttonExit = document.querySelector(".btn-exit");
 const buttonContinue = document.querySelector(".btn-continue");
 const mapLink = document.querySelector(".map-link");
 
+// setting up toggle between two divs in one function
+// code from Tom O. at stackoverflow
+/*
+* setting up toggle between two divs in one function
+* code from Tom O. at stackoverflow
+*/
+
+document.querySelector("#toggle-btn").addEventListener("click", toggleDivs);
+
+function toggleDivs() {
+    const instructionsContainer = document.querySelector(".instructions-container");
+    const quizContainer = document.querySelector(".quiz-container");
+
+    if (instructionsContainer.style.display != "none") {
+        instructionsContainer.style.display = "none";
+        quizContainer.style.display = "block";
+    }   else {
+        instructionsContainer.style.display = "block";
+        quizContainer.style.display = "none";
+    }
+}
+
 // setting up the quiz game structure
+// function hideQuizContainer() {
+//     quizContainer.classList.add(".hide");
+// }
 
-function startQuiz() {
+// startQuiz.addEventListener("click", startGame => {
+//     instructionsContainer.classList.remove(".hide");
+//     quizContainer.classList.add(".activeQuiz");
+// })
 
-}
+// startQuiz.onclick = () => {
+//     instructionsContainer.classList.remove(".activeInfo");
+//     quizContainer.classList.add(".activeQuiz");
+// }
 
-function loadQuestion() {
+// mapLink.addEventListener("click", openMap => {
+//     window.location.href = "find.html";
+// })
 
-}
+// function loadQuestion() {
 
-function selectAnswer() {
+// }
 
-}
+//     () => {
+//     }
 
-function startTimer() {
+// function startTimer() {
 
-}
+// }
 
-function showScore() {
+// function showScore() {
     
-}
+// }
 
-function quizControls() {
-    
-}
+// function quizControls() {
+
+// }
+
+// function startMission() {
+//     const instructionsContainer = document.querySelector(".instructions-container");
+//     if (instructionsContainer.style === "none") {
+//         instructionsContainer.style.display = "block";
+//     } else {
+//         instructionsContainer.style.display = "none";
+//     }
+// }
+
+// startQuiz.onclick = () => {
+    	
+// }
+
+
 
 // loading the quiz questions function
-const loadQuestion = () => {
-    questionText.innerText = quizQuestions[0].question;
+
+
+loadQuestion = () => {
+    let questionCount = 0;
+    questionText.innerText = quizQuestions[questionCount].question;    
 }
 
 loadQuestion();
 
-const loadAnswers = () => {
-    for (key in quizQuestions.answers) {
-        console.log(`${key}: ${answers[key]}`);
-    }
-}
+// loadOptions = () => {
+//     let optionsList = document.querySelectorAll(".answer");
+//     optionsList.innerText = answers[0].option;
+// }
+
+// loadOptions();
+
+// const loadAnswers = () => {
+//     for (key in quizQuestions.answers) {
+//         console.log(`${key}: ${answers[key]}`);
+//     }
+// }
 
 
-console.log(loadAnswers);
+// console.log(loadAnswers);
 
 // for (key in quizQuestions.answers) {
 //     console.log(`${key}: ${answers[key]}`);
 // }
 
-
+mapLink.addEventListener("click", openMap => {
+    window.location.href = "find.html";
+})
 
 
 

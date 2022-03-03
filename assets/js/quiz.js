@@ -90,7 +90,7 @@ const quizQuestions = [
             { option: "Fluidic Space drive", correct: false },
         ]
     },
-]
+];
 
 console.log(quizQuestions);
 
@@ -125,29 +125,30 @@ function toggleDivs() {
 
 // loading the quiz questions function
 let questionCount = 0;
-loadQuestion = () => {
+
+function loadQuestion() {
     let questionData = quizQuestions[questionCount];
-    questionText.innerText = questionData.question;      
+    questionText.innerText = questionData.question;
 }
 
 loadQuestion();
 
 // loading the quiz questions function
-loadOptions = () => {
+function loadOptions() {
     let optionOne = document.querySelector("#answer-one");
     let optionTwo = document.querySelector("#answer-two");
     let optionThree = document.querySelector("#answer-three");
     let optionFour = document.querySelector("#answer-four");
 
-    optionOne.innerText = quizQuestions[questionCount].answers[0].option; 
-    optionTwo.innerText = quizQuestions[questionCount].answers[1].option; 
-    optionThree.innerText = quizQuestions[questionCount].answers[2].option; 
-    optionFour.innerText = quizQuestions[questionCount].answers[3].option; 
+    optionOne.innerText = quizQuestions[questionCount].answers[0].option;
+    optionTwo.innerText = quizQuestions[questionCount].answers[1].option;
+    optionThree.innerText = quizQuestions[questionCount].answers[2].option;
+    optionFour.innerText = quizQuestions[questionCount].answers[3].option;
 
-    console.log(optionOne);
-    console.log(optionTwo);
-    console.log(optionTwo);
-    console.log(optionTwo);
+    // console.log(optionOne);
+    // console.log(optionTwo);
+    // console.log(optionTwo);
+    // console.log(optionTwo);
 }
 
 loadOptions();
@@ -158,7 +159,7 @@ loadOptions();
 
 mapLink.addEventListener("click", _openMap => {
     window.location.href = "find.html";
-})
+});
 
 
 
@@ -170,20 +171,4 @@ mapLink.addEventListener("click", _openMap => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-mapLink.addEventListener("click", _openMap => {
-    window.location.href = "find.html";
-})
-function newFunction() {
-    console.log(quizQuestions[0].question);
-}
 

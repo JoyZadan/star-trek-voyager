@@ -97,7 +97,7 @@ console.log(quizQuestions);
 
 // selecting all required elements by declaring constants
 const instructionsContainer = document.querySelector(".instructions-container");
-const startQuiz = document.querySelector(".start-quiz");
+const startQuiz = document.querySelector("#toggle-btn");
 const quizContainer = document.querySelector(".quiz-container");
 const questionText = document.querySelector(".question-text");
 const submitAnswer = document.querySelector(".submit-answer");
@@ -110,7 +110,7 @@ const mapLink = document.querySelector(".map-link");
 
 // setting up toggle between two divs in one function
 // code from Tom O. at stackoverflow
-document.querySelector("#toggle-btn").addEventListener("click", toggleDivs);
+startQuiz.addEventListener("click", toggleDivs);
 
 function toggleDivs() {
     if (instructionsContainer.style.display != "none") {
@@ -122,19 +122,18 @@ function toggleDivs() {
     }
 }
 
+// start quiz
+ 
 
-// loading the quiz questions function
+
+
+// loading the quiz questions and the answer options function
 let questionCount = 0;
 
 function loadQuestion() {
     let questionData = quizQuestions[questionCount];
     questionText.innerText = questionData.question;
-}
 
-loadQuestion();
-
-// loading the quiz questions function
-function loadOptions() {
     let optionOne = document.querySelector("#answer-one");
     let optionTwo = document.querySelector("#answer-two");
     let optionThree = document.querySelector("#answer-three");
@@ -144,14 +143,11 @@ function loadOptions() {
     optionTwo.innerText = quizQuestions[questionCount].answers[1].option;
     optionThree.innerText = quizQuestions[questionCount].answers[2].option;
     optionFour.innerText = quizQuestions[questionCount].answers[3].option;
-
-    // console.log(optionOne);
-    // console.log(optionTwo);
-    // console.log(optionTwo);
-    // console.log(optionTwo);
 }
 
-loadOptions();
+loadQuestion();
+
+
 
 
 

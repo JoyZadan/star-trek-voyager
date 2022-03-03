@@ -162,14 +162,6 @@ p {
     box-shadow: 0 0.1rem rgb(239, 178, 0, 0.5);
 }
 
-.instructions-container.activeInfo,
-.quiz-container.activeQuiz,
-.results-container.activeResult {
-    opacity: 1;
-    z-index: 5;
-    pointer-events: auto;
-}
-
 /* Styling for quiz game */
 .instructions-container,
 .quiz-container,

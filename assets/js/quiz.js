@@ -92,32 +92,27 @@ const quizQuestions = [
     },
 ]
 
-// console.log(quizQuestions);
+console.log(quizQuestions);
 
-// selecting all required elements
+
+// selecting all required elements by declaring constants
+const instructionsContainer = document.querySelector(".instructions-container");
 const startQuiz = document.querySelector(".start-quiz");
-// const instructionsContainer = document.querySelector(".instructions-container");
-// const quizContainer = document.querySelector(".quiz-container");
+const quizContainer = document.querySelector(".quiz-container");
 const questionText = document.querySelector(".question-text");
+const submitAnswer = document.querySelector(".submit-answer");
 const resultsContainer = document.querySelector(".results-container");
 const buttonsContainer = document.querySelector(".buttons-container");
 const buttonExit = document.querySelector(".btn-exit");
 const buttonContinue = document.querySelector(".btn-continue");
 const mapLink = document.querySelector(".map-link");
 
+
 // setting up toggle between two divs in one function
 // code from Tom O. at stackoverflow
-/*
-* setting up toggle between two divs in one function
-* code from Tom O. at stackoverflow
-*/
-
 document.querySelector("#toggle-btn").addEventListener("click", toggleDivs);
 
 function toggleDivs() {
-    const instructionsContainer = document.querySelector(".instructions-container");
-    const quizContainer = document.querySelector(".quiz-container");
-
     if (instructionsContainer.style.display != "none") {
         instructionsContainer.style.display = "none";
         quizContainer.style.display = "block";
@@ -127,90 +122,41 @@ function toggleDivs() {
     }
 }
 
-// setting up the quiz game structure
-// function hideQuizContainer() {
-//     quizContainer.classList.add(".hide");
-// }
-
-// startQuiz.addEventListener("click", startGame => {
-//     instructionsContainer.classList.remove(".hide");
-//     quizContainer.classList.add(".activeQuiz");
-// })
-
-// startQuiz.onclick = () => {
-//     instructionsContainer.classList.remove(".activeInfo");
-//     quizContainer.classList.add(".activeQuiz");
-// }
-
-// mapLink.addEventListener("click", openMap => {
-//     window.location.href = "find.html";
-// })
-
-// function loadQuestion() {
-
-// }
-
-//     () => {
-//     }
-
-// function startTimer() {
-
-// }
-
-// function showScore() {
-    
-// }
-
-// function quizControls() {
-
-// }
-
-// function startMission() {
-//     const instructionsContainer = document.querySelector(".instructions-container");
-//     if (instructionsContainer.style === "none") {
-//         instructionsContainer.style.display = "block";
-//     } else {
-//         instructionsContainer.style.display = "none";
-//     }
-// }
-
-// startQuiz.onclick = () => {
-    	
-// }
-
-
 
 // loading the quiz questions function
-
-
+let questionCount = 0;
 loadQuestion = () => {
-    let questionCount = 0;
-    questionText.innerText = quizQuestions[questionCount].question;    
+    let questionData = quizQuestions[questionCount];
+    questionText.innerText = questionData.question;      
 }
 
 loadQuestion();
 
-// loadOptions = () => {
-//     let optionsList = document.querySelectorAll(".answer");
-//     optionsList.innerText = answers[0].option;
-// }
+// loading the quiz questions function
+loadOptions = () => {
+    let optionOne = document.querySelector("#answer-one");
+    let optionTwo = document.querySelector("#answer-two");
+    let optionThree = document.querySelector("#answer-three");
+    let optionFour = document.querySelector("#answer-four");
 
-// loadOptions();
+    optionOne.innerText = quizQuestions[questionCount].answers[0].option; 
+    optionTwo.innerText = quizQuestions[questionCount].answers[1].option; 
+    optionThree.innerText = quizQuestions[questionCount].answers[2].option; 
+    optionFour.innerText = quizQuestions[questionCount].answers[3].option; 
 
-// const loadAnswers = () => {
-//     for (key in quizQuestions.answers) {
-//         console.log(`${key}: ${answers[key]}`);
-//     }
-// }
+    console.log(optionOne);
+    console.log(optionTwo);
+    console.log(optionTwo);
+    console.log(optionTwo);
+}
+
+loadOptions();
 
 
-// console.log(loadAnswers);
 
-// for (key in quizQuestions.answers) {
-//     console.log(`${key}: ${answers[key]}`);
-// }
 
-mapLink.addEventListener("click", openMap => {
+
+mapLink.addEventListener("click", _openMap => {
     window.location.href = "find.html";
 })
 
@@ -234,7 +180,7 @@ mapLink.addEventListener("click", openMap => {
 
 
 
-mapLink.addEventListener("click", openMap => {
+mapLink.addEventListener("click", _openMap => {
     window.location.href = "find.html";
 })
 function newFunction() {

@@ -100,8 +100,8 @@ const instructionsContainer = document.querySelector(".instructions-container");
 const startQuiz = document.querySelector("#toggle-btn");
 const quizContainer = document.querySelector(".quiz-container");
 const questionText = document.querySelector(".question-text");
-const submitAnswer = document.querySelector(".submit-answer");
-const answers = document.querySelectorAll(".answer");
+const submitButton = document.querySelector(".submit-answer"); // this is the submit btn
+const submittedAnswer = document.querySelectorAll(".answer");
 const resultsContainer = document.querySelector(".results-container");
 const buttonsContainer = document.querySelector(".buttons-container");
 const buttonExit = document.querySelector(".btn-exit");
@@ -148,21 +148,21 @@ function loadQuestion() {
 
 loadQuestion();
 
-const getCheckedAnswer = () => {
-    let answer;
+// const getCheckedAnswer = () => {
+//     let answer;
 
-    answers.forEach((inputChecked) => {
-        if(inputChecked.checked) {
-            answer = inputChecked.id;
-        } 
-        return answer;
-    })
-}
+//     answers.forEach((inputChecked) => {
+//         if(inputChecked.checked) {
+//             answer = inputChecked.id;
+//         } 
+//         return answer;
+//     })
+// }
 
-submitAnswer.addEventListener("click", () => {
-    let checkedAnswer = getCheckedAnswer();
-    console.log(checkedAnswer);
-});
+// submitAnswer.addEventListener("click", () => {
+//     let checkedAnswer = getCheckedAnswer();
+//     console.log(checkedAnswer);
+// });
 
 
 

@@ -166,7 +166,7 @@ p {
 .instructions-container,
 .quiz-container,
 .results-container {
-    width: 60vw;
+    width: 70vw;
     border-radius: 5px;
     background-color: rgba(38, 55, 99, 0.9);
     font-family: "Exo 2", sans-serif;
@@ -175,7 +175,7 @@ p {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: 2rem auto;
+    margin: 1rem auto 5rem;
     padding: 1rem;
 }
 
@@ -190,7 +190,22 @@ p {
     margin-bottom: 0;
 }
 
-.options-list {
+.answers-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.options-content {
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: #fff;
+    padding: 0.5rem;
+    margin: 1rem 1rem auto;
+}
+
+
+/* .options-list {
     display: flex;
     justify-content: left;
     align-self: flex-start;
@@ -204,7 +219,7 @@ p {
     flex-direction: column;
     align-items: flex-start;
     padding-left: 0;
-}
+} */
 
 .answer,
 .instructions-list {
@@ -246,9 +261,10 @@ p {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    flex-direction: row;
-    margin: 2rem auto;
-    padding: 1rem;
+    flex-direction: row;   
+    margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 0;
 }
 
 .btn-exit,
@@ -400,6 +416,11 @@ p {
     .quiz-container {
         width: 80vw;
     } 
+/* 
+    .answers-buttons {
+        display: flex;
+        flex-direction: column;
+    } */
 
     .games {
         display: flex;

@@ -100,8 +100,8 @@ const instructionsContainer = document.querySelector(".instructions-container");
 const startQuiz = document.querySelector("#toggle-btn");
 const quizContainer = document.querySelector(".quiz-container");
 const questionText = document.querySelector(".question-text");
-const submitButton = document.querySelector(".submit-answer"); // this is the submit btn
-const submittedAnswer = document.querySelectorAll(".answer");
+const submitButton = document.querySelector(".submit-button"); // this is the submit btn
+const inputButtons = document.querySelectorAll('input[name="answer"]:checked');
 const resultsContainer = document.querySelector(".results-container");
 const buttonsContainer = document.querySelector(".buttons-container");
 const buttonExit = document.querySelector(".btn-exit");
@@ -124,7 +124,7 @@ function toggleDivs() {
 }
 
 // start quiz
- 
+
 
 
 
@@ -135,10 +135,10 @@ function loadQuestion() {
     let questionData = quizQuestions[questionCount];
     questionText.innerText = questionData.question;
 
-    let optionOne = document.querySelector("#answer-one");
-    let optionTwo = document.querySelector("#answer-two");
-    let optionThree = document.querySelector("#answer-three");
-    let optionFour = document.querySelector("#answer-four");
+    let optionOne = document.querySelector("#option-one");
+    let optionTwo = document.querySelector("#option-two");
+    let optionThree = document.querySelector("#option-three");
+    let optionFour = document.querySelector("#option-four");
 
     optionOne.innerText = quizQuestions[questionCount].answers[0].option;
     optionTwo.innerText = quizQuestions[questionCount].answers[1].option;
@@ -147,6 +147,7 @@ function loadQuestion() {
 }
 
 loadQuestion();
+
 
 // const getCheckedAnswer = () => {
 //     let answer;
@@ -163,6 +164,16 @@ loadQuestion();
 //     let checkedAnswer = getCheckedAnswer();
 //     console.log(checkedAnswer);
 // });
+
+// get checked answer
+// submitButton.addEventListener("click", () => {
+//     let selectedAnswer; 
+//     for (const inputButton of inputButtons) {
+//         if (inputButton.checked) {
+//             selectedAnswer = document.querySelector('label[for="+selected.id+"]').innerHTML;
+//         }   
+//     }
+    
 
 
 

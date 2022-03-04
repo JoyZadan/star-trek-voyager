@@ -86,7 +86,7 @@ const quizQuestions = [
         answers: [
             { option: "Transwarp conduits", correct: false },
             { option: "Psionic powers", correct: false },
-            { option: "Quantum slipstream", correct: false },
+            { option: "Quantum slipstream", correct: true },
             { option: "Fluidic Space drive", correct: false },
         ]
     },
@@ -96,12 +96,13 @@ console.log(quizQuestions);
 
 
 // selecting all required elements by declaring constants
-const instructionsContainer = document.querySelector(".instructions-container");
-const startQuiz = document.querySelector("#toggle-btn");
+const instructionsContainer = document.querySelector(".instructions-container"); // WORKING
+const startQuiz = document.querySelector("#toggle-btn"); // WORKING
 
-const quizContainer = document.querySelector(".quiz-container");
-const questionText = document.querySelector(".question-text");
+const quizContainer = document.querySelector(".quiz-container"); // WORKING
+const questionText = document.querySelector(".question-text"); // WORKING
 const submitAnswer = document.querySelector(".answers-buttons"); // this is the submit btn
+const optionsContent = document.querySelectorAll(".options-content");
 
 const resultsContainer = document.querySelector(".results-container");
 const buttonsContainer = document.querySelector(".buttons-container");
@@ -123,19 +124,20 @@ function toggleDivs() {
         instructionsContainer.style.display = "block";
         quizContainer.style.display = "none";
     }
-}
+};
 
 //
 
 // start quiz
 
 
+let questionCount = 0;
+let answers = 0;
+let answerCount = 0;
+let userScore = 0;
 
 
 // loading the quiz questions and the answer options function
-
-let questionCount = 0;
-
 function loadQuestion() {
     let questionData = quizQuestions[questionCount];
     questionText.innerText = questionData.question;
@@ -152,27 +154,52 @@ function loadQuestion() {
 
     questionCount++;
 
-    // questionCount.sort(() => Math.random() - .5);    
-    // questionCount++;
-
-    // function shuffleQuestions(questionCount) {
-    //     for (let i = questionCount.length - 1; i > 0; i--) {
-    //         const q = Math.floor(Math.random() * (i + 1));
-    //         [questionCount[i], questionCount[q], questionCount[i]];
-    //     }
-    //     return questionCount;
-    // }
-
-}
+};
 
 loadQuestion();
 
-// const getCheckedAnswer = () => {
-//     if (correct === true)
+// function shuffleQuestions(array) {
+//     let currentIndex = array.length, temporaryValue, randomIndex;
+//     while (0 !== currentIndex) {
+//         randomIndex = Math.floor(Math.random() * currentIndex);
+//         temporaryValue = array[currentIndex];
+//         array[currentIndex] = array[randomIndex];
+//         array[randomIndex] = temporaryValue;
+//     }
+//     return array;
 // }
 
-submitAnswer.addEventListener("click", loadQuestion);
+// shuffleQuestions();
 
+// let userScore = 0;
+
+// function getCheckedAnswer(event) {
+//     // if (this.innerText === quizQuestions[questionCount].answers.option) {
+//     //     userScore++;
+//     //     quizContainer.style.backgroundColor = "#efb200";
+//     //     questionText.innerText = "Correct!";
+
+//     // }
+//     if
+
+// }
+
+function getCheckedAnswer(event) {
+    optionsContent = event.target;
+    let correct = quizQuestions[questionCount].answers.correct === true;
+    newFunction();
+
+    function newFunction() {
+        console.log(correct);
+    }
+}
+
+console.log(getCheckedAnswer);
+
+submitAnswer.addEventListener("click", loadQuestion, getCheckedAnswer);
+// console.log(submitAnswer);   
+// console.log(optionsContent);
+// console.log(quizQuestions[questionCount].Object.keys(answers));
 
 
 // const getCheckedAnswer = () => {

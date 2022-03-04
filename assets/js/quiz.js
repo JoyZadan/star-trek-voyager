@@ -131,14 +131,14 @@ function toggleDivs() {
 // start quiz
 
 
-let questionCount = 0;
+let questionIndex = 0;
 let answerCount = 0;
 let score = 0;
 
 
 // loading the quiz questions and the answer options function
 function loadQuestion() {
-    let questionData = quizQuestions[questionCount];
+    let questionData = quizQuestions[questionIndex];
     questionText.innerText = questionData.question;
 
     let optionOne = document.querySelector("#option-one");
@@ -146,12 +146,12 @@ function loadQuestion() {
     let optionThree = document.querySelector("#option-three");
     let optionFour = document.querySelector("#option-four");
 
-    optionOne.innerHTML = quizQuestions[questionCount].answers[0].option;
-    optionTwo.innerHTML = quizQuestions[questionCount].answers[1].option;
-    optionThree.innerHTML = quizQuestions[questionCount].answers[2].option;
-    optionFour.innerHTML = quizQuestions[questionCount].answers[3].option;
+    optionOne.innerHTML = quizQuestions[questionIndex].answers[0].option;
+    optionTwo.innerHTML = quizQuestions[questionIndex].answers[1].option;
+    optionThree.innerHTML = quizQuestions[questionIndex].answers[2].option;
+    optionFour.innerHTML = quizQuestions[questionIndex].answers[3].option;
 
-    questionCount++;
+    questionIndex++;
 
 };
 

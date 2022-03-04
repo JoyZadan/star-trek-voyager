@@ -196,7 +196,7 @@ p {
     margin: 0 auto;
 }
 
-.answers-buttons {
+.answers-container {
     display: flex;
     flex-direction: column;
 }
@@ -263,7 +263,7 @@ p {
     padding: 0.5rem;
 }
 
-.buttons-container {
+.game-nav {
     display: flex;
     justify-content: center;
     align-items: center;

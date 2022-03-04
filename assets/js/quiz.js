@@ -98,12 +98,14 @@ console.log(quizQuestions);
 // selecting all required elements by declaring constants
 const instructionsContainer = document.querySelector(".instructions-container");
 const startQuiz = document.querySelector("#toggle-btn");
+
 const quizContainer = document.querySelector(".quiz-container");
 const questionText = document.querySelector(".question-text");
-const submitButton = document.querySelector(".submit-button"); // this is the submit btn
-const inputButtons = document.querySelectorAll('input[name="answer"]:checked');
+const submitAnswer = document.querySelector(".answers-buttons"); // this is the submit btn
+
 const resultsContainer = document.querySelector(".results-container");
 const buttonsContainer = document.querySelector(".buttons-container");
+
 const buttonExit = document.querySelector(".btn-exit");
 const buttonContinue = document.querySelector(".btn-continue");
 const mapLink = document.querySelector(".map-link");
@@ -123,12 +125,15 @@ function toggleDivs() {
     }
 }
 
+//
+
 // start quiz
 
 
 
 
 // loading the quiz questions and the answer options function
+
 let questionCount = 0;
 
 function loadQuestion() {
@@ -144,9 +149,30 @@ function loadQuestion() {
     optionTwo.innerText = quizQuestions[questionCount].answers[1].option;
     optionThree.innerText = quizQuestions[questionCount].answers[2].option;
     optionFour.innerText = quizQuestions[questionCount].answers[3].option;
+
+    questionCount++;
+
+    // questionCount.sort(() => Math.random() - .5);    
+    // questionCount++;
+
+    // function shuffleQuestions(questionCount) {
+    //     for (let i = questionCount.length - 1; i > 0; i--) {
+    //         const q = Math.floor(Math.random() * (i + 1));
+    //         [questionCount[i], questionCount[q], questionCount[i]];
+    //     }
+    //     return questionCount;
+    // }
+
 }
 
 loadQuestion();
+
+// const getCheckedAnswer = () => {
+//     if (correct === true)
+// }
+
+submitAnswer.addEventListener("click", loadQuestion);
+
 
 
 // const getCheckedAnswer = () => {

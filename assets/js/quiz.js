@@ -33,7 +33,7 @@ const quizQuestions = [
             { option: "Dr Zimmerman", correct: false },
             { option: "Shmullus", correct: false },
             { option: "Joe", correct: true },
-            { option: "Jones", correct: true },
+            { option: "Jones", correct: false },
         ]
     },
     {
@@ -41,7 +41,7 @@ const quizQuestions = [
         answers: [
             { option: "Species 8472", correct: true },
             { option: "Herogen", correct: false },
-            { option: "Talaxian", correct: true },
+            { option: "Talaxian", correct: false },
             { option: "Species 6788", correct: false },
         ]
     },
@@ -77,7 +77,7 @@ const quizQuestions = [
         answers: [
             { option: "5,000 light years", correct: false },
             { option: "70,000 light years", correct: true },
-            { option: "unknown", correct: false },
+            { option: "130,000 light years", correct: false },
             { option: "175,000 light years", correct: false },
         ]
     },
@@ -93,6 +93,20 @@ const quizQuestions = [
 ];
 
 console.log(quizQuestions);
+console.log(quizQuestions[9]);
+
+let testLoop = quizQuestions.length;
+console.log(testLoop);
+
+
+// for (let i = 0; i <= testLoop.length; i++) {
+//     console.log(quizQuestions[i]);
+//     alert('hi');
+// }
+
+// for (let i = 0; i < testLoop; i++) {
+//     console.log(testLoop[i]);
+// }
 
 
 // selecting all required elements by declaring constants
@@ -101,7 +115,7 @@ const startQuiz = document.querySelector("#toggle-btn"); // WORKING
 
 const quizContainer = document.querySelector(".quiz-container"); // WORKING
 const questionText = document.querySelector(".question-text"); // WORKING
-const answersContainer = document.querySelector(".answers-container"); // this is the submit btn
+const submitButtons = document.querySelector(".submit-buttons"); // this is the submit btn
 const optionsContent = document.querySelectorAll(".options-content");
 
 const resultsContainer = document.querySelector(".results-container");
@@ -131,31 +145,83 @@ function toggleDivs() {
 // start quiz
 
 
-let questionIndex = 0;
-let answerCount = 0;
+let questionIndex = 0;  // WORKING
+let questionData; // WORKING
+let answersIndex; // does NOT work
+let answerCount = 0; // does NOT work
 let score = 0;
+let correctOption;
 
+let optionOne;
+let optionTwo;
+let optionThree;
+let optionFour;
 
 // loading the quiz questions and the answer options function
 function loadQuestion() {
-    let questionData = quizQuestions[questionIndex];
-    questionText.innerText = questionData.question;
+    questionData = quizQuestions[questionIndex];
+    questionText.innerHTML = questionData.question;
 
-    let optionOne = document.querySelector("#option-one");
-    let optionTwo = document.querySelector("#option-two");
-    let optionThree = document.querySelector("#option-three");
-    let optionFour = document.querySelector("#option-four");
+    optionOne = document.querySelector("#option-one");
+    optionTwo = document.querySelector("#option-two");
+    optionThree = document.querySelector("#option-three");
+    optionFour = document.querySelector("#option-four");
 
     optionOne.innerHTML = quizQuestions[questionIndex].answers[0].option;
     optionTwo.innerHTML = quizQuestions[questionIndex].answers[1].option;
     optionThree.innerHTML = quizQuestions[questionIndex].answers[2].option;
     optionFour.innerHTML = quizQuestions[questionIndex].answers[3].option;
-
+    
     questionIndex++;
 
 };
 
 loadQuestion();
+
+function checkAnswer() {
+    if (optionOne.innerHTML == quizQuestions[questionIndex].answers[0].correct == true) {
+        console.log(optionOne);
+        score++;
+        // questionIndex++;
+        quizContainer.style.backgroundColor = "#efb200";
+        questionText.innerHTML = "Correct!";
+    } else if (optionOne.innerHTML == quizQuestions[questionIndex].answers[1].correct == true) {
+        score++;
+        questionIndex++;
+        quizContainer.style.backgroundColor = "#efb200";
+        questionText.innerHTML = "Correct!";
+    } else if (optionOne.innerHTML == quizQuestions[questionIndex].answers[2].correct == true) {
+        score++;
+        questionIndex++;
+        quizContainer.style.backgroundColor = "#efb200";
+        questionText.innerHTML = "Correct!";
+    } else if (optionOne.innerHTML == quizQuestions[questionIndex].answers[3].correct == true) {
+        score++;
+        questionIndex++;
+        quizContainer.style.backgroundColor = "#efb200";
+        questionText.innerHTML = "Correct!";
+    }
+    loadQuestion();
+}
+    
+checkAnswer();
+
+
+
+
+
+
+
+// questionIndex++;
+
+    console.log(quizQuestions[questionIndex].answers[0].correct == true);
+    console.log(quizQuestions[questionIndex].answers[1].correct == true);
+    console.log(quizQuestions[questionIndex].answers[2].correct == true);
+    console.log(quizQuestions[questionIndex].answers[3].correct == true);
+
+
+
+// function getCheckedAnswer()
 
 // function shuffleQuestions(array) {
 //     let currentIndex = array.length, temporaryValue, randomIndex;
@@ -183,20 +249,19 @@ loadQuestion();
 
 // }
 
-function getCheckedAnswer(event) {
-    optionsContent = event.target;
-    let correct = quizQuestions[questionCount].answers.correct === true;
-    newFunction();
+// function getCheckedAnswer(event) {
+//     optionsContent = event.target;
+//     let correct = quizQuestions[questionIndex].answers.correct;
+//     console.log(correct);    
+// }
 
-    function newFunction() {
-        console.log(correct);
-    }
-}
 
-console.log(getCheckedAnswer);
+// submitButtons.addEventListener("click", loadQuestion);
 
-submitAnswer.addEventListener("click", loadQuestion, getCheckedAnswer);
-
+optionOne.addEventListener("click", checkAnswer);
+optionTwo.addEventListener("click", checkAnswer);
+optionThree.addEventListener("click", checkAnswer);
+optionFour.addEventListener("click", checkAnswer);
     
 
 
@@ -206,10 +271,6 @@ submitAnswer.addEventListener("click", loadQuestion, getCheckedAnswer);
 mapLink.addEventListener("click", _openMap => {
     window.location.href = "find.html";
 });
-
-
-
-
 
 
 

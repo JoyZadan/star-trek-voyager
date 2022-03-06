@@ -7,7 +7,7 @@ const quizQuestions = [
             { option: "Quin", correct: true },
             { option: "Q", correct: false },
             { option: "Lady Q", correct: false },
-        ]
+        ]       
     },
     {
         question: "Which shipyard was Voyager constructed?",
@@ -93,20 +93,10 @@ const quizQuestions = [
 ];
 
 console.log(quizQuestions);
-console.log(quizQuestions[9]);
+// console.log(quizQuestions[9]);
 
-let testLoop = quizQuestions.length;
-console.log(testLoop);
-
-
-// for (let i = 0; i <= testLoop.length; i++) {
-//     console.log(quizQuestions[i]);
-//     alert('hi');
-// }
-
-// for (let i = 0; i < testLoop; i++) {
-//     console.log(testLoop[i]);
-// }
+// let testLoop = quizQuestions.length;
+// console.log(testLoop);
 
 
 // selecting all required elements by declaring constants
@@ -157,6 +147,7 @@ let optionTwo;
 let optionThree;
 let optionFour;
 
+console.log(quizQuestions[questionIndex].answers[0]);
 // loading the quiz questions and the answer options function
 function loadQuestion() {
     questionData = quizQuestions[questionIndex];
@@ -171,40 +162,19 @@ function loadQuestion() {
     optionTwo.innerHTML = quizQuestions[questionIndex].answers[1].option;
     optionThree.innerHTML = quizQuestions[questionIndex].answers[2].option;
     optionFour.innerHTML = quizQuestions[questionIndex].answers[3].option;
-    
+
     questionIndex++;
 
 };
 
 loadQuestion();
 
-function checkAnswer() {
-    if (optionOne.innerHTML == quizQuestions[questionIndex].answers[0].correct == true) {
-        console.log(optionOne);
-        score++;
-        // questionIndex++;
-        quizContainer.style.backgroundColor = "#efb200";
-        questionText.innerHTML = "Correct!";
-    } else if (optionOne.innerHTML == quizQuestions[questionIndex].answers[1].correct == true) {
-        score++;
-        questionIndex++;
-        quizContainer.style.backgroundColor = "#efb200";
-        questionText.innerHTML = "Correct!";
-    } else if (optionOne.innerHTML == quizQuestions[questionIndex].answers[2].correct == true) {
-        score++;
-        questionIndex++;
-        quizContainer.style.backgroundColor = "#efb200";
-        questionText.innerHTML = "Correct!";
-    } else if (optionOne.innerHTML == quizQuestions[questionIndex].answers[3].correct == true) {
-        score++;
-        questionIndex++;
-        quizContainer.style.backgroundColor = "#efb200";
-        questionText.innerHTML = "Correct!";
-    }
-    loadQuestion();
-}
+
+optionOne.addEventListener("click", e => {
     
-checkAnswer();
+
+
+});
 
 
 
@@ -212,57 +182,18 @@ checkAnswer();
 
 
 
-// questionIndex++;
-
-    console.log(quizQuestions[questionIndex].answers[0].correct == true);
-    console.log(quizQuestions[questionIndex].answers[1].correct == true);
-    console.log(quizQuestions[questionIndex].answers[2].correct == true);
-    console.log(quizQuestions[questionIndex].answers[3].correct == true);
 
 
 
-// function getCheckedAnswer()
-
-// function shuffleQuestions(array) {
-//     let currentIndex = array.length, temporaryValue, randomIndex;
-//     while (0 !== currentIndex) {
-//         randomIndex = Math.floor(Math.random() * currentIndex);
-//         temporaryValue = array[currentIndex];
-//         array[currentIndex] = array[randomIndex];
-//         array[randomIndex] = temporaryValue;
-//     }
-//     return array;
-// }
-
-// shuffleQuestions();
-
-// let userScore = 0;
-
-// function getCheckedAnswer(event) {
-//     // if (this.innerText === quizQuestions[questionCount].answers.option) {
-//     //     userScore++;
-//     //     quizContainer.style.backgroundColor = "#efb200";
-//     //     questionText.innerText = "Correct!";
-
-//     // }
-//     if
-
-// }
-
-// function getCheckedAnswer(event) {
-//     optionsContent = event.target;
-//     let correct = quizQuestions[questionIndex].answers.correct;
-//     console.log(correct);    
-// }
 
 
-// submitButtons.addEventListener("click", loadQuestion);
-
-optionOne.addEventListener("click", checkAnswer);
-optionTwo.addEventListener("click", checkAnswer);
-optionThree.addEventListener("click", checkAnswer);
-optionFour.addEventListener("click", checkAnswer);
+optionTwo.addEventListener("click", loadQuestion);
+optionThree.addEventListener("click", loadQuestion);
+optionFour.addEventListener("click", loadQuestion);
     
+
+
+
 
 
 

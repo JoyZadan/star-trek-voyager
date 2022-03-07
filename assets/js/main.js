@@ -15,7 +15,7 @@ quizLink.addEventListener("click", changeBackground => {
 });
 
 // This changes the background color of the quotes link when clicked
-quotesLink.addEventListener("click", changeBackground => {
+quotesLink.addEventListener("click", () => {
     quotesLink.style.backgroundColor = "#efb200";
 
     // This reverts the background color of the quiz link after 3 seconds

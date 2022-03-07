@@ -190,7 +190,7 @@ p {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: 2rem auto;
+    margin: 2rem auto 5rem;
     padding: 1rem;
 }
 
@@ -199,11 +199,13 @@ p {
 }
 
 .correct {
-    background-color: rgb(1, 66, 1); 
+    background-color: rgb(114, 173, 114); 
+    color: #fff;
 }
 
 .wrong {
-    background-color: rgb(68, 2, 2); 
+    background-color: rgb(201, 109, 109);
+    color: #fff; 
 }
 
 .instructions-title {
@@ -213,7 +215,8 @@ p {
     margin-bottom: 0;
 }
 
-.question-text {
+.question-text,
+.results-text {
     font-weight: 700;
     font-size: 1.75rem;
     color: #efb200;
@@ -234,23 +237,6 @@ p {
     padding: 0.5rem;
     margin: 1rem 1rem auto;
 }
-
-
-/* .options-list {
-    display: flex;
-    justify-content: left;
-    align-self: flex-start;
-    flex-direction: column;
-}
-
-.options-list ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 0;
-} */
 
 .answer,
 .instructions-list {
@@ -301,11 +287,15 @@ p {
 .btn-exit {
     background-color: #600;
     color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .btn-continue {
-    background-color: #d08504;
-    color: #fff;
+    background-color: #04d093;
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 .btn-exit,
@@ -314,14 +304,13 @@ p {
     border-radius: 5px;
     margin: 0.5rem;
     font-family: "Exo 2", sans-serif;
-    font-weight: 500;
 }
 
 .timer {
     margin-bottom: 1rem;
 }
 
-.timer-title, 
+.timer-text, 
 .countdown {
     display: flex;
     justify-content: center;

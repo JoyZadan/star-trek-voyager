@@ -95,104 +95,95 @@ const quizQuestions = [
 console.log(quizQuestions);
 
 
-// const filtered = Object.keys(quizQuestions).filter((key) => key.includes("answers")).reduce((cure, key) => {return Object.assign(cure, {[key]: object[key] })}, {});
-// console.log(filtered);
-
-// const filteredAnswers = quizQuestions.filter((answers) => {
-//     return answers;
-// });
-// console.log(filteredAnswers);
-
-// console.log(quizQuestions[9]);
-
-// let testLoop = quizQuestions.length;
-// console.log(testLoop);
 
 
-// selecting all required elements by declaring constants
+
+// SELECTING ALL QREUIRED ELEMENTS BY DECLARING CONSTANTS
 const instructionsContainer = document.querySelector(".instructions-container"); // WORKING
 const startQuizBtn = document.querySelector("#toggle-btn"); // WORKING
 
 const quizContainer = document.querySelector(".quiz-container"); // WORKING
 const questionText = document.querySelector(".question-text"); // WORKING
-// const submitButtons = document.querySelector(".submit-buttons"); // this is the submit btn
-// const options = document.querySelector(".options");
+
 const answersContainer = document.querySelector(".answers-container");
 const buttonContinue = document.querySelector(".btn-continue");
 
 const resultsContainer = document.querySelector(".results-container");
+const resultsText = document.querySelector(".results-text");
 const gameNav = document.querySelector(".game-nav");
 
 const buttonExit = document.querySelector(".btn-exit");
 const mapLink = document.querySelector(".map-link");
 
+const timerText = document.querySelector(".timer-text");
+const multiToggle = document.querySelector(".multi-toggle");
 
-// setting up toggle between two divs in one function
-// code from Tom O. at stackoverflow
-startQuizBtn.addEventListener("click", toggleDivs);
+// EVENT LISTENER FOR THE START BUTTON TO HIDE INSTRUCTIONS CONTAINER 
+// DISPLAYS QUIZ BOARD
+startQuizBtn.addEventListener("click", startQuiz);
+buttonContinue.addEventListener("click", () =>  {
+    questionIndex++;
+})
+buttonContinue.addEventListener("click", loadQuestion);
 
-function toggleDivs() {
+let questionIndex;
+let shuffledQuestions;
+let score = 0;
+let hiddenDiv = document.querySelector("#hidden");
+
+
+// FUNCTION TO HIDE INSTRUCTIONS CONTAINER AND DISPLAY QUIZ BOARD
+// CODE FROM TOM O., STACKOVERFLOW
+
+function startQuiz() {
     startQuizBtn.style.display = "none";
-    if (instructionsContainer.style.display != "none") {
-        instructionsContainer.style.display = "none";
-        quizContainer.style.display = "block";
-    }   else {
-        instructionsContainer.style.display = "block";
-        quizContainer.style.display = "none";
-    }
+    instructionsContainer.classList.add("hide");
+    quizContainer.style.display = "block"; // NEEDS WORK TO DISPLAY THE QUIX BOARD
+
     shuffledQuestions = quizQuestions.sort(() => Math.random() -.5);
     questionIndex = 0;
     loadQuestion();
-};
+    console.log(instructionsContainer);
+
+}
 
 
+// function toggleDivs() {
+//     startQuizBtn.style.display = "none";
+//     if (instructionsContainer.style.display != "none") {
+//         instructionsContainer.style.display = "none";
+//         quizContainer.style.display = "block";
+//     }   else {
+//         instructionsContainer.style.display = "block";
+//         quizContainer.style.display = "none";
+//     }
 
-let questionIndex;  // WORKING
-let questionData; // WORKING
-let shuffledQuestions;
-let answersIndex; // does NOT work
-let answerCount = 0; // does NOT work
-let score = 0;
-let correctOption;
-
-// let optionOne;
-// let optionTwo;
-// let optionThree;
-// let optionFour;
-
-// console.log(quizQuestions[questionIndex].answers[0]);
+//     shuffledQuestions = quizQuestions.sort(() => Math.random() -.5);
+//     questionIndex = 0;
+//     loadQuestion();
+//     console.log(instructionsContainer);
+// };
 
 
-// loading the quiz questions and the answer options function
+// LOADS THE SHUFFLED QUIZ QUESTIONS
+// CODE FROM WEB DEV SIMPLIFIED YOUTUBE TUTORIAL - https://www.youtube.com/watch?v=riDzcEQbX6k
+// AMENDED FOR THE PROJECT
 function loadQuestion() {
-    // questionData = quizQuestions[questionIndex];
-    // questionText.innerHTML = questionData.question;
-
-    // optionOne = document.querySelector("#option-one");
-    // optionTwo = document.querySelector("#option-two");
-    // optionThree = document.querySelector("#option-three");
-    // optionFour = document.querySelector("#option-four");
-
-    // optionOne.innerHTML = quizQuestions[questionIndex].answers[0].option;
-    // optionTwo.innerHTML = quizQuestions[questionIndex].answers[1].option;
-    // optionThree.innerHTML = quizQuestions[questionIndex].answers[2].option;
-    // optionFour.innerHTML = quizQuestions[questionIndex].answers[3].option;
-
-    // questionIndex++;
-
-    // Testing WEbDev Simplified Quiz App Tutorial
     resetBoardGame();
     showQuestion(shuffledQuestions[questionIndex]);
 
 };
 
+// RESETS QUIZ BOARD TO HIDE CONTINUE BUTTON AFTER QUESTION IS LOADED
 function resetBoardGame() {
+    clearStatusClass(document.body);
     buttonContinue.classList.add("hide");
     while (answersContainer.firstChild) {
         answersContainer.removeChild(answersContainer.firstChild);
     }
 }
 
+// LOADS CORRESPONDING ANSWERS OPTIONS AND ADDS EVENT LISTENER TO ANSWERS BUTTONS 
 function showQuestion(question) {
     questionText.innerText = question.question;
     question.answers.forEach(answer => {
@@ -207,14 +198,25 @@ function showQuestion(question) {
     });
 }
 
+// CHECKS IF PLAYER CHOICE IS CORRECT
 function checkAnswer(e) {
     const selectedAnswer = e.target;
     const correctAnswer = selectedAnswer.dataset.correct;
     Array.from(answersContainer.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
     });
-}
 
+    // NEEDS REWORK
+    if (shuffledQuestions.length > questionIndex + 1) {
+        buttonContinue.classList.remove("hide");    
+    } else if (shuffledQuestions.length < questionIndex) {
+        alert("You finished the game!")
+    }   
+ 
+    // endGame();
+};
+
+// DISPLAYS VISUAL FEEDBACK TO PLAYER IF CHOSEN ANSWER IS CORRECT OR NOT
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
@@ -224,27 +226,32 @@ function setStatusClass(element, correct) {
     }
 }   
 
+// CLEARS VISUAL SIGNAL TO PLAYER WHEN NEW QUESTION AND ANSWERS ARE LOADED
 function clearStatusClass(element) {
     element.classList.remove("correct");
     element.classList.remove("wrong");
 }
 
+// PRIORITY: END GAME
+
+// DISPLAYS SCORES ()
+
+// END GAME FUNCION ()
+
+// SET INTERVAL
+
+// SET TIMER?
 
 
-
-// optionOne.addEventListener("click", checkAnswer);
-// optionTwo.addEventListener("click", checkAnswer);
-// optionThree.addEventListener("click", checkAnswer);
-// optionFour.addEventListener("click", checkAnswer);    
-
+  
+// EVENT LISTENER TO TAKE PLAYER BACK TO GAMES HOME PAGE
 buttonExit.addEventListener("click", backHome => {
     window.location.href = "index.html";
 } )
 
-buttonContinue.addEventListener("click", loadQuestion);
 
 
-// });
+
 
 
 

@@ -135,10 +135,25 @@ p {
 
 .quiz-link,
 .quotes-link,
-.rescue-link,
-.start-quiz {
+.rescue-link {
     padding: 1rem;
     margin: 0 0.5rem 0.5rem; 
+    font-family: "Exo 2", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0.2rem rgba(255, 255, 255, 0.3);
+}
+
+.start-quiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 auto; 
     font-family: "Exo 2", sans-serif;
     font-weight: bold;
     text-decoration: none;
@@ -210,7 +225,7 @@ p {
     flex-direction: column;
 }
 
-.options-content {
+.options-btn {
     text-decoration: none;
     border: 1px solid white;
     border-radius: 5px;

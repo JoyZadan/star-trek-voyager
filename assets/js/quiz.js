@@ -115,15 +115,15 @@ const startQuiz = document.querySelector("#toggle-btn"); // WORKING
 
 const quizContainer = document.querySelector(".quiz-container"); // WORKING
 const questionText = document.querySelector(".question-text"); // WORKING
-let submitButtons = document.querySelector(".submit-buttons"); // this is the submit btn
-const optionsContent = document.querySelectorAll(".options-content");
+// const submitButtons = document.querySelector(".submit-buttons"); // this is the submit btn
+// const options = document.querySelector(".options");
+const answersContainer = document.querySelector(".answers-container");
 const buttonContinue = document.querySelector(".btn-continue");
 
 const resultsContainer = document.querySelector(".results-container");
 const gameNav = document.querySelector(".game-nav");
 
 const buttonExit = document.querySelector(".btn-exit");
-
 const mapLink = document.querySelector(".map-link");
 
 
@@ -139,6 +139,9 @@ function toggleDivs() {
         instructionsContainer.style.display = "block";
         quizContainer.style.display = "none";
     }
+    shuffledQuestions = quizQuestions.sort(() => Math.random() -.5);
+    questionIndex = 0;
+    loadQuestion();
 };
 
 //
@@ -146,49 +149,101 @@ function toggleDivs() {
 // start quiz
 
 
-let questionIndex = 0;  // WORKING
+let questionIndex;  // WORKING
 let questionData; // WORKING
+let shuffledQuestions;
 let answersIndex; // does NOT work
 let answerCount = 0; // does NOT work
 let score = 0;
 let correctOption;
 
-let optionOne;
-let optionTwo;
-let optionThree;
-let optionFour;
+// let optionOne;
+// let optionTwo;
+// let optionThree;
+// let optionFour;
 
-console.log(quizQuestions[questionIndex].answers[0]);
+// console.log(quizQuestions[questionIndex].answers[0]);
+
+
 // loading the quiz questions and the answer options function
 function loadQuestion() {
-    questionData = quizQuestions[questionIndex];
-    questionText.innerHTML = questionData.question;
+    // questionData = quizQuestions[questionIndex];
+    // questionText.innerHTML = questionData.question;
 
-    optionOne = document.querySelector("#option-one");
-    optionTwo = document.querySelector("#option-two");
-    optionThree = document.querySelector("#option-three");
-    optionFour = document.querySelector("#option-four");
+    // optionOne = document.querySelector("#option-one");
+    // optionTwo = document.querySelector("#option-two");
+    // optionThree = document.querySelector("#option-three");
+    // optionFour = document.querySelector("#option-four");
 
-    optionOne.innerHTML = quizQuestions[questionIndex].answers[0].option;
-    optionTwo.innerHTML = quizQuestions[questionIndex].answers[1].option;
-    optionThree.innerHTML = quizQuestions[questionIndex].answers[2].option;
-    optionFour.innerHTML = quizQuestions[questionIndex].answers[3].option;
+    // optionOne.innerHTML = quizQuestions[questionIndex].answers[0].option;
+    // optionTwo.innerHTML = quizQuestions[questionIndex].answers[1].option;
+    // optionThree.innerHTML = quizQuestions[questionIndex].answers[2].option;
+    // optionFour.innerHTML = quizQuestions[questionIndex].answers[3].option;
 
-    questionIndex++;
+    // questionIndex++;
+
+    // Testing WEbDev Simplified Quiz App Tutorial
+    resetBoardGame();
+    showQuestion(shuffledQuestions[questionIndex]);
+
 };
 
-loadQuestion();
+function resetBoardGame() {
+    buttonContinue.classList.add("hide");
+    while (answersContainer.firstChild) {
+        answersContainer.removeChild(answersContainer.firstChild);
+    }
+}
 
-submitButtons.addEventListener("click", checkAnswer);
+function showQuestion(question) {
+    questionText.innerText = question.question;
+    question.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerText = answer.option;
+        button.classList.add("options-btn");
+        if (answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", submitAnswer);
+        answersContainer.appendChild(button);
+    });
+}
+
+function checkAnswer(e) {
+    const selectedAnswer = e.target;
+    const correctAnswer = selectedAnswer.dataset.correct;
+    Array.from(answersContainer.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct);
+    });
+}
+
+// function setStatusClass(element, correct) {
+//     clearStatusClass(element);
+//     if (correct) {
+//         element.classList.add("correct");
+//     } else {
+//         element.classList.add("wrong");
+//     }
+// }   
+
+// function clearStatusClass(element) {
+//     element.classList.remove("correct");
+//     element.classList.remove("wrong");
+// }
+
+
+// loadQuestion();
+
+// submitButtons.addEventListener("click", checkAnswer);
 
 
 
 // let correctAns = quizQuestions[questionIndex].answers.filter(answer => answer.correct);  // THIS WORKS IN FILTERING THROUGH OPTIONS AND GETTING THE CORRECT VALUE
 // console.log(correctAns);
 
-function checkAnswer(e) {
-    console.log(e.currentTarget.dataset.correctAns);
-}
+// function submitAnswer(e) {
+//     console.log(e.currentTarget.dataset.correctAns);
+// }
 
 // let totalCorrect = quizQuestions[questionIndex].answers.reduce((acc, curr) => {
 //     if(curr.answer === true) {

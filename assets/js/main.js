@@ -1,8 +1,8 @@
 // Setting up the event handlers 
-const quizLink = document.querySelector(".quiz-link");
-const quotesLink = document.querySelector(".quotes-link");
-const rescueLink = document.querySelector(".rescue-link");
-const mapLink = document.querySelector(".map-link");
+const quizLink = document.getElementsByClassName(".quiz-link");
+const quotesLink = document.getElementsByClassName(".quotes-link");
+const rescueLink = document.getElementsByClassName(".rescue-link");
+const mapLink = document.getElementsByClassName(".map-link");
 
 // This changes the background color of the quiz link when clicked
 quizLink.addEventListener("click", changeBackground => {

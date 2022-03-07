@@ -182,6 +182,15 @@ p {
 .quiz-container {
     display: none;
 }
+
+.correct {
+    background-color: rgb(1, 66, 1); 
+}
+
+.wrong {
+    background-color: rgb(68, 2, 2); 
+}
+
 .instructions-title {
     font-weight: 500;
     font-size: 1.75rem;
@@ -274,12 +283,20 @@ p {
     padding-bottom: 0;
 }
 
+.btn-exit {
+    background-color: #600;
+    color: #fff;
+}
+
+.btn-continue {
+    background-color: #d08504;
+    color: #fff;
+}
+
 .btn-exit,
 .btn-continue {
-    background-color: #600;
     padding: 0.5rem;
     border-radius: 5px;
-    color: #fff;
     margin: 0.5rem;
     font-family: "Exo 2", sans-serif;
     font-weight: 500;

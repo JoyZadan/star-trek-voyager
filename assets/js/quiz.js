@@ -93,6 +93,16 @@ const quizQuestions = [
 ];
 
 console.log(quizQuestions);
+
+
+// const filtered = Object.keys(quizQuestions).filter((key) => key.includes("answers")).reduce((cure, key) => {return Object.assign(cure, {[key]: object[key] })}, {});
+// console.log(filtered);
+
+// const filteredAnswers = quizQuestions.filter((answers) => {
+//     return answers;
+// });
+// console.log(filteredAnswers);
+
 // console.log(quizQuestions[9]);
 
 // let testLoop = quizQuestions.length;
@@ -105,14 +115,15 @@ const startQuiz = document.querySelector("#toggle-btn"); // WORKING
 
 const quizContainer = document.querySelector(".quiz-container"); // WORKING
 const questionText = document.querySelector(".question-text"); // WORKING
-const submitButtons = document.querySelector(".submit-buttons"); // this is the submit btn
+let submitButtons = document.querySelector(".submit-buttons"); // this is the submit btn
 const optionsContent = document.querySelectorAll(".options-content");
+const buttonContinue = document.querySelector(".btn-continue");
 
 const resultsContainer = document.querySelector(".results-container");
 const gameNav = document.querySelector(".game-nav");
 
 const buttonExit = document.querySelector(".btn-exit");
-const buttonContinue = document.querySelector(".btn-continue");
+
 const mapLink = document.querySelector(".map-link");
 
 
@@ -164,42 +175,58 @@ function loadQuestion() {
     optionFour.innerHTML = quizQuestions[questionIndex].answers[3].option;
 
     questionIndex++;
-
 };
 
 loadQuestion();
 
-
-optionOne.addEventListener("click", e => {
-    
-
-
-});
+submitButtons.addEventListener("click", checkAnswer);
 
 
 
+// let correctAns = quizQuestions[questionIndex].answers.filter(answer => answer.correct);  // THIS WORKS IN FILTERING THROUGH OPTIONS AND GETTING THE CORRECT VALUE
+// console.log(correctAns);
 
+function checkAnswer(e) {
+    console.log(e.currentTarget.dataset.correctAns);
+}
 
-
-
-
-
-
-
-
-optionTwo.addEventListener("click", loadQuestion);
-optionThree.addEventListener("click", loadQuestion);
-optionFour.addEventListener("click", loadQuestion);
-    
+// let totalCorrect = quizQuestions[questionIndex].answers.reduce((acc, curr) => {
+//     if(curr.answer === true) {
+//         acc +=
+//     }
+// }, 0);
 
 
 
 
 
 
+// optionOne.addEventListener("click", checkAnswer);
+// optionTwo.addEventListener("click", checkAnswer);
+// optionThree.addEventListener("click", checkAnswer);
+// optionFour.addEventListener("click", checkAnswer);    
+
+buttonExit.addEventListener("click", backHome => {
+    window.location.href = "index.html";
+} )
+
+buttonContinue.addEventListener("click", loadQuestion);
 
 
-mapLink.addEventListener("click", _openMap => {
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+mapLink.addEventListener("click", openMap => {
     window.location.href = "find.html";
 });
 

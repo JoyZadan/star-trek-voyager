@@ -190,7 +190,7 @@ p {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: 1rem auto 5rem;
+    margin: 2rem auto;
     padding: 1rem;
 }
 
@@ -363,7 +363,7 @@ p {
     font-family: "Orbitron", sans-serif;
     color: #d08504;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.4);
 

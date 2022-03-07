@@ -111,7 +111,7 @@ console.log(quizQuestions);
 
 // selecting all required elements by declaring constants
 const instructionsContainer = document.querySelector(".instructions-container"); // WORKING
-const startQuiz = document.querySelector("#toggle-btn"); // WORKING
+const startQuizBtn = document.querySelector("#toggle-btn"); // WORKING
 
 const quizContainer = document.querySelector(".quiz-container"); // WORKING
 const questionText = document.querySelector(".question-text"); // WORKING
@@ -129,9 +129,10 @@ const mapLink = document.querySelector(".map-link");
 
 // setting up toggle between two divs in one function
 // code from Tom O. at stackoverflow
-startQuiz.addEventListener("click", toggleDivs);
+startQuizBtn.addEventListener("click", toggleDivs);
 
 function toggleDivs() {
+    startQuizBtn.style.display = "none";
     if (instructionsContainer.style.display != "none") {
         instructionsContainer.style.display = "none";
         quizContainer.style.display = "block";
@@ -144,9 +145,6 @@ function toggleDivs() {
     loadQuestion();
 };
 
-//
-
-// start quiz
 
 
 let questionIndex;  // WORKING
@@ -204,7 +202,7 @@ function showQuestion(question) {
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
-        button.addEventListener("click", submitAnswer);
+        button.addEventListener("click", checkAnswer);
         answersContainer.appendChild(button);
     });
 }
@@ -217,41 +215,19 @@ function checkAnswer(e) {
     });
 }
 
-// function setStatusClass(element, correct) {
-//     clearStatusClass(element);
-//     if (correct) {
-//         element.classList.add("correct");
-//     } else {
-//         element.classList.add("wrong");
-//     }
-// }   
+function setStatusClass(element, correct) {
+    clearStatusClass(element);
+    if (correct) {
+        element.classList.add("correct");
+    } else {
+        element.classList.add("wrong");
+    }
+}   
 
-// function clearStatusClass(element) {
-//     element.classList.remove("correct");
-//     element.classList.remove("wrong");
-// }
-
-
-// loadQuestion();
-
-// submitButtons.addEventListener("click", checkAnswer);
-
-
-
-// let correctAns = quizQuestions[questionIndex].answers.filter(answer => answer.correct);  // THIS WORKS IN FILTERING THROUGH OPTIONS AND GETTING THE CORRECT VALUE
-// console.log(correctAns);
-
-// function submitAnswer(e) {
-//     console.log(e.currentTarget.dataset.correctAns);
-// }
-
-// let totalCorrect = quizQuestions[questionIndex].answers.reduce((acc, curr) => {
-//     if(curr.answer === true) {
-//         acc +=
-//     }
-// }, 0);
-
-
+function clearStatusClass(element) {
+    element.classList.remove("correct");
+    element.classList.remove("wrong");
+}
 
 
 

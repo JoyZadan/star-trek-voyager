@@ -208,12 +208,13 @@ function checkAnswer(e) {
 
     // NEEDS REWORK
     if (shuffledQuestions.length > questionIndex + 1) {
-        buttonContinue.classList.remove("hide");    
+        buttonContinue.classList.remove("hide"); 
+        buttonContinue.style.display = "block";   
     } else if (shuffledQuestions.length < questionIndex) {
         alert("You finished the game!")
     }   
- 
-    // endGame();
+   
+    
 };
 
 // DISPLAYS VISUAL FEEDBACK TO PLAYER IF CHOSEN ANSWER IS CORRECT OR NOT

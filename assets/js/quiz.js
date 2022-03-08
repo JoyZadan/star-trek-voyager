@@ -126,7 +126,7 @@ buttonContinue.addEventListener("click", loadQuestion);
 
 let questionIndex;
 let shuffledQuestions;
-let score = 0;
+// let totalScore = incrementScore();
 let hiddenDiv = document.querySelector("#hidden");
 
 
@@ -157,6 +157,7 @@ function loadQuestion() {
 function resetBoardGame() {
     // clearStatusClass(document.body); // DOES NOT WORK
     buttonContinue.classList.add("hide");
+    this.removeEventListener("click", resetBoardGame);
     while (answersContainer.firstChild) {
         answersContainer.removeChild(answersContainer.firstChild);
     }
@@ -184,26 +185,27 @@ function checkAnswer(e) {
     const selectedAnswer = e.target;
     const correctAnswer = selectedAnswer.dataset.correct;
 
+    Array.from(answersContainer.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct);
+    });
+
     if (correctAnswer) {
         incrementScore();
     } else {
         incrementWrongAnswer();
     }
 
-    Array.from(answersContainer.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct);
-    });
-
 
     // NEEDS REWORK
+
+
     if (shuffledQuestions.length > questionIndex + 1) {
         buttonContinue.classList.remove("hide"); 
-        buttonContinue.style.display = "block";   
-    } else if (shuffledQuestions.length < questionIndex) {
-        alert("You finished the game!")
-    }   
-    
-    
+        // buttonContinue.style.display = "block";  
+        console.log(shuffledQuestions.length - questionIndex); 
+    } else if (shuffledQuestions.length === 2) {
+        console.log("You finished the game!");
+    }       
 };
 
 // DISPLAYS VISUAL FEEDBACK TO PLAYER IF CHOSEN ANSWER IS CORRECT OR NOT
@@ -211,16 +213,12 @@ function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
         element.classList.add("correct");
-    // } else {
-    //     // element.classList.add("wrong");
-    //     score = + 0;
     }
 }      
 
 // CLEARS VISUAL SIGNAL TO PLAYER WHEN NEW QUESTION AND ANSWERS ARE LOADED
 function clearStatusClass(element) {
     element.classList.remove("correct");
-    // element.classList.remove("wrong");
 }
 
 // PRIORITY: END GAME
@@ -228,10 +226,10 @@ function clearStatusClass(element) {
 // timerText.remove();
 
 
-// DISPLAYS SCORES ()
-
+// DISPLAYS SCORES
+// Code from Code Institute Love Maths JS lessons
 function incrementWrongAnswer() {
-    oldScore = parseInt(document.querySelector("#incorrect").innerText);
+    let oldScore = parseInt(document.querySelector("#incorrect").innerText);
     document.querySelector("#incorrect").innerText = oldScore + 1;
 }
 
@@ -239,6 +237,7 @@ function incrementScore() {
     let oldScore = parseInt(document.querySelector("#score").innerText);
     document.querySelector("#score").innerText = oldScore + 1;
 }
+
 
 
 // END GAME FUNCION ()

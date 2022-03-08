@@ -95,12 +95,9 @@ const quizQuestions = [
 console.log(quizQuestions);
 
 
-
-
-
-// SELECTING ALL QREUIRED ELEMENTS BY DECLARING CONSTANTS
+// SELECTING ALL REQUIRED ELEMENTS BY DECLARING CONSTANTS
 const instructionsContainer = document.querySelector(".instructions-container"); // WORKING
-const startQuizBtn = document.querySelector("#toggle-btn"); // WORKING
+const startQuizBtn = document.querySelector("#start-btn"); // WORKING
 
 const quizContainer = document.querySelector(".quiz-container"); // WORKING
 const questionText = document.querySelector(".question-text"); // WORKING
@@ -132,38 +129,18 @@ let score = 0;
 let hiddenDiv = document.querySelector("#hidden");
 
 
+
 // FUNCTION TO HIDE INSTRUCTIONS CONTAINER AND DISPLAY QUIZ BOARD
-// CODE FROM TOM O., STACKOVERFLOW
 
 function startQuiz() {
-    startQuizBtn.style.display = "none";
+    startQuizBtn.classList.add("hide");
     instructionsContainer.classList.add("hide");
-    quizContainer.style.display = "block"; // NEEDS WORK TO DISPLAY THE QUIX BOARD
+    quizContainer.style.display = "block"; // NEEDS WORK TO DISPLAY THE QUIz BOARD
 
     shuffledQuestions = quizQuestions.sort(() => Math.random() -.5);
     questionIndex = 0;
     loadQuestion();
-    console.log(instructionsContainer);
-
 }
-
-
-// function toggleDivs() {
-//     startQuizBtn.style.display = "none";
-//     if (instructionsContainer.style.display != "none") {
-//         instructionsContainer.style.display = "none";
-//         quizContainer.style.display = "block";
-//     }   else {
-//         instructionsContainer.style.display = "block";
-//         quizContainer.style.display = "none";
-//     }
-
-//     shuffledQuestions = quizQuestions.sort(() => Math.random() -.5);
-//     questionIndex = 0;
-//     loadQuestion();
-//     console.log(instructionsContainer);
-// };
-
 
 // LOADS THE SHUFFLED QUIZ QUESTIONS
 // CODE FROM WEB DEV SIMPLIFIED YOUTUBE TUTORIAL - https://www.youtube.com/watch?v=riDzcEQbX6k
@@ -176,11 +153,13 @@ function loadQuestion() {
 
 // RESETS QUIZ BOARD TO HIDE CONTINUE BUTTON AFTER QUESTION IS LOADED
 function resetBoardGame() {
-    clearStatusClass(document.body);
+    // clearStatusClass(document.body); // DOES NOT WORK
     buttonContinue.classList.add("hide");
     while (answersContainer.firstChild) {
         answersContainer.removeChild(answersContainer.firstChild);
     }
+  
+
 }
 
 // LOADS CORRESPONDING ANSWERS OPTIONS AND ADDS EVENT LISTENER TO ANSWERS BUTTONS 
@@ -202,9 +181,17 @@ function showQuestion(question) {
 function checkAnswer(e) {
     const selectedAnswer = e.target;
     const correctAnswer = selectedAnswer.dataset.correct;
+
+    if (correctAnswer) {
+        incrementScore();
+    } else {
+        incrementWrongAnswer();
+    }
+
     Array.from(answersContainer.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
     });
+
 
     // NEEDS REWORK
     if (shuffledQuestions.length > questionIndex + 1) {
@@ -213,7 +200,7 @@ function checkAnswer(e) {
     } else if (shuffledQuestions.length < questionIndex) {
         alert("You finished the game!")
     }   
-   
+    
     
 };
 
@@ -222,20 +209,35 @@ function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
         element.classList.add("correct");
-    } else {
-        element.classList.add("wrong");
+    // } else {
+    //     // element.classList.add("wrong");
+    //     score = + 0;
     }
-}   
+}      
 
 // CLEARS VISUAL SIGNAL TO PLAYER WHEN NEW QUESTION AND ANSWERS ARE LOADED
 function clearStatusClass(element) {
     element.classList.remove("correct");
-    element.classList.remove("wrong");
+    // element.classList.remove("wrong");
 }
 
 // PRIORITY: END GAME
 
+// timerText.remove();
+
+
 // DISPLAYS SCORES ()
+
+function incrementWrongAnswer() {
+    oldScore = parseInt(document.querySelector("#incorrect").innerText);
+    document.querySelector("#incorrect").innerText = oldScore + 1;
+}
+
+function incrementScore() {
+    let oldScore = parseInt(document.querySelector("#score").innerText);
+    document.querySelector("#score").innerText = oldScore + 1;
+}
+
 
 // END GAME FUNCION ()
 
@@ -249,21 +251,6 @@ function clearStatusClass(element) {
 buttonExit.addEventListener("click", backHome => {
     window.location.href = "index.html";
 } )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 mapLink.addEventListener("click", openMap => {
     window.location.href = "find.html";

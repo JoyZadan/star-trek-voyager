@@ -190,13 +190,23 @@ p {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: 2rem auto 5rem;
+    /* margin: 2rem auto 5rem; */
     padding: 1rem;
+}
+
+.start {
+    margin-bottom: 2rem;
+}
+
+.instructions-container {
+    margin: 2rem auto 2rem;
 }
 
 .quiz-container {
     display: none;
+    margin: 2rem auto 5rem;
 }
+
 
 .correct {
     background-color: rgb(114, 173, 114); 
@@ -256,12 +266,33 @@ p {
     padding: 1rem;
 }
 
-.quiz-score {
-    color: #d08504;
-    font-size: 2rem;
+.score-area {
+    color: #fff;
+    font-size: 1.5rem;
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
     align-items: center;
+    flex-direction: row;
+    width: 60%;
+    margin: 0 auto 1rem;
+}
+
+.scores {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+#incorrect {
+    color: red;
+    padding: 0 1rem;
+}
+
+#score {
+    color: greenyellow;
+    padding: 0 1rem;
 }
 
 .hide {
@@ -414,6 +445,11 @@ p {
         font-size: 1.25rem;
         background-color: rgba(0, 0, 0, 0.6);
     }
+
+    .score-area {
+        flex-direction: column;
+        width: 80%;
+    }
    
 }
 
@@ -444,11 +480,6 @@ p {
     .quiz-container {
         width: 80vw;
     } 
-/* 
-    .answers-buttons {
-        display: flex;
-        flex-direction: column;
-    } */
 
     .games {
         display: flex;
@@ -456,5 +487,22 @@ p {
         flex-direction: column;
         justify-content: space-between;
         margin-bottom: 0.25rem;
+    }
+
+    .score-area {
+        flex-direction: column;
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 66.5em) {
+    .start {
+        margin-bottom: 5rem;
+    }
+
+    .score-area {
+        flex-direction: column;
+        width: 90%;
     }
 }

@@ -37,7 +37,7 @@
     </div>
     <div>
         <!-- start quiz button -->
-        <button class="start-quiz" id="toggle-btn">Start Quiz</button>
+        <button class="start-quiz start" id="start-btn">Start Quiz</button>
     </div>    
     <!-- start quiz container -->
     <div class="multi-toggle">
@@ -47,6 +47,7 @@
                 <!-- <div class="countdown">10</div> -->
             </div>
             <div class="question-text" id="question-index"></div>
+
             <div>
                 <div class="answers-container submit-buttons">
                     <button class="options-btn" id="option-one"></button>
@@ -59,7 +60,12 @@
                     <button class="btn-exit ">Exit Quiz</button>
                     <button class="btn-continue ">Next Question</button>
                 </div>    
-            </div>   
+            </div>
+            
+            <div class="score-area">
+                <p class="scores">Correct Answer: <span id="score">0</span> </p>
+                <p class="scores">Incorrect Answer: <span id="incorrect">0</span> </p>
+            </div>
         </div>
     </div>
     <!-- show results container -->

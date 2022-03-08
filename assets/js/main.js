@@ -36,4 +36,4 @@ rescueLink.addEventListener("click", changeBackground => {
 
 mapLink.addEventListener("click", openMap => {
     window.location.href = "find.html";
-})
+});

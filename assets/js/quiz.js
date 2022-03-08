@@ -140,7 +140,7 @@ function startQuiz() {
     instructionsContainer.classList.add("hide");
     quizContainer.style.display = "block"; 
 
-    shuffledQuestions = quizQuestions.sort(() => Math.random() -.5);
+    shuffledQuestions = quizQuestions.sort(() => Math.random() -0.5);
     questionIndex = 0;
     loadQuestion();
 }
@@ -226,9 +226,9 @@ function clearStatusClass(element) {
 
 // PRIORITY: END GAME
 
-function endGame() {
+// function endGame() {
 
-}
+// }
 
 // timerText.remove();
 
@@ -237,17 +237,14 @@ function endGame() {
 // Code from Code Institute Love Maths JS lessons
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.querySelector("#incorrect").innerText);
-    document.querySelector("#incorrect").innerText = ++oldScore;
+    document.querySelector("#incorrect").innerText = oldScore + 1;
 }
 
 function incrementScore() {
     let oldScore = parseInt(document.querySelector("#score").innerText);
-    document.querySelector("#score").innerText = ++oldScore;
+    document.querySelector("#score").innerText = oldScore + 1;
 }
 
-
-
-// END GAME FUNCION ()
 
 // SET INTERVAL
 

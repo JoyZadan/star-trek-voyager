@@ -104,6 +104,8 @@ const quizContainer = document.querySelector(".quiz-container"); // WORKING
 const questionText = document.querySelector(".question-text"); // WORKING
 
 const answersContainer = document.querySelector(".answers-container");
+const onlyOnce = document.querySelector(".options-btn");
+const submitButtons = document.querySelector(".submit-buttons");
 const buttonContinue = document.querySelector(".btn-continue");
 
 const resultsContainer = document.querySelector(".results-container");
@@ -126,7 +128,6 @@ buttonContinue.addEventListener("click", loadQuestion);
 
 let questionIndex;
 let shuffledQuestions;
-// let totalScore = incrementScore();
 let hiddenDiv = document.querySelector("#hidden");
 
 
@@ -137,7 +138,7 @@ function startQuiz() {
     mission.style.display = "none";
     startQuizBtn.classList.add("hide");
     instructionsContainer.classList.add("hide");
-    quizContainer.style.display = "block"; // NEEDS WORK TO DISPLAY THE QUIz BOARD
+    quizContainer.style.display = "block"; 
 
     shuffledQuestions = quizQuestions.sort(() => Math.random() -.5);
     questionIndex = 0;
@@ -153,16 +154,14 @@ function loadQuestion() {
 
 };
 
+
 // RESETS QUIZ BOARD TO HIDE CONTINUE BUTTON AFTER QUESTION IS LOADED
 function resetBoardGame() {
     // clearStatusClass(document.body); // DOES NOT WORK
     buttonContinue.classList.add("hide");
-    this.removeEventListener("click", resetBoardGame);
     while (answersContainer.firstChild) {
         answersContainer.removeChild(answersContainer.firstChild);
     }
-  
-
 }
 
 // LOADS CORRESPONDING ANSWERS OPTIONS AND ADDS EVENT LISTENER TO ANSWERS BUTTONS 
@@ -172,11 +171,14 @@ function showQuestion(question) {
         const button = document.createElement("button");
         button.innerText = answer.option;
         button.classList.add("options-btn");
+        
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
+
         button.addEventListener("click", checkAnswer);
         answersContainer.appendChild(button);
+
     });
 }
 
@@ -189,30 +191,31 @@ function checkAnswer(e) {
         setStatusClass(button, button.dataset.correct);
     });
 
+    
     if (correctAnswer) {
         incrementScore();
     } else {
         incrementWrongAnswer();
-    }
+    };
 
 
     // NEEDS REWORK
-
-
-    if (shuffledQuestions.length > questionIndex + 1) {
+    if (shuffledQuestions.length > questionIndex) {
         buttonContinue.classList.remove("hide"); 
-        // buttonContinue.style.display = "block";  
-        console.log(shuffledQuestions.length - questionIndex); 
-    } else if (shuffledQuestions.length === 2) {
-        console.log("You finished the game!");
+        console.log(questionIndex); 
+    } else {
+        // endGame();
     }       
 };
 
 // DISPLAYS VISUAL FEEDBACK TO PLAYER IF CHOSEN ANSWER IS CORRECT OR NOT
 function setStatusClass(element, correct) {
-    clearStatusClass(element);
+    // clearStatusClass(element);
     if (correct) {
         element.classList.add("correct");
+        element.classList.add("disabled");
+    } else {
+        element.classList.add("disabled");
     }
 }      
 
@@ -223,6 +226,10 @@ function clearStatusClass(element) {
 
 // PRIORITY: END GAME
 
+function endGame() {
+
+}
+
 // timerText.remove();
 
 
@@ -230,12 +237,12 @@ function clearStatusClass(element) {
 // Code from Code Institute Love Maths JS lessons
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.querySelector("#incorrect").innerText);
-    document.querySelector("#incorrect").innerText = oldScore + 1;
+    document.querySelector("#incorrect").innerText = ++oldScore;
 }
 
 function incrementScore() {
     let oldScore = parseInt(document.querySelector("#score").innerText);
-    document.querySelector("#score").innerText = oldScore + 1;
+    document.querySelector("#score").innerText = ++oldScore;
 }
 
 

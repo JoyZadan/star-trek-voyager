@@ -299,6 +299,10 @@ p {
     display: none;
 }
 
+.disabled {
+    pointer-events: none;
+}
+
 .start-quiz {
     background-color: #d08504;
     padding: 0.5rem;

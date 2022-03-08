@@ -446,11 +446,19 @@ p {
         background-color: rgba(0, 0, 0, 0.6);
     }
 
+    .instructions-title {
+        font-size: 1.25rem;
+        margin-bottom: 0;
+    }
+
+    .instructions-list {
+        font-size: 1rem;
+    } 
+    
     .score-area {
         flex-direction: column;
         width: 80%;
-    }
-   
+    }   
 }
 
 @media screen and (max-width: 45em) {
@@ -467,18 +475,9 @@ p {
         font-size: 1.25rem;
     }
 
-    .instructions-title {
-        font-size: 1.25rem;
-        margin-bottom: 0;
-    }
-
-    .instructions-list {
-        font-size: 1rem;
-    }
-
     .instructions-container,
     .quiz-container {
-        width: 80vw;
+        width: 90vw;
     } 
 
     .games {
@@ -493,7 +492,6 @@ p {
         flex-direction: column;
         width: 90%;
     }
-
 }
 
 @media screen and (max-width: 66.5em) {

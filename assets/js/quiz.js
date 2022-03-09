@@ -246,11 +246,19 @@ function endGame() {
 
 // DISPLAYS SCORES
 // Code from Code Institute Love Maths JS lessons
-
+// Amended to include code from Modern JavaScript by The Net Ninja (Shaun Pelling)
 function incrementScore() {
     let oldScore = parseInt(document.querySelector("#score").innerText);
     document.querySelector("#score").innerText = oldScore + 10;
-    resultsContainer.querySelector(".total-scores").innerText = `You are ${oldScore + 10} % Trekkie!`;
+    let output = 0;
+    const scoreAnimation = setInterval(() => {
+        resultsContainer.querySelector(".total-scores").innerText = `You are ${output}% Trekkie!`;
+        if (output === oldScore + 10) {
+            clearInterval(scoreAnimation);
+        } else {
+            output++;
+        }
+    }, 10);    
 }
 
 function incrementWrongAnswer() {

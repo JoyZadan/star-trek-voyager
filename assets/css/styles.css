@@ -155,7 +155,7 @@ p {
     padding: 1rem;
     margin: 0 auto; 
     font-family: "Exo 2", sans-serif;
-    font-weight: bold;
+    font-weight: 800;
     text-decoration: none;
     text-transform: uppercase;
     border: none;
@@ -208,8 +208,13 @@ p {
 
 .results-container {
     width: 60vw;
-    background-color: rgba(60, 70, 94, 0.4);
+    background-color: rgba(60, 70, 94, 0.1);
 }
+
+.results-container p {
+    text-shadow: 5px 5px 5px black;
+}
+
 .correct {
     background-color: rgb(114, 173, 114); 
     color: #fff;
@@ -498,6 +503,11 @@ p {
         font-size: 1rem;
     }
 
+    .games {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
     .mission-intro {
         font-size: 1.25rem;
     }
@@ -513,11 +523,24 @@ p {
         flex-direction: column;
         justify-content: space-between;
         margin-bottom: 0.25rem;
+        font-size: 1rem;
+        font-weight: 500;
     }
 
     .score-area {
         flex-direction: column;
         width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 48.2em) {
+    .games {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 0.25rem;
     }
 }
 

@@ -1,10 +1,13 @@
+/* GOOGLE FONTS IMPORT */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;1,100;1,200;1,400&family=Orbitron:wght@400;500&display=swap');
 
+/* RESETS BODY STYLING */
 body {
     padding: 0;
     margin: 0;
 }
 
+/* SETTING BACKGROUND STYLING FOR EACH PAGE */
 .home-bg,
 .quiz-bg,
 .quotes-bg {
@@ -29,6 +32,8 @@ body {
 .find-bg {
     background-color: rgb(90, 88, 88);
 }
+
+/* FONTS STYLING */
 h1,
 h2,
 h3 {
@@ -40,6 +45,7 @@ p {
     font-family: "Exo 2", sans-serif;
 }
 
+/* GAME HEADING STYLING */
 .heading {
     font-family: "Orbitron", sans-serif;
     color: #efb200;
@@ -70,6 +76,21 @@ p {
     padding: 0 1rem;
 }
 
+.header-container h3 {
+    color: #efb200;
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-container p {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    color: #fff;
+    align-content: center;
+}
+
+/* WELCOME MESSAGE STYLING */
 .welcome-text {
     color: #efb200;
     padding: 0 1rem;
@@ -77,7 +98,7 @@ p {
     margin-bottom: 1rem;
     font-size: 2rem;
 
-    /* adding text animation */
+/* adding text animation */
     animation-name: slide-in;
     animation-duration: 3s;
     animation-timing-function: ease-in;
@@ -96,20 +117,7 @@ p {
     100% {transform: rotateX(360deg)}
 }    
 
-.header-container h3 {
-    color: #efb200;
-    margin-top: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.header-container p {
-    font-weight: bold;
-    font-size: 1.25rem;
-    margin-bottom: 0;
-    color: #fff;
-    align-content: center;
-}
-
+/* LINKS TO EACH GAME STYLED AS BUTTONS */
 .games {
     padding: 1rem;
     margin: 2rem 1rem 2rem;
@@ -177,7 +185,8 @@ p {
     box-shadow: 0 0.1rem rgb(239, 178, 0, 0.5);
 }
 
-/* Styling for quiz game */
+/* STYLING FOR QUIZ GAME */
+/* quiz game containers styles */
 .instructions-container,
 .quiz-container,
 .results-container {
@@ -215,16 +224,54 @@ p {
     text-shadow: 5px 5px 5px black;
 }
 
-.correct {
-    background-color: rgb(114, 173, 114); 
-    color: #fff;
+.answers-container {
+    display: flex;
+    flex-direction: column;
 }
 
-.wrong {
-    background-color: rgb(201, 109, 109);
-    color: #fff; 
+.mission-container {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
+/* INTRO TO QUIZ GAME STYLING */
+.mission-intro {
+    font-family: "Orbitron", sans-serif;
+    color: #d08504;
+    font-weight: 400;
+    font-size: 1.75rem;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.4);
+
+/* text animation */
+    animation-name: slide;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: fowards;
+    -o-animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+    0% {transform: rotateX(45deg)}
+    25% {transform: rotateX(90deg)}
+    50% {transform: rotateX(145deg)}
+    75% {transform: rotateX(180deg)}
+    100% {transform: rotateX(360deg)}
+}
+
+/* QUIZ GAME FONTS STYLING */
 .instructions-title {
     font-weight: 500;
     font-size: 1.75rem;
@@ -241,11 +288,14 @@ p {
     padding-top: 1rem;
 }
 
-.answers-container {
-    display: flex;
-    flex-direction: column;
+.answer,
+.instructions-list {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #fff;
 }
 
+/* STYLING FOR QUIZ ANSWER OPTIONS, JS LOADS THE QUIZ CONTENT DYNAMICALLY */
 .options-btn {
     text-decoration: none;
     border: 1px solid white;
@@ -256,16 +306,19 @@ p {
     margin: 1rem 1rem auto;
 }
 
-.answer,
-.instructions-list {
-    font-weight: 400;
-    font-size: 1.5rem;
+/* USER FEEDBACK STYLING AFTER AN ANSWER IS CHOSEN */
+.correct {
+    background-color: rgb(114, 173, 114); 
     color: #fff;
 }
 
+.wrong {
+    background-color: rgb(201, 109, 109);
+    color: #fff; 
+}
+
+/* STYLING FOR END OF QUIZ TO PROVIDE USER FEEDBACK */
 .results-container {
-    /* display: flex;
-    justify-content: center; */
     font-weight: 700;
     font-size: 1.75rem;
     color: #efb200;
@@ -286,6 +339,7 @@ p {
     padding: 1rem;
 }
 
+/* STYLING FOR THE QUIZ SCORE AREA */
 .score-area {
     color: #fff;
     font-size: 1.5rem;
@@ -315,6 +369,7 @@ p {
     padding: 0 1rem;
 }
 
+/* STYLING TO HIDE ELEMENTS VIA JS */
 .hide {
     display: none;
 }
@@ -323,6 +378,7 @@ p {
     pointer-events: none;
 }
 
+/* STYLING FOR THE QUIZ GAME NAVIGATION */
 .start-quiz {
     background-color: #d08504;
     padding: 0.5rem;
@@ -365,8 +421,7 @@ p {
     background: #d08504;
     width: 100%;
     bottom: 0;
-    position: fixed; 
-    
+    position: fixed;     
 }
 
 .map-link {
@@ -378,49 +433,7 @@ p {
     cursor: pointer;
 }
 
-/* Styling for quiz game */
-.mission-container {
-    width: 80vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: 0 auto;
-}
-
-.mission-intro {
-    font-family: "Orbitron", sans-serif;
-    color: #d08504;
-    font-weight: 400;
-    font-size: 1.75rem;
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.4);
-
-    /* adding text animation */
-    animation-name: slide;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-    animation-iteration-count: 1;
-    -webkit-animation-iteration-count: 1;
-    -moz-animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: fowards;
-    -o-animation-fill-mode: forwards;
-}
-
-@keyframes slide {
-    0% {transform: rotateX(45deg)}
-    25% {transform: rotateX(90deg)}
-    50% {transform: rotateX(145deg)}
-    75% {transform: rotateX(180deg)}
-    100% {transform: rotateX(360deg)}
-}
-
-
+/* MEDIA QUERIES FOR SMALL DEVICES (MOBILES) */
 @media screen and (max-width: 29.5em) {
     .heading {
         font-size: 1.5rem; 
@@ -451,6 +464,7 @@ p {
     }
 }
 
+/* MEDIA QUERIES FOR MID-SIZED DEVICES (TABLETS) */
 @media screen and (max-width: 38.75em) {
     .heading {
         font-size: 1.75rem; 
@@ -480,6 +494,7 @@ p {
     }   
 }
 
+/* MEDIA QUERIES FOR OTHER MID-SIZED DEVICES (IPAD, KINDLE) */
 @media screen and (max-width: 45em) {
     .heading {
         font-size: 1.75rem; 
@@ -520,7 +535,7 @@ p {
     }
 }
 
-
+/* MEDIA QUERIES FOR NOTEBOOKS AND LAPTOPS */
 @media screen and (max-width: 48.2em) {
     .games {
         display: flex;
@@ -531,6 +546,7 @@ p {
     }
 }
 
+/* MEDIA QUERIES FOR BIGGER SCREENS */
 @media screen and (max-width: 66.5em) {
     .start {
         margin-bottom: 5rem;

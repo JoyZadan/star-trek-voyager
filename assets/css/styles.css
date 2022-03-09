@@ -206,7 +206,10 @@ p {
     margin: 2rem auto 5rem;
 }
 
-
+.results-container {
+    width: 60vw;
+    background-color: rgba(60, 70, 94, 0.4);
+}
 .correct {
     background-color: rgb(114, 173, 114); 
     color: #fff;
@@ -255,12 +258,19 @@ p {
 }
 
 .results-container {
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     font-weight: 700;
     font-size: 1.75rem;
     color: #efb200;
     margin: 0 auto;
+}
+
+.results-container p {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
 }
 
 .results-content {
@@ -437,6 +447,15 @@ p {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+        
+    .scores {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-weight: 800;
+        margin-bottom: 0;
     }
 }
 

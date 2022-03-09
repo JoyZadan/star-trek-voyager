@@ -135,12 +135,11 @@ let hiddenDiv = document.querySelector("#hidden");
 
 
 // FUNCTION TO HIDE INSTRUCTIONS CONTAINER AND DISPLAY QUIZ BOARD
-
 function startQuiz() {
     mission.style.display = "none";
     startQuizBtn.classList.add("hide");
     instructionsContainer.classList.add("hide");
-    // resultsContainer.classList.add("hide");
+    resultsContainer.classList.add("hide");
     quizContainer.style.display = "block";
     shuffledQuestions = quizQuestions.sort(() => Math.random() -0.5);
     questionIndex = 0;
@@ -201,15 +200,23 @@ function checkAnswer(e) {
 
 
     // NEEDS REWORK
-    if (shuffledQuestions.length > questionIndex) {
+    if (shuffledQuestions.length > questionIndex + 1) {
         buttonContinue.classList.remove("hide"); 
         console.log(questionIndex); 
     } else {
-        // quizContainer.classList.add("hide"); // DOES NOT WORK
+        quizContainer.classList.add("hide"); // DOES NOT WORK
+        timerContainer.classList.add ("hide");
+        timerText.classList.add("hide");
+        questionText.classList.add("hide");
+        answersContainer.classList.add("hide");
         resultsContainer.classList.remove("hide");
-        endGame();
-    }       
+        resultsContainer.style.display = "block";  
+        // buttonContinue.innerText = "Restart";
+    } 
+    endGame();      
 };
+
+
 
 // DISPLAYS VISUAL FEEDBACK TO PLAYER IF CHOSEN ANSWER IS CORRECT OR NOT
 function setStatusClass(element, correct) {
@@ -231,8 +238,7 @@ function clearStatusClass(element) {
 
 function endGame() {
     quizContainer.classList.add("hide");
-    resultsContainer.classList.remove("hide");
-    
+    // resultsContainer.classList.remove("hide");   
 }
 
 // timerText.remove();
@@ -244,7 +250,7 @@ function endGame() {
 function incrementScore() {
     let oldScore = parseInt(document.querySelector("#score").innerText);
     document.querySelector("#score").innerText = oldScore + 10;
-    resultsContainer.querySelector(".total-scores").innerText = `${oldScore + 10}%`;
+    resultsContainer.querySelector(".total-scores").innerText = `You are ${oldScore + 10} % Trekkie!`;
 }
 
 function incrementWrongAnswer() {

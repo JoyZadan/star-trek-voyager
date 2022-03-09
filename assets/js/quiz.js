@@ -115,10 +115,10 @@ const buttonExit = document.querySelector(".btn-exit");
 const mapLink = document.querySelector(".map-link");
 
 
-// EVENT LISTENER FOR THE START BUTTON TO HIDE INSTRUCTIONS CONTAINER
+// EVENT LISTENER FOR THE START BUTTON TO HIDE INSTRUCTIONS CONTAINER 
 // DISPLAYS QUIZ BOARD
 startQuizBtn.addEventListener("click", startQuiz);
-buttonContinue.addEventListener("click", function() {
+buttonContinue.addEventListener("click", () =>  {
     questionIndex++;
 });
 buttonContinue.addEventListener("click", loadQuestion);
@@ -138,7 +138,7 @@ function startQuiz() {
     shuffledQuestions = quizQuestions.sort(() => Math.random() -0.5);
     questionIndex = 0;
     loadQuestion();
-}
+};
 
 // LOADS THE SHUFFLED QUIZ QUESTIONS
 // CODE FROM WEB DEV SIMPLIFIED YOUTUBE TUTORIAL - https://www.youtube.com/watch?v=riDzcEQbX6k
@@ -146,7 +146,7 @@ function startQuiz() {
 function loadQuestion() {
     resetBoardGame();
     showQuestion(shuffledQuestions[questionIndex]);
-}
+};
 
 // RESETS QUIZ BOARD TO HIDE CONTINUE BUTTON AFTER QUESTION IS LOADED
 function resetBoardGame() {
@@ -155,15 +155,16 @@ function resetBoardGame() {
     while (answersContainer.firstChild) {
         answersContainer.removeChild(answersContainer.firstChild);
     }
-}
+};
 
-// LOADS CORRESPONDING ANSWERS OPTIONS AND ADDS EVENT LISTENER TO ANSWERS BUTTONS
+// LOADS CORRESPONDING ANSWERS OPTIONS AND ADDS EVENT LISTENER TO ANSWERS BUTTONS 
 function showQuestion(question) {
     questionText.innerText = question.question;
-    question.answers.forEach((answer), function() {
+    question.answers.forEach(answer => {
         const button = document.createElement("button");
         button.innerText = answer.option;
         button.classList.add("options-btn");
+        
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
@@ -171,47 +172,50 @@ function showQuestion(question) {
         button.addEventListener("click", checkAnswer);
         answersContainer.appendChild(button);
     });
-}
+};
 
 // CHECKS IF PLAYER CHOICE IS CORRECT
 function checkAnswer(e) {
     const selectedAnswer = e.target;
     const correctAnswer = selectedAnswer.dataset.correct;
 
-    Array.from(answersContainer.children).forEach((button), function() {
+    Array.from(answersContainer.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
     });
+    
     if (correctAnswer) {
         incrementScore();
     } else {
         incrementWrongAnswer();
-    }
+    };
 
 // LOOPS THROUGH QUIZ QUESTIONS AND ENDS QUIZ WITH FEEDBACK TO USER
     if (shuffledQuestions.length > questionIndex + 1) {
-        buttonContinue.classList.remove("hide");
+        buttonContinue.classList.remove("hide"); 
+        console.log(questionIndex); 
     } else {
         questionText.classList.add("hide");
         answersContainer.classList.add("hide");
         resultsContainer.classList.remove("hide");
-        resultsContainer.style.display = "block";
-    }
-}
+        resultsContainer.style.display = "block";  
+    }       
+};
 
 // DISPLAYS VISUAL FEEDBACK TO PLAYER IF CHOSEN ANSWER IS CORRECT OR NOT
 function setStatusClass(element, correct) {
+    // clearStatusClass(element);
     if (correct) {
         element.classList.add("correct");
         element.classList.add("disabled");
     } else {
         element.classList.add("disabled");
     }
-}
+};      
 
 // CLEARS VISUAL SIGNAL TO PLAYER WHEN AN ANSWER IS SELECTED
 function clearStatusClass(element) {
     element.classList.remove("correct");
-}
+};
 
 // DISPLAYS SCORES
 // Code from Code Institute Love Maths JS lessons
@@ -220,30 +224,30 @@ function incrementScore() {
     let oldScore = parseInt(document.querySelector("#score").innerText);
     document.querySelector("#score").innerText = oldScore + 10;
     let output = 0;
-    const scoreAnimation = setInterval((e), function() {
+    const scoreAnimation = setInterval(() => {
         resultsContainer.querySelector(".total-scores").innerText = `You are ${output}% Trekkie!`;
         if (output === oldScore + 10) {
             clearInterval(scoreAnimation);
         } else {
             output++;
         }
-    }, 10);
-}
+    }, 10);    
+};
 
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.querySelector("#incorrect").innerText);
     document.querySelector("#incorrect").innerText = oldScore + 10;
-}
+};
 
+  
 // EVENT LISTENER TO TAKE PLAYER BACK TO GAMES HOME PAGE
-// buttonExit.addEventListener("click", (backHome)) {
-//     window.location.href = "index.html";
-// };
+buttonExit.addEventListener("click", backHome => {
+    window.location.href = "index.html";
+});
 
 // mapLink.addEventListener("click", openMap => {
 //     window.location.href = "find.html";
 // });
-
 
 
 

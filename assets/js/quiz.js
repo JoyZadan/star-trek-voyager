@@ -6,7 +6,7 @@ const quizQuestions = [
             { option: "Quintin", correct: false },
             { option: "Quin", correct: true },
             { option: "Q", correct: false },
-            { option: "Lady Q", correct: false },
+            { option: "Lady Q", correct: false }
         ]       
     },
     {
@@ -15,7 +15,7 @@ const quizQuestions = [
             { option: "Massachusetts Institute of Technology", correct: false },
             { option: "San Francisco Fleet Yards", correct: false },
             { option: "Utopia Planitia Fleet Yards", correct: true },
-            { option: "Vulcan Science Academy", correct: false },
+            { option: "Vulcan Science Academy", correct: false }
         ]
     },
     {
@@ -24,7 +24,7 @@ const quizQuestions = [
             { option: "The Borg Queen", correct: false },
             { option: "The Continuum", correct: false },
             { option: "The Maquis", correct: false },
-            { option: "The Caretaker", correct: true },
+            { option: "The Caretaker", correct: true }
         ]
     },
     {
@@ -33,7 +33,7 @@ const quizQuestions = [
             { option: "Dr Zimmerman", correct: false },
             { option: "Shmullus", correct: false },
             { option: "Joe", correct: true },
-            { option: "Jones", correct: false },
+            { option: "Jones", correct: false }
         ]
     },
     {
@@ -42,7 +42,7 @@ const quizQuestions = [
             { option: "Species 8472", correct: true },
             { option: "Herogen", correct: false },
             { option: "Talaxian", correct: false },
-            { option: "Species 6788", correct: false },
+            { option: "Species 6788", correct: false }
         ]
     },
     {
@@ -51,7 +51,7 @@ const quizQuestions = [
             { option: "Kess", correct: false },
             { option: "Vorik", correct: false },
             { option: "Neelix", correct: true },
-            { option: "Icheb", correct: false },
+            { option: "Icheb", correct: false }
         ]
     },
     {
@@ -60,7 +60,7 @@ const quizQuestions = [
             { option: "Ocampan", correct: false },
             { option: "The Borg", correct: true },
             { option: "Klingon", correct: false },
-            { option: "Krenim", correct: false },
+            { option: "Krenim", correct: false }
         ]
     },
     {
@@ -69,7 +69,7 @@ const quizQuestions = [
             { option: "The Delta Flyer", correct: true },
             { option: "The Beta Flyer", correct: false },
             { option: "Alpha Flyer", correct: false },
-            { option: "The Gamma Quadrant", correct: false },
+            { option: "The Gamma Quadrant", correct: false }
         ]
     },
     {
@@ -78,7 +78,7 @@ const quizQuestions = [
             { option: "5,000 light years", correct: false },
             { option: "70,000 light years", correct: true },
             { option: "130,000 light years", correct: false },
-            { option: "175,000 light years", correct: false },
+            { option: "175,000 light years", correct: false }
         ]
     },
     {
@@ -87,12 +87,10 @@ const quizQuestions = [
             { option: "Transwarp conduits", correct: false },
             { option: "Psionic powers", correct: false },
             { option: "Quantum slipstream", correct: true },
-            { option: "Fluidic Space drive", correct: false },
+            { option: "Fluidic Space drive", correct: false }
         ]
     },
 ];
-
-console.log(quizQuestions);
 
 
 // SELECTING ALL REQUIRED ELEMENTS BY DECLARING CONSTANTS
@@ -122,7 +120,7 @@ const mapLink = document.querySelector(".map-link");
 startQuizBtn.addEventListener("click", startQuiz);
 buttonContinue.addEventListener("click", () =>  {
     questionIndex++;
-})
+});
 buttonContinue.addEventListener("click", loadQuestion);
 
 let questionIndex;
@@ -130,8 +128,7 @@ let shuffledQuestions;
 let hiddenDiv = document.querySelector("#hidden");
 
 
-
-// FUNCTION TO HIDE INSTRUCTIONS CONTAINER AND DISPLAY QUIZ BOARD
+// FUNCTION TO HIDE INSTRUCTIONS CONTAINER AND DISPLAYS QUIZ BOARD
 function startQuiz() {
     mission.style.display = "none";
     startQuizBtn.classList.add("hide");
@@ -141,16 +138,15 @@ function startQuiz() {
     shuffledQuestions = quizQuestions.sort(() => Math.random() -0.5);
     questionIndex = 0;
     loadQuestion();
-}
+};
 
 // LOADS THE SHUFFLED QUIZ QUESTIONS
 // CODE FROM WEB DEV SIMPLIFIED YOUTUBE TUTORIAL - https://www.youtube.com/watch?v=riDzcEQbX6k
-// AMENDED FOR THE PROJECT
+// AMENDED AND ENHANCED FOR THE PROJECT
 function loadQuestion() {
     resetBoardGame();
     showQuestion(shuffledQuestions[questionIndex]);
 };
-
 
 // RESETS QUIZ BOARD TO HIDE CONTINUE BUTTON AFTER QUESTION IS LOADED
 function resetBoardGame() {
@@ -159,7 +155,7 @@ function resetBoardGame() {
     while (answersContainer.firstChild) {
         answersContainer.removeChild(answersContainer.firstChild);
     }
-}
+};
 
 // LOADS CORRESPONDING ANSWERS OPTIONS AND ADDS EVENT LISTENER TO ANSWERS BUTTONS 
 function showQuestion(question) {
@@ -175,9 +171,8 @@ function showQuestion(question) {
 
         button.addEventListener("click", checkAnswer);
         answersContainer.appendChild(button);
-
     });
-}
+};
 
 // CHECKS IF PLAYER CHOICE IS CORRECT
 function checkAnswer(e) {
@@ -187,7 +182,6 @@ function checkAnswer(e) {
     Array.from(answersContainer.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
     });
-
     
     if (correctAnswer) {
         incrementScore();
@@ -195,23 +189,17 @@ function checkAnswer(e) {
         incrementWrongAnswer();
     };
 
-
-    // NEEDS REWORK
+// LOOPS THROUGH QUIZ QUESTIONS AND ENDS QUIZ WITH FEEDBACK TO USER
     if (shuffledQuestions.length > questionIndex + 1) {
         buttonContinue.classList.remove("hide"); 
         console.log(questionIndex); 
     } else {
-        quizContainer.classList.add("hide"); // DOES NOT WORK
         questionText.classList.add("hide");
         answersContainer.classList.add("hide");
         resultsContainer.classList.remove("hide");
         resultsContainer.style.display = "block";  
-        // buttonContinue.innerText = "Restart";
-    } 
-    endGame();      
+    }       
 };
-
-
 
 // DISPLAYS VISUAL FEEDBACK TO PLAYER IF CHOSEN ANSWER IS CORRECT OR NOT
 function setStatusClass(element, correct) {
@@ -222,19 +210,19 @@ function setStatusClass(element, correct) {
     } else {
         element.classList.add("disabled");
     }
-}      
+};      
 
-// CLEARS VISUAL SIGNAL TO PLAYER WHEN NEW QUESTION AND ANSWERS ARE LOADED
+// CLEARS VISUAL SIGNAL TO PLAYER WHEN AN ANSWER IS SELECTED
 function clearStatusClass(element) {
     element.classList.remove("correct");
-}
+};
 
 // PRIORITY: END GAME
 
 function endGame() {
     quizContainer.classList.add("hide");
     // resultsContainer.classList.remove("hide");   
-}
+};
 
 // DISPLAYS SCORES
 // Code from Code Institute Love Maths JS lessons
@@ -251,23 +239,22 @@ function incrementScore() {
             output++;
         }
     }, 10);    
-}
+};
 
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.querySelector("#incorrect").innerText);
     document.querySelector("#incorrect").innerText = oldScore + 10;
-}
-
+};
 
   
 // EVENT LISTENER TO TAKE PLAYER BACK TO GAMES HOME PAGE
 buttonExit.addEventListener("click", backHome => {
     window.location.href = "index.html";
-} )
-
-mapLink.addEventListener("click", openMap => {
-    window.location.href = "find.html";
 });
+
+// mapLink.addEventListener("click", openMap => {
+//     window.location.href = "find.html";
+// });
 
 
 

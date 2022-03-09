@@ -2,7 +2,7 @@
 // const quizLink = document.getElementsByClassName(".quiz-link");
 // const quotesLink = document.getElementsByClassName(".quotes-link");
 // const rescueLink = document.getElementsByClassName(".rescue-link");
-const mapLink = document.getElementsByClassName(".map-link");
+// const mapLink = document.getElementsByClassName(".map-link");
 
 // This changes the background color of the quiz link when clicked
 // quizLink.addEventListener("click", changeBackground => {
@@ -34,6 +34,12 @@ const mapLink = document.getElementsByClassName(".map-link");
 //     }, 3000); 
 // });
 
-mapLink.addEventListener("click", (openMap) => {
-    window.location.href = "find.html";
-});
+// mapLink.addEventListener("click", openMap => {
+//     window.location.href = "find.html";
+// });
+
+// mapLink.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     window.location.replace("find.html");
+//     return false;
+// }) 

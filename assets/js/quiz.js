@@ -217,13 +217,6 @@ function clearStatusClass(element) {
     element.classList.remove("correct");
 };
 
-// PRIORITY: END GAME
-
-function endGame() {
-    quizContainer.classList.add("hide");
-    // resultsContainer.classList.remove("hide");   
-};
-
 // DISPLAYS SCORES
 // Code from Code Institute Love Maths JS lessons
 // Amended to include code from Modern JavaScript by The Net Ninja (Shaun Pelling)

@@ -110,11 +110,13 @@ const buttonContinue = document.querySelector(".btn-continue");
 
 const resultsContainer = document.querySelector(".results-container");
 const resultsText = document.querySelector(".results-text");
+const totalScores = document.querySelector(".total-scores");
 const gameNav = document.querySelector(".game-nav");
 
 const buttonExit = document.querySelector(".btn-exit");
 const mapLink = document.querySelector(".map-link");
 
+const timerContainer = document.querySelector(".timer");
 const timerText = document.querySelector(".timer-text");
 const multiToggle = document.querySelector(".multi-toggle");
 
@@ -138,8 +140,8 @@ function startQuiz() {
     mission.style.display = "none";
     startQuizBtn.classList.add("hide");
     instructionsContainer.classList.add("hide");
-    quizContainer.style.display = "block"; 
-
+    // resultsContainer.classList.add("hide");
+    quizContainer.style.display = "block";
     shuffledQuestions = quizQuestions.sort(() => Math.random() -0.5);
     questionIndex = 0;
     loadQuestion();
@@ -151,7 +153,6 @@ function startQuiz() {
 function loadQuestion() {
     resetBoardGame();
     showQuestion(shuffledQuestions[questionIndex]);
-
 };
 
 
@@ -204,7 +205,9 @@ function checkAnswer(e) {
         buttonContinue.classList.remove("hide"); 
         console.log(questionIndex); 
     } else {
-        // endGame();
+        // quizContainer.classList.add("hide"); // DOES NOT WORK
+        resultsContainer.classList.remove("hide");
+        endGame();
     }       
 };
 
@@ -226,24 +229,30 @@ function clearStatusClass(element) {
 
 // PRIORITY: END GAME
 
-// function endGame() {
-
-// }
+function endGame() {
+    quizContainer.classList.add("hide");
+    resultsContainer.classList.remove("hide");
+    
+}
 
 // timerText.remove();
 
 
 // DISPLAYS SCORES
 // Code from Code Institute Love Maths JS lessons
-function incrementWrongAnswer() {
-    let oldScore = parseInt(document.querySelector("#incorrect").innerText);
-    document.querySelector("#incorrect").innerText = oldScore + 1;
-}
 
 function incrementScore() {
     let oldScore = parseInt(document.querySelector("#score").innerText);
-    document.querySelector("#score").innerText = oldScore + 1;
+    document.querySelector("#score").innerText = oldScore + 10;
+    resultsContainer.querySelector(".total-scores").innerText = `${oldScore + 10}%`;
 }
+
+function incrementWrongAnswer() {
+    let oldScore = parseInt(document.querySelector("#incorrect").innerText);
+    document.querySelector("#incorrect").innerText = oldScore + 10;
+}
+
+
 
 
 // SET INTERVAL

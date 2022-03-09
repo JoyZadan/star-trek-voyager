@@ -190,7 +190,6 @@ p {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-    /* margin: 2rem auto 5rem; */
     padding: 1rem;
 }
 
@@ -256,7 +255,12 @@ p {
 }
 
 .results-container {
-    color: #d08504;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #efb200;
+    margin: 0 auto;
 }
 
 .results-content {

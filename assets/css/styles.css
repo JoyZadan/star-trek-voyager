@@ -135,15 +135,8 @@ p {
     margin-bottom: 0.25rem;
 }
 
-.rescue-link {
-    background: #29407c;
-    color: #fff;
-    margin-bottom: 0.25rem;
-}
-
 .quiz-link,
-.quotes-link,
-.rescue-link {
+.quotes-link {
     padding: 1rem;
     margin: 0 0.5rem 0.5rem; 
     font-family: "Exo 2", sans-serif;
@@ -173,14 +166,12 @@ p {
 }
 
 .quiz-link:hover,
-.quotes-link:hover,
-.rescue-link:hover {
+.quotes-link:hover {
     filter: brightness(120%);
 }
 
 .quiz-link:active,
-.quotes-link:active,
-.rescue-link:active {
+.quotes-link:active {
     transform: translate(0, 0.2rem);
     box-shadow: 0 0.1rem rgb(239, 178, 0, 0.5);
 }

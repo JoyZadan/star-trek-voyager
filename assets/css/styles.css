@@ -430,7 +430,14 @@ p {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    
+    flex-wrap: wrap;
+    /* position: fixed; */
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    max-width: 90%;
+
+    margin: 0 auto;    
 }
 
 /* modal buttons styling*/
@@ -440,7 +447,7 @@ p {
     align-items: center;
     margin: 0 auto;
     color: #000;
-    background-color: greenyellow;
+    background-color: #d08504;
     font-size: 1.5rem;    
     border-radius: 5px;
     margin-bottom: 1rem;
@@ -450,7 +457,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 1rem auto;
     color: #000;
     background-color: rgb(255, 5, 5);
     font-size: 1.5rem;
@@ -458,29 +465,84 @@ p {
 }
 
 .modal {
+    background-color: #29407c;
+    max-width: 100%;
+}
+
+/* styling for modal intro text before the feedback form */
+.modal-intro {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgb(0, 92, 134);
-    min-height: 100vh;
 }
 
 .modal h3 {
     color: #efb200;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-    font-size: 1.rem;
-    
+    font-size: 1.rem;    
 }
 
 .modal p {
     color: #fff;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-    font-size: 1rem;
-    
+    font-size: 1rem;   
 }
+
+/* STYLING FOR FEEDBACK FORM */
+.feedback-intro {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.feedback-text {    
+    font-family: "Exo 2", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.feedback-container {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin: 2rem;
+    padding: 1rem;
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: #fff;
+    margin: 1rem auto;
+    width: 90%;
+}
+
+.feedback-input {
+    padding: 1rem;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.email-btn {
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 1rem auto;
+    font-family: "Exo 2", sans-serif;
+    max-width: 50%;
+}
+
+
+
+
 
 
 /* MEDIA QUERIES FOR SMALL DEVICES (MOBILES) */
@@ -512,6 +574,42 @@ p {
         font-weight: 800;
         margin-bottom: 0;
     }
+
+    /* styling for the feedback form for mobile devices    */
+    .feedback-container {
+        border: 2px solid #fff;
+        border-radius: 5px;
+        margin: 2rem;
+        padding: 1rem;
+        max-width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .feedback-form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        color: #fff;
+        margin: 1rem auto;
+        width: 90%;
+    }
+
+    .feedback-input {
+        padding: 1rem;
+        font-family: "Orbitron", sans-serif;
+        font-weight: 300;
+        margin-bottom: 1rem;
+        max-width: 90%;
+    }
+
+    .feedback-text-area {
+        max-width: 90%;
+    }
+
+
 }
 
 /* MEDIA QUERIES FOR MID-SIZED DEVICES (TABLETS) */
@@ -541,7 +639,42 @@ p {
     .score-area {
         flex-direction: column;
         width: 80%;
-    }   
+    } 
+    
+    /* styling for the feedback form for mid-sized screens */
+    .feedback-container {
+        border: 2px solid #fff;
+        border-radius: 5px;
+        margin: 2rem;
+        padding: 1rem;
+        max-width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .feedback-form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        color: #fff;
+        margin: 1rem auto;
+        width: 90%;
+    }
+
+    .feedback-input {
+        padding: 1rem;
+        font-family: "Orbitron", sans-serif;
+        font-weight: 300;
+        margin-bottom: 1rem;
+        max-width: 90%;
+    }
+
+    .feedback-text-area {
+        max-width: 90%;
+    }
+
 }
 
 /* MEDIA QUERIES FOR OTHER MID-SIZED DEVICES (IPAD, KINDLE) */
@@ -583,10 +716,45 @@ p {
         flex-direction: column;
         width: 90%;
     }
+
+    /* styling for the feedback form for mid-sized screens */
+    .feedback-container {
+        border: 2px solid #fff;
+        border-radius: 5px;
+        margin: 2rem;
+        padding: 1rem;
+        max-width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .feedback-form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        color: #fff;
+        margin: 1rem auto;
+        width: 90%;
+    }
+
+    .feedback-input {
+        padding: 1rem;
+        font-family: "Orbitron", sans-serif;
+        font-weight: 300;
+        margin-bottom: 1rem;
+        max-width: 90%;
+    }
+
+    .feedback-text-area {
+        max-width: 95%;
+    }
+    
 }
 
 /* FIND OTHER TREKKIES USING GOOGLE MAP */
-.other-trekkies {
+/* .other-trekkies {
     font-weight: 800;
     color: #d08504;
     display: flex;
@@ -612,7 +780,7 @@ p {
     width: 80vw;
     height: 70vh;
     margin: 1rem auto;
-}
+} */
 
 
 

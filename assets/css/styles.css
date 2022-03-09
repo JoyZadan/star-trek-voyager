@@ -424,6 +424,67 @@ p {
     cursor: pointer;
 }
 
+/* MODAL CONTAINER STYLING */
+.modal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 2rem auto;
+}
+
+/* modal buttons styling*/
+.modal-open-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: #000;
+    background-color: greenyellow;
+    font-size: 1.5rem;    
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.modal-close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: #000;
+    background-color: rgb(255, 5, 5);
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* margin: 0 1rem auto; */
+    width: 90vw;
+    height: 90vh;
+    background-color: #000;
+}
+
+.modal h3 {
+    color: #efb200;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    font-size: 2rem;
+    
+}
+
+.modal p {
+    color: #fff;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    font-size: 1.5rem;
+    
+}
+
+
 /* MEDIA QUERIES FOR SMALL DEVICES (MOBILES) */
 @media screen and (max-width: 29.5em) {
     .heading {

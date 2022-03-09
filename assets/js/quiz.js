@@ -116,9 +116,6 @@ const gameNav = document.querySelector(".game-nav");
 const buttonExit = document.querySelector(".btn-exit");
 const mapLink = document.querySelector(".map-link");
 
-const timerContainer = document.querySelector(".timer");
-const timerText = document.querySelector(".timer-text");
-const multiToggle = document.querySelector(".multi-toggle");
 
 // EVENT LISTENER FOR THE START BUTTON TO HIDE INSTRUCTIONS CONTAINER 
 // DISPLAYS QUIZ BOARD
@@ -205,8 +202,6 @@ function checkAnswer(e) {
         console.log(questionIndex); 
     } else {
         quizContainer.classList.add("hide"); // DOES NOT WORK
-        timerContainer.classList.add ("hide");
-        timerText.classList.add("hide");
         questionText.classList.add("hide");
         answersContainer.classList.add("hide");
         resultsContainer.classList.remove("hide");
@@ -241,9 +236,6 @@ function endGame() {
     // resultsContainer.classList.remove("hide");   
 }
 
-// timerText.remove();
-
-
 // DISPLAYS SCORES
 // Code from Code Institute Love Maths JS lessons
 // Amended to include code from Modern JavaScript by The Net Ninja (Shaun Pelling)
@@ -265,13 +257,6 @@ function incrementWrongAnswer() {
     let oldScore = parseInt(document.querySelector("#incorrect").innerText);
     document.querySelector("#incorrect").innerText = oldScore + 10;
 }
-
-
-
-
-// SET INTERVAL
-
-// SET TIMER?
 
 
   

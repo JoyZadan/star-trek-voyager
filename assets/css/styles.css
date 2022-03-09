@@ -238,6 +238,7 @@ p {
     font-size: 1.75rem;
     color: #efb200;
     margin: 0 auto;
+    padding-top: 1rem;
 }
 
 .answers-container {
@@ -358,20 +359,6 @@ p {
     border-radius: 5px;
     margin: 0.5rem;
     font-family: "Exo 2", sans-serif;
-}
-
-.timer {
-    margin-bottom: 1rem;
-}
-
-.timer-text, 
-.countdown {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    font-weight: 600;
-    color: #fff;
 }
 
 .footer {

@@ -130,11 +130,11 @@ const newQuoteBtn = document.getElementById("new-quote");
 
 // SHOW NEW QUOTE
 // shuffles quotes and dynamically shows them on the browser
-function newQuote() {    
+function newQuote() {
     const shuffledQuotes = quotes[Math.floor(Math.random() * quotes.length)];
-    authorText.innerText = `${shuffledQuotes.author}`; 
-    
-// Check quote length to adjust styling  
+    authorText.innerText = `${shuffledQuotes.author}`;
+
+// Check quote length to adjust styling
     if (quoteText.innerText.length > 80) {
         quoteText.classList.add("long-quote");
     }  else {

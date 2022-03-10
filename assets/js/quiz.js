@@ -148,7 +148,6 @@ function loadQuestion() {
 
 // RESETS QUIZ BOARD TO HIDE CONTINUE BUTTON AFTER QUESTION IS LOADED
 function resetBoardGame() {
-    // clearStatusClass(document.body); // DOES NOT WORK
     buttonContinue.classList.add("hide");
     while (answersContainer.firstChild) {
         answersContainer.removeChild(answersContainer.firstChild);
@@ -180,6 +179,7 @@ function checkAnswer(e) {
     Array.from(answersContainer.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
     });
+
     
     if (correctAnswer) {
         incrementScore();

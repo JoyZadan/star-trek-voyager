@@ -64,12 +64,13 @@ p {
 
 .header-container {
     width: 80vw;
-    border-radius: 5px;
+    border-radius: 0.625rem;
     background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 10px 10px 10px rgba(4, 215, 252, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     flex-wrap: wrap;
     flex-direction: column;
     margin: 0 auto;
@@ -101,7 +102,7 @@ p {
 
 /* adding text animation */
     animation-name: slide-in;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-timing-function: ease-in;
     -webkit-animation-timing-function: ease-in;
     -moz-animation-timing-function: ease-in;
@@ -145,7 +146,7 @@ p {
     text-decoration: none;
     text-transform: uppercase;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.625rem;
     cursor: pointer;
     box-shadow: 0 0.2rem rgba(255, 255, 255, 0.3);
 }
@@ -161,7 +162,7 @@ p {
     text-decoration: none;
     text-transform: uppercase;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.625rem;
     cursor: pointer;
     box-shadow: 0 0.2rem rgba(255, 255, 255, 0.3);
 }
@@ -183,7 +184,7 @@ p {
 .quiz-container,
 .results-container {
     width: 70vw;
-    border-radius: 5px;
+    border-radius: 0.625rem;
     background-color: rgba(38, 55, 99, 0.9);
     font-family: "Exo 2", sans-serif;
     display: flex;
@@ -237,12 +238,13 @@ p {
     color: #d08504;
     font-weight: 400;
     font-size: 1.75rem;
+    text-align: center;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.4);
 
 /* text animation */
     animation-name: slide;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-timing-function: linear;
     -webkit-animation-timing-function: linear;
     -moz-animation-timing-function: linear;
@@ -291,7 +293,7 @@ p {
 .options-btn {
     text-decoration: none;
     border: 1px solid white;
-    border-radius: 5px;
+    border-radius: 0.625rem;
     font-weight: 700;
     color: #000;
     padding: 0.5rem;
@@ -404,7 +406,7 @@ p {
 .btn-exit,
 .btn-continue {
     padding: 0.5rem;
-    border-radius: 5px;
+    border-radius: 0.625rem;
     margin: 0.5rem;
     font-family: "Exo 2", sans-serif;
 }
@@ -457,7 +459,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     color: #000;
     background-color: #d08504;
     font-size: 1.5rem;    
-    border-radius: 5px;
+    border-radius: 0.625rem;
     text-transform: uppercase;
     font-family: "Exo 2", sans-serif;
     font-weight: 500;
@@ -470,7 +472,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     margin: 0 auto 0.5rem;
     color: #fff;
     background-color: #600;
-    border-radius: 5px;
+    border-radius: 0.625rem;
     padding: 0.5em;
     text-transform: uppercase;
     font-family: "Exo 2", sans-serif;
@@ -502,6 +504,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     font-family: "Exo 2", sans-serif;
     font-weight: 300;
     font-size: 2rem;
+    text-align: center;
     max-width: 80%;
     color: #d08504;
     margin: 0;
@@ -517,7 +520,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
 
 .feedback-container {
     border: 2px solid #fff;
-    border-radius: 5px;
+    border-radius: 0.625rem;
     margin: 2rem auto;
     max-width: 90%;
     display: flex;
@@ -547,7 +550,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
 
 .email-btn {
     padding: 0.5rem;
-    border-radius: 5px;
+    border-radius: 0.625rem;
     margin: 1rem auto 0;
     max-width: 50%;
     color: #000;
@@ -563,18 +566,37 @@ Part of FlorinPop YouTube tutorial, Create a Modal
 /* quote container styles */
 .quote-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
-    max-width: 80vw;
-
+    text-align: center;
+    background-color: rgb(128, 0, 128, 0.5);
+    width: auto;
+    max-width: 50rem;
+    margin: 5rem auto;
+    padding: 1.5rem 2rem;
+    color: #fff;
+    border-radius: 0.625rem;
 
 }
 
+.quote-text {
+    font: 700;
+    font-family: "Exo 2", sans-serif;
+    font-size: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-
-
+.quote-author {
+    font-family: "Exo 2", sans-serif;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
 
 
 /* MEDIA QUERIES FOR SMALL DEVICES (MOBILES) */

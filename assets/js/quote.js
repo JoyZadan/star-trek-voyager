@@ -132,8 +132,15 @@ const newQuoteBtn = document.getElementById("new-quote");
 // shuffles quotes and dynamically shows them on the browser
 function newQuote() {    
     const shuffledQuotes = quotes[Math.floor(Math.random() * quotes.length)];
+    authorText.innerText = `${shuffledQuotes.author}`; 
+    
+// Check quote length to adjust styling  
+    if (quoteText.innerText.length > 80) {
+        quoteText.classList.add("long-quote");
+    }  else {
+        quoteText.classList.remove("long-quote");
+    }
     quoteText.innerText = `${shuffledQuotes.quote}`;
-    authorText.innerText = `${shuffledQuotes.author}`;     
 }
 newQuote();
 
@@ -143,6 +150,7 @@ function tweetQuote() {
     const socialShare = `https://twitter.com/intent/tweet?text=${quoteText.innerText} - ${authorText.innerText}`;
     window.open(socialShare, "_blank");
 }
+
 
 // EVENT LISTENERS
 twitterBtn.addEventListener("click", tweetQuote);

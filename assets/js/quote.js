@@ -123,16 +123,12 @@ const authorText = document.getElementById("author");
 const twitterBtn = document.getElementById("twitter");
 const newQuoteBtn = document.getElementById("new-quote");
 
-
-function newQuote() {
+// SHOW NEW QUOTE
+// shuffles quotes and dynamically shows them on the browser
+function newQuote() {    
     const shuffledQuotes = quotes[Math.floor(Math.random() * quotes.length)];
-    console.log(shuffledQuotes);
-    // quoteText.textContent = quotes.quote;
     quoteText.innerText = `${shuffledQuotes.quote}`;
-    authorText.innerText = `${shuffledQuotes.author}`;
-    console.log(authorText);
-    console.log(authorText);
-    
+    authorText.innerText = `${shuffledQuotes.author}`;    
 }
 newQuote();
 

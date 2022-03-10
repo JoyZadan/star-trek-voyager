@@ -26,7 +26,6 @@ body {
 }
 
 .quotes-bg {
-    /* background-image: url(../images/quotes-bg.webp); */
     background-image: url(../images/planets-bg.webp);
 }
 
@@ -595,6 +594,12 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
+}
+
+.quote-icon {
+    height: 3rem;
+    width: 3rem;
+    color: #fff;
 }
 
 .twitter-button,

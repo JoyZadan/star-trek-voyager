@@ -103,17 +103,11 @@ const quizContainer = document.querySelector(".quiz-container"); // WORKING
 const questionText = document.querySelector(".question-text"); // WORKING
 
 const answersContainer = document.querySelector(".answers-container");
-const onlyOnce = document.querySelector(".options-btn");
-const submitButtons = document.querySelector(".submit-buttons");
 const buttonContinue = document.querySelector(".btn-continue");
 
 const resultsContainer = document.querySelector(".results-container");
-const resultsText = document.querySelector(".results-text");
-const totalScores = document.querySelector(".total-scores");
-const gameNav = document.querySelector(".game-nav");
 
 const buttonExit = document.querySelector(".btn-exit");
-const mapLink = document.querySelector(".map-link");
 
 
 // EVENT LISTENER FOR THE START BUTTON TO HIDE INSTRUCTIONS CONTAINER 
@@ -126,7 +120,7 @@ buttonContinue.addEventListener("click", loadQuestion);
 
 let questionIndex;
 let shuffledQuestions;
-let hiddenDiv = document.querySelector("#hidden");
+
 
 // FUNCTION TO HIDE INSTRUCTIONS CONTAINER, DISPLAYS QUIZ BOARD AND LOADS SHUFFLE QUESTIONS
 function startQuiz() {
@@ -137,13 +131,13 @@ function startQuiz() {
     shuffledQuestions = quizQuestions.sort(() => Math.random() -0.5);
     questionIndex = 0;
     loadQuestion();
-};
+}
 
 // LOADS THE SHUFFLED QUIZ QUESTIONS
 function loadQuestion() {
     resetBoardGame();
     showQuestion(shuffledQuestions[questionIndex]);
-};
+}
 
 // RESETS QUIZ BOARD TO HIDE CONTINUE BUTTON AFTER QUESTION IS LOADED
 function resetBoardGame() {
@@ -151,7 +145,7 @@ function resetBoardGame() {
     while (answersContainer.firstChild) {
         answersContainer.removeChild(answersContainer.firstChild);
     }
-};
+}
 
 // LOADS CORRESPONDING ANSWERS OPTIONS AND ADDS EVENT LISTENER TO ANSWERS BUTTONS 
 function showQuestion(question) {
@@ -168,7 +162,7 @@ function showQuestion(question) {
         button.addEventListener("click", checkAnswer);
         answersContainer.appendChild(button);
     });
-};
+}
 
 // CHECKS IF PLAYER CHOICE IS CORRECT
 function checkAnswer(e) {
@@ -184,7 +178,7 @@ function checkAnswer(e) {
         incrementScore();
     } else {
         incrementWrongAnswer();
-    };
+    }
 
 // LOOPS THROUGH QUIZ QUESTIONS AND ENDS QUIZ WITH FEEDBACK TO USER BY DISPLAYING THEIR TOTAL SCORE
     if (shuffledQuestions.length > questionIndex + 1) {
@@ -196,7 +190,7 @@ function checkAnswer(e) {
         resultsContainer.classList.remove("hide");
         resultsContainer.style.display = "block";  
     }       
-};
+}
 
 // DISPLAYS VISUAL FEEDBACK TO PLAYER IF CHOSEN ANSWER IS CORRECT OR NOT
 function setStatusClass(element, correct) {
@@ -207,12 +201,8 @@ function setStatusClass(element, correct) {
     } else {
         element.classList.add("disabled");
     }
-};      
+}      
 
-// CLEARS VISUAL SIGNAL TO PLAYER WHEN AN ANSWER IS SELECTED
-function clearStatusClass(element) {
-    element.classList.remove("correct");
-};
 
 // DISPLAYS SCORES
 // Code from Code Institute Love Maths JS lessons
@@ -230,12 +220,12 @@ function incrementScore() {
             output++;
         }
     }, 10);    
-};
+}
 
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.querySelector("#incorrect").innerText);
     document.querySelector("#incorrect").innerText = oldScore + 10;
-};
+}
   
 // EVENT LISTENER TO TAKE PLAYER BACK TO GAMES HOME PAGE
 buttonExit.addEventListener("click", backHome => {

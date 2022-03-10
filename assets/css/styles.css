@@ -26,7 +26,8 @@ body {
 }
 
 .quotes-bg {
-    background-image: url(../images/quotes-bg.webp);
+    /* background-image: url(../images/quotes-bg.webp); */
+    background-image: url(../images/planets-bg.webp);
 }
 
 .find-bg {

@@ -1,4 +1,4 @@
-# Space
+# [Trekkies Games](https://joyzadan.github.io/star-trek-voyager/)
 
 ## Table of Contents
 ### Overview

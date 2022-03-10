@@ -1,5 +1,10 @@
 // ADDING THE QUOTES ARRAY AND STORING THEM IN A VARIABLE
 // Quotes credit to Star Trek and Paramount Global
+// Moderately simplified Code from Jacinto Wong's Udemy course - JavaScript Web Projects: 20 Projects to Build Your Portfolio
+// Used for this project for additional feature
+
+
+// ADDING THE QUOTES ARRAY AND STORING THEM IN A VARIABLE
 const quotes = [
 	{
 	  quote: "A man either lives life as it happens to him, meets it head-on and licks it, or he turns his back on it and starts to wither away.",
@@ -102,8 +107,8 @@ const quotes = [
 	  author: "Capt. Kathryn Janeway"
 	},
 	{
-	  quote: "You can use logic to justify almost anything. That\"s it\"s power and it\"s flaw.",
-	  author: "James T. Kirk"
+	  quote: "You can use logic to justify almost anything. That\'s it\'s power and it\'s flaw.",
+	  author: "Capt. Kathryn Janeway"
 	},
 	{
 	  quote: "I do not fire on defenseless people",
@@ -117,18 +122,29 @@ const quotes = [
 console.log(quotes);
 
 // SELECTING ALL REQUIRED ELEMENTS BY DECLARING CONSTANTS
-const quoteContainer = document.getElementById("quote-container");
 const quoteText = document.getElementById("quote");
 const authorText = document.getElementById("author");
 const twitterBtn = document.getElementById("twitter");
 const newQuoteBtn = document.getElementById("new-quote");
+
 
 // SHOW NEW QUOTE
 // shuffles quotes and dynamically shows them on the browser
 function newQuote() {    
     const shuffledQuotes = quotes[Math.floor(Math.random() * quotes.length)];
     quoteText.innerText = `${shuffledQuotes.quote}`;
-    authorText.innerText = `${shuffledQuotes.author}`;    
+    authorText.innerText = `${shuffledQuotes.author}`;     
 }
 newQuote();
+
+
+// TWEET QUOTE
+function tweetQuote() {
+    const socialShare = `https://twitter.com/intent/tweet?text=${quoteText.innerText} - ${authorText.innerText}`;
+    window.open(socialShare, "_blank");
+}
+
+// EVENT LISTENERS
+twitterBtn.addEventListener("click", tweetQuote);
+newQuoteBtn.addEventListener("click", newQuote);
 

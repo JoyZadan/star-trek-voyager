@@ -1,3 +1,6 @@
+// CODE FROM WEB DEV SIMPLIFIED YOUTUBE TUTORIAL - https://www.youtube.com/watch?v=riDzcEQbX6k
+// AMENDED AND ENHANCED FOR THE PROJECT
+
 // ADDING THE QUESTIONS ARRAY AND STORING THEM IN A VARIABLE
 const quizQuestions = [
     {
@@ -137,8 +140,6 @@ function startQuiz() {
 };
 
 // LOADS THE SHUFFLED QUIZ QUESTIONS
-// CODE FROM WEB DEV SIMPLIFIED YOUTUBE TUTORIAL - https://www.youtube.com/watch?v=riDzcEQbX6k
-// AMENDED AND ENHANCED FOR THE PROJECT
 function loadQuestion() {
     resetBoardGame();
     showQuestion(shuffledQuestions[questionIndex]);

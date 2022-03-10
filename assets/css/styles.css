@@ -80,7 +80,7 @@ p {
 }
 
 .header-container p {
-    font-weight: bold;
+    font-weight: 500;
     font-size: 1.25rem;
     margin-bottom: 0;
     color: #fff;
@@ -134,16 +134,17 @@ p {
 
 .quiz-link,
 .quotes-link {
-    padding: 1rem;
+    padding: 0.5rem;
     margin: 0 0.5rem 0.5rem; 
     font-family: "Exo 2", sans-serif;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 1.5rem;
     text-decoration: none;
     text-transform: uppercase;
     border: none;
     border-radius: 0.625rem;
+    border: 1px solid #fff;
     cursor: pointer;
-    box-shadow: 0 0.2rem rgba(255, 255, 255, 0.3);
 }
 
 .start-quiz {
@@ -156,10 +157,10 @@ p {
     font-weight: 800;
     text-decoration: none;
     text-transform: uppercase;
-    border: none;
+    border: 1px solid #fff;
     border-radius: 0.625rem;
+    transition: all 0.3s ease-in-out 0s;
     cursor: pointer;
-    box-shadow: 0 0.2rem rgba(255, 255, 255, 0.3);
 }
 
 .quiz-link:hover,
@@ -169,8 +170,7 @@ p {
 
 .quiz-link:active,
 .quotes-link:active {
-    transform: translate(0, 0.2rem);
-    box-shadow: 0 0.1rem rgb(239, 178, 0, 0.5);
+    transition: all 0.3s ease-in-out 0s;
 }
 
 /* STYLING FOR QUIZ GAME */

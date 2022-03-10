@@ -559,6 +559,24 @@ Part of FlorinPop YouTube tutorial, Create a Modal
 }
 
 
+/* STYLING FOR THE QUOTE GENERATOR */
+/* quote container styles */
+.quote-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    max-width: 80vw;
+
+
+}
+
+
+
+
+
+
 /* MEDIA QUERIES FOR SMALL DEVICES (MOBILES) */
 @media screen and (max-width: 29.5em) {
     .heading {

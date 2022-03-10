@@ -235,7 +235,6 @@ function incrementWrongAnswer() {
     let oldScore = parseInt(document.querySelector("#incorrect").innerText);
     document.querySelector("#incorrect").innerText = oldScore + 10;
 };
-
   
 // EVENT LISTENER TO TAKE PLAYER BACK TO GAMES HOME PAGE
 buttonExit.addEventListener("click", backHome => {

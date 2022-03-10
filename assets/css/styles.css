@@ -226,6 +226,7 @@ p {
     font-size: 1.75rem;
     text-align: center;
     margin: 0 auto;
+    max-width: 80vw;
 
 /* text animation */
     animation-name: slide;
@@ -554,22 +555,24 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     background-color: rgba(73, 55, 73, 0.5);
     width: auto;
     max-width: 50rem;
-    margin: 5rem auto;
+    margin: 2rem auto;
     padding: 1.5rem 2rem;
     color: #fff;
     border-radius: 0.625rem;
+}
 
+.fa-twitter {
+    font-size: 2rem;
+    color: #29407c;
 }
 
 .quote-text {
     font-family: "Exo 2", sans-serif;
-    font-size: 2rem;
+    font-size: 2.75rem;
     padding: 1rem;
     display: flex;
     justify-content: center;
@@ -577,12 +580,44 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     flex-wrap: wrap;
 }
 
+.long-quote {
+    font-size: 2rem;
+}
+
 .quote-author {
     font-family: "Exo 2", sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-style: italic;
     padding: 1rem;
 }
 
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.twitter-button,
+#new-quote {
+    outline: none;
+    cursor: pointer;
+    border-radius: 0.625rem;
+    font-size: 1rem;
+    height: 2rem;
+    border-radius: 0.625rem;
+    background-color: rgb(51, 50, 50);
+    color: #fff;
+}
+
+.twitter-button:hover,
+#new-quote:hover {
+    filter: brightness(120%);
+} 
+
+.twitter-button:active,
+#new-quote:active {
+    background-color: #29407c;
+} 
 
 /* MEDIA QUERIES FOR SMALL DEVICES (MOBILES) */
 @media screen and (max-width: 29.5em) {
@@ -644,6 +679,18 @@ Part of FlorinPop YouTube tutorial, Create a Modal
 
     .modal-close-btn {
         font-size: 1rem;
+    }
+
+    .quote-container {
+        margin: auto 0.75rem;
+    }
+
+    .quote-text {
+        font-size: 2rem;
+    }
+
+    .quote-author {
+        font-size: 1.5rem;
     }
 }
 

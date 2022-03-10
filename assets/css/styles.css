@@ -218,16 +218,6 @@ p {
     flex-direction: column;
 }
 
-.mission-container {
-    width: 80vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: 0 auto;
-}
-
 /* INTRO TO QUIZ GAME STYLING */
 .mission-intro {
     font-family: "Orbitron", sans-serif;
@@ -236,8 +226,6 @@ p {
     font-size: 1.75rem;
     text-align: center;
     margin: 0 auto;
-    /* background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 0.625rem; */
 
 /* text animation */
     animation-name: slide;
@@ -605,10 +593,6 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     .welcome-text {
         font-size: 1.25rem;
     }
-
-    .mission-intro {
-        /* background-color: rgba(0, 0, 0, 0.6); */
-    }
     
     .results-content {
         font-size: 1rem;
@@ -675,7 +659,6 @@ Part of FlorinPop YouTube tutorial, Create a Modal
 
     .mission-intro {
         font-size: 1.25rem;
-        background-color: rgba(0, 0, 0, 0.6);
     }
 
     .instructions-title {

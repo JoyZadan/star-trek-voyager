@@ -93,7 +93,6 @@ const quizQuestions = [
 ];
 
 // SELECTING ALL REQUIRED ELEMENTS BY DECLARING CONSTANTS
-const mission = document.querySelector(".mission-intro");
 const instructionsContainer = document.querySelector(".instructions-container"); // WORKING
 const startQuizBtn = document.querySelector("#start-btn"); // WORKING
 
@@ -128,7 +127,6 @@ let hiddenDiv = document.querySelector("#hidden");
 
 // FUNCTION TO HIDE INSTRUCTIONS CONTAINER, DISPLAYS QUIZ BOARD AND LOADS SHUFFLE QUESTIONS
 function startQuiz() {
-    mission.style.display = "none";
     startQuizBtn.classList.add("hide");
     instructionsContainer.classList.add("hide");
     resultsContainer.classList.add("hide");

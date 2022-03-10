@@ -424,19 +424,27 @@ p {
     cursor: pointer;
 }
 
-/* MODAL CONTAINER STYLING */
-.modal-container {
+/* MODAL CONTAINER STYLING 
+Part of FlorinPop YouTube tutorial, Create a Modal 
+- https://www.youtube.com/watch?v=XH5OW46yO8I 
+*/
+.modal-popup {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
     flex-wrap: wrap;
-    /* position: fixed; */
+    position: fixed;
     top: 0;
-    height: 95vh;
+    left: 0;
     width: 100vw;
-    max-width: 90%;
-    margin: 0 auto;    
+    height: 100vh;
+    opacity: 0;  
+    pointer-events: none;
+}
+
+.modal-popup.show {
+    pointer-events: auto;
+    opacity: 1;
 }
 
 /* modal buttons styling*/

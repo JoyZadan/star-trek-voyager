@@ -1,4 +1,4 @@
-// adding the questions array and storing it in a variable
+// ADDING THE QUESTIONS ARRAY AND STORING THEM IN A VARIABLE
 const quizQuestions = [
     {
         question: "In Star Trek Voyager episode 'Death Wish', who was the rogue member of the Continuum being pursued by Q?",
@@ -92,7 +92,6 @@ const quizQuestions = [
     }
 ];
 
-
 // SELECTING ALL REQUIRED ELEMENTS BY DECLARING CONSTANTS
 const mission = document.querySelector(".mission-intro");
 const instructionsContainer = document.querySelector(".instructions-container"); // WORKING
@@ -126,7 +125,6 @@ buttonContinue.addEventListener("click", loadQuestion);
 let questionIndex;
 let shuffledQuestions;
 let hiddenDiv = document.querySelector("#hidden");
-
 
 // FUNCTION TO HIDE INSTRUCTIONS CONTAINER AND DISPLAYS QUIZ BOARD
 function startQuiz() {

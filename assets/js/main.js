@@ -1,45 +1,15 @@
-// Setting up the event handlers 
-// const quizLink = document.getElementsByClassName(".quiz-link");
-// const quotesLink = document.getElementsByClassName(".quotes-link");
-// const rescueLink = document.getElementsByClassName(".rescue-link");
-// const mapLink = document.getElementsByClassName(".map-link");
+// SETTING VARIABLES TO TARGET MODAL
+// Based on FlorinPop YouTube tutorial, Create a Modal - https://www.youtube.com/watch?v=XH5OW46yO8I
+const openModal = document.getElementById("open-modal");
+const modalContainer = document.getElementById("modal-container");
+const closeModal = document.getElementById("close-modal");
 
-// This changes the background color of the quiz link when clicked
-// quizLink.addEventListener("click", changeBackground => {
-//     quizLink.style.backgroundColor = "#efb200";
+// OPENS THE MODAL POPOP
+openModal.addEventListener("click", () => {
+    modalContainer.classList.add("show");
+});
 
-//     // This reverts the background color of the quiz link after 3 seconds
-//     window.setTimeout(() => {
-//         quizLink.style.backgroundColor = "#29407c";
-//     }, 3000); 
-// });
-
-// This changes the background color of the quotes link when clicked
-// quotesLink.addEventListener("click", () => {
-//     quotesLink.style.backgroundColor = "#efb200";
-
-//     // This reverts the background color of the quiz link after 3 seconds
-//     window.setTimeout(() => {
-//         quotesLink.style.backgroundColor = "#600";
-//     }, 3000); 
-// });
-
-// This changes the background color of the rescue mission link when clicked
-// rescueLink.addEventListener("click", changeBackground => {
-//     rescueLink.style.backgroundColor = "#efb200";
-
-//     // This reverts the background color of the rescue mission link after 3 seconds
-//     window.setTimeout(() => {
-//         rescueLink.style.backgroundColor = "#efb200";
-//     }, 3000); 
-// });
-
-// mapLink.addEventListener("click", openMap => {
-//     window.location.href = "find.html";
-// });
-
-// mapLink.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     window.location.replace("find.html");
-//     return false;
-// }) 
+// CLOSES THE MODAL POPOP
+closeModal.addEventListener("click", () => {
+    modalContainer.classList.remove("show");
+});

@@ -126,7 +126,7 @@ let questionIndex;
 let shuffledQuestions;
 let hiddenDiv = document.querySelector("#hidden");
 
-// FUNCTION TO HIDE INSTRUCTIONS CONTAINER AND DISPLAYS QUIZ BOARD
+// FUNCTION TO HIDE INSTRUCTIONS CONTAINER, DISPLAYS QUIZ BOARD AND LOADS SHUFFLE QUESTIONS
 function startQuiz() {
     mission.style.display = "none";
     startQuizBtn.classList.add("hide");
@@ -180,17 +180,17 @@ function checkAnswer(e) {
         setStatusClass(button, button.dataset.correct);
     });
 
-    
+// Increments the scores for correct and wrong answers    
     if (correctAnswer) {
         incrementScore();
     } else {
         incrementWrongAnswer();
     };
 
-// LOOPS THROUGH QUIZ QUESTIONS AND ENDS QUIZ WITH FEEDBACK TO USER
+// LOOPS THROUGH QUIZ QUESTIONS AND ENDS QUIZ WITH FEEDBACK TO USER BY DISPLAYING THEIR TOTAL SCORE
     if (shuffledQuestions.length > questionIndex + 1) {
         buttonContinue.classList.remove("hide"); 
-        console.log(questionIndex); 
+// Hides the questions and answers buttons and replaces them with the animated quiz score        
     } else {
         questionText.classList.add("hide");
         answersContainer.classList.add("hide");
@@ -201,9 +201,9 @@ function checkAnswer(e) {
 
 // DISPLAYS VISUAL FEEDBACK TO PLAYER IF CHOSEN ANSWER IS CORRECT OR NOT
 function setStatusClass(element, correct) {
-    // clearStatusClass(element);
     if (correct) {
         element.classList.add("correct");
+// Disables the answers buttons to stop player from incrementing correct and wrong answer points    
         element.classList.add("disabled");
     } else {
         element.classList.add("disabled");
@@ -222,6 +222,7 @@ function incrementScore() {
     let oldScore = parseInt(document.querySelector("#score").innerText);
     document.querySelector("#score").innerText = oldScore + 10;
     let output = 0;
+// Loads the computed total score to display to user    
     const scoreAnimation = setInterval(() => {
         resultsContainer.querySelector(".total-scores").innerText = `You are ${output}% Trekkie!`;
         if (output === oldScore + 10) {
@@ -242,10 +243,6 @@ function incrementWrongAnswer() {
 buttonExit.addEventListener("click", backHome => {
     window.location.href = "index.html";
 });
-
-// mapLink.addEventListener("click", openMap => {
-//     window.location.href = "find.html";
-// });
 
 
 

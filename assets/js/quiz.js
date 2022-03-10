@@ -95,18 +95,15 @@ const quizQuestions = [
     }
 ];
 
+
 // SELECTING ALL REQUIRED ELEMENTS BY DECLARING CONSTANTS
-const instructionsContainer = document.querySelector(".instructions-container"); // WORKING
-const startQuizBtn = document.querySelector("#start-btn"); // WORKING
-
-const quizContainer = document.querySelector(".quiz-container"); // WORKING
-const questionText = document.querySelector(".question-text"); // WORKING
-
+const instructionsContainer = document.querySelector(".instructions-container");
+const startQuizBtn = document.querySelector("#start-btn");
+const quizContainer = document.querySelector(".quiz-container");
+const questionText = document.querySelector(".question-text");
 const answersContainer = document.querySelector(".answers-container");
 const buttonContinue = document.querySelector(".btn-continue");
-
 const resultsContainer = document.querySelector(".results-container");
-
 const buttonExit = document.querySelector(".btn-exit");
 
 
@@ -133,11 +130,13 @@ function startQuiz() {
     loadQuestion();
 }
 
+
 // LOADS THE SHUFFLED QUIZ QUESTIONS
 function loadQuestion() {
     resetBoardGame();
     showQuestion(shuffledQuestions[questionIndex]);
 }
+
 
 // RESETS QUIZ BOARD TO HIDE CONTINUE BUTTON AFTER QUESTION IS LOADED
 function resetBoardGame() {
@@ -147,6 +146,7 @@ function resetBoardGame() {
     }
 }
 
+
 // LOADS CORRESPONDING ANSWERS OPTIONS AND ADDS EVENT LISTENER TO ANSWERS BUTTONS 
 function showQuestion(question) {
     questionText.innerText = question.question;
@@ -154,7 +154,7 @@ function showQuestion(question) {
         const button = document.createElement("button");
         button.innerText = answer.option;
         button.classList.add("options-btn");
-        
+
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
@@ -163,6 +163,7 @@ function showQuestion(question) {
         answersContainer.appendChild(button);
     });
 }
+
 
 // CHECKS IF PLAYER CHOICE IS CORRECT
 function checkAnswer(e) {
@@ -173,7 +174,7 @@ function checkAnswer(e) {
         setStatusClass(button, button.dataset.correct);
     });
 
-// Increments the scores for correct and wrong answers    
+// Increments the scores for correct and wrong answers
     if (correctAnswer) {
         incrementScore();
     } else {
@@ -182,15 +183,16 @@ function checkAnswer(e) {
 
 // LOOPS THROUGH QUIZ QUESTIONS AND ENDS QUIZ WITH FEEDBACK TO USER BY DISPLAYING THEIR TOTAL SCORE
     if (shuffledQuestions.length > questionIndex + 1) {
-        buttonContinue.classList.remove("hide"); 
-// Hides the questions and answers buttons and replaces them with the animated quiz score        
+        buttonContinue.classList.remove("hide");
+// Hides the questions and answers buttons and replaces them with the animated quiz score
     } else {
         questionText.classList.add("hide");
         answersContainer.classList.add("hide");
         resultsContainer.classList.remove("hide");
-        resultsContainer.style.display = "block";  
+        resultsContainer.style.display = "block";
     }       
 }
+
 
 // DISPLAYS VISUAL FEEDBACK TO PLAYER IF CHOSEN ANSWER IS CORRECT OR NOT
 function setStatusClass(element, correct) {
@@ -201,7 +203,7 @@ function setStatusClass(element, correct) {
     } else {
         element.classList.add("disabled");
     }
-}      
+}
 
 
 // DISPLAYS SCORES
@@ -211,7 +213,7 @@ function incrementScore() {
     let oldScore = parseInt(document.querySelector("#score").innerText);
     document.querySelector("#score").innerText = oldScore + 10;
     let output = 0;
-// Loads the computed total score to display to user    
+// Loads the computed total score to display to user
     const scoreAnimation = setInterval(() => {
         resultsContainer.querySelector(".total-scores").innerText = `You are ${output}% Trekkie!`;
         if (output === oldScore + 10) {
@@ -219,14 +221,15 @@ function incrementScore() {
         } else {
             output++;
         }
-    }, 10);    
+    }, 10);
 }
 
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.querySelector("#incorrect").innerText);
     document.querySelector("#incorrect").innerText = oldScore + 10;
 }
-  
+
+
 // EVENT LISTENER TO TAKE PLAYER BACK TO GAMES HOME PAGE
 buttonExit.addEventListener("click", backHome => {
     window.location.href = "index.html";

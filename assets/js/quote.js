@@ -29,43 +29,43 @@ const quotes = [
 	{
 	  quote: "With the first link, the chain is forged. The first speech censored, the first thought forbidden, the first freedom denied, chains us all irrevocably.",
 	  author: "Jean-Luc Picard"
-	}, 
+	},
 	{
 	  quote: "A library serves no purpose unless someone is using it.",
       author: "Mr. Atoz"
-	}, 
+	},
 	{
 	  quote: "When dreams become more important than reality, you give up travel, building, creating; you even forget how to repair the machines left behind by your ancestors. You just sit living and reliving other lives left behind in the thought records.",
 	  author: "Vina"
-	}, 
+	},
 	{
 	  quote: "Insufficient facts always invite danger.",
 	  author: "Mr. Spock"
-	}, 
+	},
 	{
 	  quote: "Insults are effective only where emotion is present.",
 	  author: "Mr. Spock"
-	}, 	
+	},
 	{
 	  quote: "Madness has no purpose. Or reason. But it may have a goal.",
 	  author: "Mr. Spock"
-	}, 
+	},
 	{
 	  quote: "They used to say that if Man was meant to fly, he'd have wings. But he did fly. He discovered he had to.",
 	  author: "James T. Kirk"
-	}, 
+	},
 	{
 	  quote: "Humans do have an amazing capacity for believing what they choose, and excluding that which is painful.",
 	  author: "Mr. Spock"
-	}, 
+	},
 	{
 	  quote: "When a child is taught, it's programmed with simple instructions, and at some point, if its mind develops properly, it exceeds the sum of what it was taught, thinks independently.",
 	  author: "Dr. Daystrom"
-	}, 
+	},
 	{
 	  quote: "Change is the essential process of all existence.",
 	  author: "Mr. Spock"
-	}, 
+	},
 	{
 	  quote: "In critical moments, men sometimes see exactly what they wish to see.",
 	  author: "Mr. Spock"

@@ -118,15 +118,21 @@ console.log(quotes);
 
 // SELECTING ALL REQUIRED ELEMENTS BY DECLARING CONSTANTS
 const quoteContainer = document.getElementById("quote-container");
-// const quote = document.getElementById("quote");
-const author = document.getElementById("author");
-const twitter = document.getElementById("twitter");
-// const newQuote = document.getElementById("new-quote");
+const quoteText = document.getElementById("quote");
+const authorText = document.getElementById("author");
+const twitterBtn = document.getElementById("twitter");
+const newQuoteBtn = document.getElementById("new-quote");
 
-// let newQuote;
 
 function newQuote() {
     const shuffledQuotes = quotes[Math.floor(Math.random() * quotes.length)];
     console.log(shuffledQuotes);
+    // quoteText.textContent = quotes.quote;
+    quoteText.innerText = `${shuffledQuotes.quote}`;
+    authorText.innerText = `${shuffledQuotes.author}`;
+    console.log(authorText);
+    console.log(authorText);
+    
 }
 newQuote();
+

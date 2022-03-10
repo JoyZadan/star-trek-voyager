@@ -30,25 +30,20 @@ body {
     background-image: url(../images/planets-bg.webp);
 }
 
-.find-bg {
-    background-color: #1e1e1e;
-}
-
 /* FONTS STYLING */
-h1,
-h2,
-h3 {
-    font-family: "Orbitron", sans-serif;
+h1 {
+    font-family: "Orbitron";
 }
 
-h4,
+h2,
+h3, 
+h4, 
 p {
     font-family: "Exo 2", sans-serif;
 }
 
 /* GAME HEADING STYLING */
 .heading {
-    font-family: "Orbitron", sans-serif;
     color: #efb200;
     text-shadow: 5px 5px 5px black;
     font-weight: 700;
@@ -56,6 +51,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     text-transform: uppercase;
     margin: 0 auto;
     padding: 1rem;
@@ -66,7 +62,7 @@ p {
     width: 80vw;
     border-radius: 0.625rem;
     background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 0 10px 10px 10px rgba(4, 215, 252, 0.2);
+    box-shadow: 0 10px 10px 10px rgba(81, 212, 235, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,7 +236,8 @@ p {
     font-size: 1.75rem;
     text-align: center;
     margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    /* background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0.625rem; */
 
 /* text animation */
     animation-name: slide;
@@ -515,6 +512,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     font-family: "Orbitron", sans-serif;
     font-weight: 600;
     font-size: 3rem;
+    text-align: center;
     margin-bottom: 1rem;
 }
 
@@ -571,7 +569,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgb(128, 0, 128, 0.5);
+    background-color: rgba(73, 55, 73, 0.5);
     width: auto;
     max-width: 50rem;
     margin: 5rem auto;
@@ -582,7 +580,6 @@ Part of FlorinPop YouTube tutorial, Create a Modal
 }
 
 .quote-text {
-    font: 700;
     font-family: "Exo 2", sans-serif;
     font-size: 2rem;
     padding: 1rem;
@@ -610,7 +607,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     }
 
     .mission-intro {
-        background-color: rgba(0, 0, 0, 0.6);
+        /* background-color: rgba(0, 0, 0, 0.6); */
     }
     
     .results-content {

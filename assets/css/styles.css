@@ -83,20 +83,6 @@ p {
     width: 80vw;
 }
 
-/* .logo-container h3 {
-    color: #efb200;
-    margin-top: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.logo-container p {
-    font-weight: 500;
-    font-size: 1.25rem;
-    margin-bottom: 0;
-    color: #fff;
-    align-content: center;
-} */
-
 /* WELCOME MESSAGE STYLING */
 .heading-container {
     width: 80vw;
@@ -144,6 +130,7 @@ p {
 }
 
 /* LINKS TO EACH GAME STYLED AS BUTTONS */
+/* Centers the text in the links, sets the color for each link */
 .games {
     padding: 1rem;
     margin: 2rem 1rem 2rem;
@@ -192,6 +179,7 @@ p {
     cursor: pointer;
 }
 
+/* Styling links on hover and on active states using filter to add brighness and transition*/
 .quiz-link:hover,
 .quotes-link:hover {
     filter: brightness(120%);
@@ -203,7 +191,7 @@ p {
 }
 
 /* STYLING FOR QUIZ GAME */
-/* quiz game containers styles */
+/* quiz game containers styles adds box shadow and centers content by using flex */
 .instructions-container,
 .quiz-container {
     width: 70vw;
@@ -219,6 +207,7 @@ p {
     padding: 1rem;
 }
 
+/* sets separate margins for contents instructions and quiz containers */
 .start {
     margin-bottom: 2rem;
 }
@@ -232,6 +221,7 @@ p {
     margin: 2rem auto 5rem;
 }
 
+/* styling for the results container on quiz page, uses flex to center content and for responsiveness*/
 .results-container {
     width: 50vw;
     border-radius: 0.625rem;
@@ -287,6 +277,7 @@ p {
 }
 
 /* QUIZ GAME FONTS STYLING */
+/* sets fonts styling including sizes, colors, padding and margins */
 .instructions-title {
     font-weight: 500;
     font-size: 1.75rem;
@@ -311,6 +302,7 @@ p {
 }
 
 /* STYLING FOR QUIZ ANSWER OPTIONS, JS LOADS THE QUIZ CONTENT DYNAMICALLY */
+/* answer buttons fonts, margins and padding styling  */
 .options-btn {
     text-decoration: none;
     border: 1px solid white;
@@ -322,6 +314,7 @@ p {
 }
 
 /* USER FEEDBACK STYLING AFTER AN ANSWER IS CHOSEN */
+/* changes colors of the buttons for correct and wrong answers */
 .correct {
     background-color: rgb(114, 173, 114); 
     color: #fff;
@@ -333,6 +326,7 @@ p {
 }
 
 /* STYLING FOR END OF QUIZ TO PROVIDE USER FEEDBACK */
+/* results container, fonts and margin styling */
 .results-container {
     font-weight: 700;
     font-size: 1.75rem;
@@ -355,6 +349,7 @@ p {
 }
 
 /* STYLING FOR THE QUIZ SCORE AREA */
+/* using flex and space between to separate the correct answer points from the wrong answer points */
 .score-area {
     color: #fff;
     font-size: 1.5rem;
@@ -394,6 +389,7 @@ p {
 }
 
 /* STYLING FOR THE QUIZ GAME NAVIGATION */
+/* these are the buttons for the quiz game and using flex for responsiveness */
 .start-quiz {
     background-color: #d08504;
     padding: 0.5rem;
@@ -430,22 +426,6 @@ p {
     border-radius: 0.625rem;
     margin: 0.5rem;
     font-family: "Exo 2", sans-serif;
-}
-
-.footer {
-    background: #d08504;
-    width: 100%;
-    bottom: 0;
-    position: fixed;     
-}
-
-.map-link {
-    font-weight: bold;
-    color: #000;
-    display: flex;
-    justify-content: center;
-    margin: 1rem auto;
-    cursor: pointer;
 }
 
 /* MODAL CONTAINER STYLING 

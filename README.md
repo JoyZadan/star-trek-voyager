@@ -6,14 +6,14 @@ Trekkies Games is a quiz and Star Trek quote generator application with an optio
 ![Screenshot of Trekkies Games on multiple device](./assets/images/ux/trekkies-index.webp)
 
 ## Table of Contents
-### [Overview](#overview-1)
-### [User Experience (UX)](#user-experience-ux-1)
-### [Features](#features-1)
-### [Technologies Used](#technologies-used-1)
-### [Testing](#testing-1)
-### [Deployment](#deployment--local-development)
-### [Credits](#credits-1)
-### [Acknowledgements](#acknowledgements-1)
+* [Overview](#overview-1)
+* [User Experience (UX)](#user-experience-ux-1)
+* [Features](#features-1)
+* [Technologies Used](#technologies-used-1)
+* [Testing](#testing-1)
+* [Deployment](#deployment--local-development)
+* [Credits](#credits-1)
+* [Acknowledgements](#acknowledgements-1)
 
 ## Overview
 To quote [Space.com](https://www.space.com/31802-star-trek-space-tech.html), since viewers first heard the tagline, "... to boldly go where no man has gone before", "Star Trek has represented hope of what space -- 'the final frontier' -- can mean for humanity in a few centuries. 
@@ -130,7 +130,7 @@ JSHint was used to test JavaScript code quality.
     - Upon landing on the site, the user is immediately made aware of what the application is about. Beneath the logo is the welcome message and message about what they will find on the site/ game.
     [Screenshot of home page](./assets/images/ux/trekkies-rules.webp)
 * As a First Time Visitor, I want to be able to understand how to play the games.
-     - Aside from the welcome message on the home page, the players are presented with the [quiz rules on the quiz page](./assets/images/ux/trekkies-quiz.webp)
+     - Aside from the welcome message on the home page, the players are presented with the [quiz rules on the quiz page](./assets/images/ux/trekkies-rules.webp)
 * As a First Time Visitor, I want to be able to choose what I want to do upon landing on the home page, play the quiz game or play with the quote generator.
 The players have the choice to go to the [quiz game or to the quote generator on the home page](./assets/images/ux/trekkies-intro.webp). They are also able to navigate back to the home page by clicking the [game logo](./assets/images/ux/trekkies-logo.webp) on any page.
 * As a First Time Visitor, I want the pages to be responsive to be my device, no matter it's size.

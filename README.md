@@ -88,6 +88,14 @@ Trekkies Games has two main features: a quiz game on Voyager where fans can test
 Testing was carried out at every point in the development to check for issues with the code, responsiveness, design, interactivity and accessibility. The developer tools used primarily were Chrome DevTools, with the console playing a key factor in testing and debugging.
 
 ### Bugs and Solutions
+#### Solved Bugs
+ - Users were able to increment both the correct and wrong answers after the game had ended. This was solved by adding this [line of code to quiz.js](./assets/images/bugs/increment-scores.webp)
+ - Modal container's close me button not showing on large screen. This was solved by adjusting the feedback form's font sizing.
+
+| No | Known Bugs                                           | How these were solved                                       |
+| --------------------------------------------------------- | ----------------------------------------------------------- |
+| 1  | Users were able to increment both the correct and    | This was solved by adding this 
+
 ### Remaining Bugs
 ### Validation Results
 

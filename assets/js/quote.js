@@ -119,7 +119,6 @@ const quotes = [
 	  author: "Jean-Luc Picard"
 	}
 ];
-console.log(quotes);
 
 // SELECTING ALL REQUIRED ELEMENTS BY DECLARING CONSTANTS
 const quoteText = document.getElementById("quote");

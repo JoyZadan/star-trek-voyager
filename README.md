@@ -50,12 +50,12 @@ Orbitron is paired with Exo 2 font for the game content and for the buttons.
 - The three images used for the application all represented the "look" of space, planets and nebulas. The home page image was superimposed by a png image of Star Trek Voyager spaceship from pngegg.
 
 ### Wireframes
-- ![Home page wireframe (mobile)](./assets/images/ux/mobile-home.webp)
-- ![Quiz wireframe - game page (mobile)](./assets/images/ux/mobile-quizgame.webp)
-- ![Quote Generator wireframe (mobile)](./assets/images/ux/mobile-quotetweet.webp)
-- ![Home page wireframe (desktop)](./assets/images/ux/desktop-home.webp)
-- ![Quiz wireframe (desktop)](./assets/images/ux/desktop-quizgame.webp)
-- ![Quote Generator wireframe (desktop)](./assets/images/ux/desktop-quotetweet.webp)
+- [Home page wireframe (mobile)](./assets/images/ux/mobile-home.webp)
+- [Quiz wireframe - game page (mobile)](./assets/images/ux/mobile-quizgame.webp)
+- [Quote Generator wireframe (mobile)](./assets/images/ux/mobile-quotetweet.webp)
+- [Home page wireframe (desktop)](./assets/images/ux/desktop-home.webp)
+- [Quiz wireframe (desktop)](./assets/images/ux/desktop-quizgame.webp)
+- [Quote Generator wireframe (desktop)](./assets/images/ux/desktop-quotetweet.webp)
 ### Trekkies Games Flow Charts
 ### Features
 
@@ -117,7 +117,12 @@ JSHint was used to test JavaScript code quality.
     - [Desktop - home page](./assets/images/validation/desktop-index.webp)
     - [Desktop - quiz page](./assets/images/validation/desktop-quiz.webp)
     - [Desktop - home page](./assets/images/validation/desktop-quotes.webp)
-    - [Desktop - home page](./assets/images/validation/desktop-redirect.webp)    
+    - [Desktop - home page](./assets/images/validation/desktop-redirect.webp)
+* a11y Color Contrast Accessibility for the Visually Impaired Validator Results:
+    - [Home page](./assets/images/validation/a11y-index.webp)      
+    - [Quiz page](./assets/images/validation/a11y-quiz.webp)
+    - [Quotes page](./assets/images/validation/a11y-quotes.webp)
+    - [404 Redirect page](./assets/images/validation/a11-redirect.webp)
 
 ### Testing User Stories from User Experience (UX) Section
 ### Further Testing

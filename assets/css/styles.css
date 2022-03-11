@@ -856,37 +856,6 @@ Modal uses flex for responsiveness and centers contents
     }    
 }
 
-/* FIND OTHER TREKKIES USING GOOGLE MAP */
-/* .other-trekkies {
-    font-weight: 800;
-    color: #d08504;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-.find-trekkies {
-    font-weight: 500;
-    color: #d08504;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem auto;
-    padding: 0 1rem;
-}
-
-.map {
-    display: flex;
-    justify-content: center;
-    width: 80vw;
-    height: 70vh;
-    margin: 1rem auto;
-} */
-
-
-
 /* MEDIA QUERIES FOR NOTEBOOKS AND LAPTOPS */
 @media screen and (max-width: 48em) {
     .games {

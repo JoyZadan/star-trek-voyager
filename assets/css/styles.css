@@ -431,6 +431,7 @@ p {
 /* MODAL CONTAINER STYLING 
 Part of FlorinPop YouTube tutorial, Create a Modal 
 - https://www.youtube.com/watch?v=XH5OW46yO8I 
+Modal uses flex for responsiveness and centers contents
 */
 .modal-popup {
     display: flex;
@@ -511,7 +512,8 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     margin: 0;
 }
 
-/* STYLING FOR FEEDBACK FORM */
+/* STYLING FOR FEEDBACK FORM IN THE MODAL POPUP */
+/* feedback form intro text styling */
 .feedback-intro {
     font-family: "Orbitron", sans-serif;
     font-weight: 600;
@@ -520,6 +522,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     margin-bottom: 1rem;
 }
 
+/* feedback container using flex for responsivness and sets the form's max-width for any device */
 .feedback-container {
     border: 2px solid #fff;
     border-radius: 0.625rem;
@@ -530,6 +533,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     align-items: center;
 }
 
+/* feedback form using flex for responsivness and styles the fonts used */
 .feedback-form {
     display: flex;
     flex-direction: column;
@@ -543,6 +547,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     width: 90%;
 }
 
+/* feedback form input label fonts styling */
 .feedback-input {
     padding: 1rem;
     font-family: "Orbitron", sans-serif;
@@ -550,6 +555,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     margin-bottom: 1rem;
 }
 
+/* submit button on the feedback form styled for sizing, margins, font and color */
 .email-btn {
     padding: 0.5rem;
     border-radius: 0.625rem;
@@ -563,9 +569,8 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     font-size: 1.5rem;
 }
 
-
-/* STYLING FOR THE QUOTE GENERATOR */
-/* quote container styles */
+/* STYLING FOR THE QUOTE GENERATOR GAME */
+/* quote container uses flex for responsiveness and centers all content */
 .quote-container {
     display: flex;
     flex-direction: column;
@@ -578,11 +583,6 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     padding: 1.5rem 2rem;
     color: #fff;
     border-radius: 0.625rem;
-}
-
-.fa-twitter {
-    font-size: 2rem;
-    color: #29407c;
 }
 
 .quote-text {
@@ -618,6 +618,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     color: #fff;
 }
 
+/* twitter button and new quote button styling */
 .twitter-button,
 #new-quote {
     outline: none;
@@ -641,6 +642,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
 } 
 
 /* 404 PAGE STYLING */
+/* redirect page background image styling fixes the image to the background to adjust for different screen sizes */
 .redirect-bg {
     background-position: center center;
     background-repeat: no-repeat;
@@ -649,6 +651,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     background-image: url(../images/planets-bg.webp)
 }
 
+/* redirect page content using flex for responsive design */
 .redirect {
     display: flex;
     flex-direction: column;
@@ -663,6 +666,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     padding: 1rem;
 }
 
+/* styling for the links's div to center content and uses flex for responsiveness */
 .redirect-links {
     display: flex;
     flex-direction: column;
@@ -673,6 +677,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     margin: 0 auto;
 }
 
+/* styling for the links to set font sizing, padding and removes text decoration*/
 .redirect-links a {
     text-decoration: none;
     font-family: "Exo 2", sans-serif;

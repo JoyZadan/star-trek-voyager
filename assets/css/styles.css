@@ -219,9 +219,6 @@ p {
     text-shadow: 5px 5px 5px black;
 }
 
-
-
-
 .answers-container {
     display: flex;
     flex-direction: column;
@@ -633,6 +630,10 @@ Part of FlorinPop YouTube tutorial, Create a Modal
 #new-quote:active {
     background-color: #29407c;
 } 
+
+/* 404 PAGE STYLING */
+
+
 
 /* MEDIA QUERIES FOR SMALL DEVICES (MOBILES) */
 @media screen and (max-width: 29.5em) {

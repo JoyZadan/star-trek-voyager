@@ -91,12 +91,21 @@ Testing was carried out at every point in the development to check for issues wi
 #### Solved Bugs
  - Users were able to increment both the correct and wrong answers after the game had ended. This was solved by adding this [line of code to quiz.js](./assets/images/bugs/increment-scores.webp)
  - Modal container's close me button not showing on large screen. This was solved by adjusting the feedback form's font sizing.
-
-| No | Known Bugs                                           | How these were solved                                       |
-| --------------------------------------------------------- | ----------------------------------------------------------- |
-| 1  | Users were able to increment both the correct and    | This was solved by adding this 
+ - Space between a font number and the rem caused sole error on W3C's CSS Validation test. This was easily resolved by correcting the typo.
+ - Including the main.js script tag on the 404 page caused lighthouse testing errors. Fixed by removing the link.
+ - a11y testing showed problems with font and background color contrast. This was solved by changing background of modal container and the quiz gameboard to black.
+ - Several trailing spaces showed up on JSLint testing. These were resolved by deleting said spaces.
+ - Unnecessary semicolons and unused variables also showed up on jshint testing. These were deleted.
+ - Two errors were also discovered following the Nu Validator testing - a typo on the word method and the valid attribute of required on the input submit button. These were corrected promptly.
+ - The quotation mark icon was overlapping with the quotes when viewed on bigger screens after being loaded dynamically. This was resolved by adjusting the font sizing.
+ - A JSLint testing showed warning for using ++ for the increment function. This was resolved by using + 1 instead.
+ - The toggleDivs function caused issues with the quiz container not being removed after the quiz ended. The originally idea was to:
+ first show the instructions container when the page is loaded. Second, it will then be removed when the player presses the start quiz button. Third, after the quiz had ended, the plan was to then dynamicslly remove the quiz container and replace it with a new container for results. The toggleDiv function seemed to have locked the quiz container to display block and after multiple tries for nearly a day, this problematic function was removed and replaced by hiding the content of the quiz container and replacing it with the results content instead.
+ - During development, I had the hardest time to capture the correct and wrong answers selected by the user. The solution was found from WebDev simplified's tutorial and in particular, the use of array.from to iterate through an array.
 
 ### Remaining Bugs
+There are no remaining known bugs.
+
 ### Validation Results
 
 The W3C Markup Validator and the W3C CSS Validator were used to test and validate every all six pages of 
@@ -151,8 +160,12 @@ The players are able to load more quotes by clicking the [new quote button](./as
 The users are able to do just that at the click of the twitter button. They are also able to load a new quote by clicking on the [new quote button](./assets/images/ux/quotes-buttons.webp); [tweet sample](./assets/images/ux/quotes-tweet.webp)
 * As a Frequent Visitor, I want to be able to give my feedback to the developer.
 The [feedback form](./assets/images/ux/trekkies-modal.webp) allows the users to send the message and feedback about the games. 
-#### Further Testing
 
+#### Further Testing
+During the development stage, ongoing testings were carried out for responsiveness, functions and console errors. The project under its development were tested using different DevTools (Chrome, Safari and Microsoft Edge). The pages were physically viewed on different devices available to the developer to test for links, functions and responsiveness. 
+
+Friends, family members and colleagues were also requested to play the games and inform the developer of any broken links, bugs or glitch they may encounter. No issues were reported and some have already expressed interest for additional questions and more mini games to be added as soon as reasonable.
+ 
 ### Future Developments
 * Planned future developments include:
     - adding more questions to the quiz game

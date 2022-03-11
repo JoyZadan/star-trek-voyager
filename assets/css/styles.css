@@ -61,6 +61,8 @@ p {
     text-decoration: none;
 }
 
+/* STYLING FOR THE LOGO AND WELCOME CONTAINER */
+/* Centers the game logo using flex and also removes link text decoration */
 .logo-container,
 .heading-container {
     border-radius: 0.625rem;
@@ -81,7 +83,7 @@ p {
     width: 80vw;
 }
 
-.logo-container h3 {
+/* .logo-container h3 {
     color: #efb200;
     margin-top: 3rem;
     margin-bottom: 0.5rem;
@@ -93,7 +95,7 @@ p {
     margin-bottom: 0;
     color: #fff;
     align-content: center;
-}
+} */
 
 /* WELCOME MESSAGE STYLING */
 .heading-container {

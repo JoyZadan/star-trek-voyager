@@ -188,6 +188,14 @@ To fork the repository, use the following steps:
 1. Login or signup to Github and locate the repository.
 2. Click the Fork button in the top right corner
 
+### Making Local Clone
+1. Login or signup to GitHub and locate the GitHub Repository [GitHub Repository](https://github.com/JoyZadan/star-trek-voyager).
+2. Under the repository name, click "clone" or "download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open the terminal in your preferred code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type git clone, and then paste the URL you copied in Step 3. 
+6. Press Enter. Your clone will be created.
+
 ## Credits
 ### Code
 * Credit and thanks belong to numerous tutorials on YouTube by seasoned developers.

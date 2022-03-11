@@ -176,11 +176,11 @@ p {
 /* STYLING FOR QUIZ GAME */
 /* quiz game containers styles */
 .instructions-container,
-.quiz-container,
-.results-container {
+.quiz-container {
     width: 70vw;
     border-radius: 0.625rem;
-    background-color: rgba(38, 55, 99, 0.9);
+    background-color: #000;
+    box-shadow: 0 10px 10px 10px rgba(81, 212, 235, 0.4);
     font-family: "Exo 2", sans-serif;
     display: flex;
     justify-content: center;
@@ -204,13 +204,23 @@ p {
 }
 
 .results-container {
-    width: 60vw;
-    background-color: rgba(60, 70, 94, 0.1);
+    width: 50vw;
+    border-radius: 0.625rem;
+    font-family: "Exo 2", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 1rem;
 }
 
 .results-container p {
     text-shadow: 5px 5px 5px black;
 }
+
+
+
 
 .answers-container {
     display: flex;

@@ -58,13 +58,15 @@ Orbitron is paired with Exo 2 font for the game content and for the buttons.
 - [Quote Generator wireframe (desktop)](./assets/images/ux/desktop-quotetweet.webp)
 
 ### Features
+Trekkies Games is highly interactive and encourages users to click on their choices to play a game.
+
 Trekkies Games has two main features: a quiz game on Voyager where fans can test their knowledge of the seven season show and famous Star Trek quotes generator with the option to share their favourite quote on Twitter. The game also allows for and encourages user feedback by having a button that clearly states, "send a feedback".
 
 ## Technologies Used
 ### Languages Used
-#### HTML5
-#### CSS
-#### JavaScript
+*  HTML5
+*  CSS
+* JavaScript
 
 ### Frameworks, Libraries and Programmes Used
 - Google Fonts used to import the Montserrat and Fira Sans fonts into the style.css file and are used on all pages of the application

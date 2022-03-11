@@ -219,5 +219,5 @@ Special mention and thanks to my mentor, Dario Carrasquel, for his support, inva
 on this project.
 
 ## Copyrights
-[Joy Zadan](www.linkedin.com/in/joy-araneta-zadan)
+[Joy Zadan, 2022](www.linkedin.com/in/joy-araneta-zadan)
 

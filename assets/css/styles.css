@@ -2,12 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,500;0,600;0,700;1,300;1,400;1,500&family=Orbitron:wght@400;500&display=swap');
 
 /* RESETS BODY STYLING */
+/* Removes default padding and margin */
 body {
     padding: 0;
     margin: 0;
 }
 
 /* SETTING BACKGROUND STYLING FOR EACH PAGE */
+/* Sets background image to cover entire viewport */
 .home-bg,
 .quiz-bg,
 .quotes-bg {
@@ -17,6 +19,7 @@ body {
     background-size: cover;
 }
 
+/* Background images for each page */
 .home-bg {
     background-image: url(../images/spaceship.webp);    
 }
@@ -41,8 +44,9 @@ p {
     font-family: "Exo 2", sans-serif;
 }
 
-/* GAME HEADING STYLING */
-.heading {
+/* GAME LOGO STYLING */
+
+.logo {
     color: #efb200;
     text-shadow: 5px 5px 5px black;
     font-weight: 700;
@@ -674,7 +678,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
 
 /* MEDIA QUERIES FOR SMALL DEVICES (MOBILES) */
 @media screen and (max-width: 29.5em) {
-    .heading {
+    .logo {
         font-size: 1.5rem; 
     }
 
@@ -757,7 +761,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
 
 /* MEDIA QUERIES FOR MID-SIZED DEVICES (TABLETS) */
 @media screen and (max-width: 38.75em) {
-    .heading {
+    .logo {
         font-size: 1.75rem; 
     }
 
@@ -786,7 +790,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
 
 /* MEDIA QUERIES FOR OTHER MID-SIZED DEVICES (IPAD, KINDLE) */
 @media screen and (max-width: 45em) {
-    .heading {
+    .logo {
         font-size: 1.75rem; 
     }
 

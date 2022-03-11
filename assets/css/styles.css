@@ -45,7 +45,7 @@ p {
 }
 
 /* GAME LOGO STYLING */
-
+/* Centers the game logo using flex and also removes link text decoration */
 .logo {
     color: #efb200;
     text-shadow: 5px 5px 5px black;
@@ -61,8 +61,8 @@ p {
     text-decoration: none;
 }
 
-.header-container {
-    width: 80vw;
+.logo-container,
+.heading-container {
     border-radius: 0.625rem;
     background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 10px 10px 10px rgba(81, 212, 235, 0.4);
@@ -77,13 +77,17 @@ p {
     padding: 0 1rem;
 }
 
-.header-container h3 {
+.logo-container {
+    width: 80vw;
+}
+
+.logo-container h3 {
     color: #efb200;
     margin-top: 3rem;
     margin-bottom: 0.5rem;
 }
 
-.header-container p {
+.logo-container p {
     font-weight: 500;
     font-size: 1.25rem;
     margin-bottom: 0;
@@ -92,12 +96,17 @@ p {
 }
 
 /* WELCOME MESSAGE STYLING */
+.heading-container {
+    width: 80vw;
+    margin: 2rem auto;    
+}
+
 .welcome-text {
     color: #efb200;
     padding: 0 1rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
 
 /* adding text animation */
     animation-name: slide-in;
@@ -117,6 +126,20 @@ p {
     75% {transform: rotateX(180deg)}
     100% {transform: rotateX(360deg)}
 }    
+
+.heading-container h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.heading-container p {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 0;
+    margin: 0 auto;
+}
 
 /* LINKS TO EACH GAME STYLED AS BUTTONS */
 .games {
@@ -676,7 +699,7 @@ Part of FlorinPop YouTube tutorial, Create a Modal
     padding: 0.5rem;
 }
 
-/* MEDIA QUERIES FOR SMALL DEVICES (MOBILES) */
+/* MEDIA QUERIES FOR SMALLEST DEVICES (MOBILES) */
 @media screen and (max-width: 29.5em) {
     .logo {
         font-size: 1.5rem; 
@@ -686,6 +709,14 @@ Part of FlorinPop YouTube tutorial, Create a Modal
         font-size: 1.25rem;
     }
     
+    .heading-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .heading-container p {
+        font-size: 1rem;
+    }
+
     .results-content {
         font-size: 1rem;
         display: flex;
@@ -791,12 +822,16 @@ Part of FlorinPop YouTube tutorial, Create a Modal
 /* MEDIA QUERIES FOR OTHER MID-SIZED DEVICES (IPAD, KINDLE) */
 @media screen and (max-width: 45em) {
     .logo {
-        font-size: 1.75rem; 
+        font-size: 2.5rem; 
     }
 
-    .header-container p {
+    .logo-container p {
         font-weight: 400;
         font-size: 1rem;
+    }
+
+    .welcome-text {
+        font-size: 2rem;
     }
 
     .games {

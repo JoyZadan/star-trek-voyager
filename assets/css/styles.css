@@ -632,8 +632,45 @@ Part of FlorinPop YouTube tutorial, Create a Modal
 } 
 
 /* 404 PAGE STYLING */
+.redirect-bg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url(../images/planets-bg.webp)
+}
 
+.redirect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 80vh;
+    margin: 3rem auto;
+    font-family: "Exo 2", sans-serif;
+    color: #fff;
+    font-weight: 300;
+    padding: 1 rem;
+}
 
+.redirect-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 80vh;
+    margin: 0 auto;
+}
+
+.redirect-links a {
+    text-decoration: none;
+    font-family: "Exo 2", sans-serif;
+    font-size: 2rem;
+    color: #d08504;
+    padding: 0.5rem;
+}
 
 /* MEDIA QUERIES FOR SMALL DEVICES (MOBILES) */
 @media screen and (max-width: 29.5em) {
@@ -707,6 +744,14 @@ Part of FlorinPop YouTube tutorial, Create a Modal
 
     .quote-author {
         font-size: 1.5rem;
+    }
+
+    .redirect {
+        margin: 1rem auto;
+    }
+
+    .redirect-links a {
+        font-size: 1.25rem;
     }
 }
 

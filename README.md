@@ -50,14 +50,12 @@ Orbitron is paired with Exo 2 font for the game content and for the buttons.
 - The three images used for the application all represented the "look" of space, planets and nebulas. The home page image was superimposed by a png image of Star Trek Voyager spaceship from pngegg.
 
 ### Wireframes
-- ![Home page wireframe (mobile)]()
-- ![Home page wireframe (desktop)]()
-- ![Quiz wireframe (mobile)]()
-- ![Quiz wireframe - game page (mobile)]()
-- ![Quiz wireframe (desktop)]()
-- ![Quiz wireframe - game page (mobile)]()
-- ![Quote Generator wireframe (mobile)]()
-- ![Quote Generator wireframe (desktop)]()
+- ![Home page wireframe (mobile)](./assets/images/ux/mobile-home.webp)
+- ![Quiz wireframe - game page (mobile)](./assets/images/ux/mobile-quizgame.webp)
+- ![Quote Generator wireframe (mobile)](./assets/images/ux/mobile-quotetweet.webp)
+- ![Home page wireframe (desktop)](./assets/images/ux/desktop-home.webp)
+- ![Quiz wireframe (desktop)](./assets/images/ux/desktop-quizgame.webp)
+- ![Quote Generator wireframe (desktop)](./assets/images/ux/desktop-quotetweet.webp)
 ### Trekkies Games Flow Charts
 ### Features
 

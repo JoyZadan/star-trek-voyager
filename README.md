@@ -11,7 +11,7 @@ Trekkies Games is a quiz and Star Trek quote generator application with an optio
 ### [Features](#features-1)
 ### [Technologies Used](#technologies-used-1)
 ### [Testing](#testing-1)
-### [Deployment](#deployment-1)
+### [Deployment](#deployment--local-development)
 ### [Credits](#credits-1)
 ### [Acknowledgements](#acknowledgements-1)
 
@@ -125,19 +125,69 @@ JSHint was used to test JavaScript code quality.
     - [404 Redirect page](./assets/images/validation/a11-redirect.webp)
 
 ### Testing User Stories from User Experience (UX) Section
-### Further Testing
-### Future Developments
+#### First Time Visitor Goals
+* As a First Time Visitor, I want to be able to immediately understand the main purpose of the application, "Trekkies Games".
+    - Upon landing on the site, the user is immediately made aware of what the application is about. Beneath the logo is the welcome message and message about what they will find on the site/ game.
+    [Screenshot of home page](./assets/images/ux/trekkies-rules.webp)
+* As a First Time Visitor, I want to be able to understand how to play the games.
+     - Aside from the welcome message on the home page, the players are presented with the [quiz rules on the quiz page](./assets/images/ux/trekkies-quiz.webp)
+* As a First Time Visitor, I want to be able to choose what I want to do upon landing on the home page, play the quiz game or play with the quote generator.
+The players have the choice to go to the [quiz game or to the quote generator on the home page](./assets/images/ux/trekkies-intro.webp). They are also able to navigate back to the home page by clicking the [game logo](./assets/images/ux/trekkies-logo.webp) on any page.
+* As a First Time Visitor, I want the pages to be responsive to be my device, no matter it's size.
+The whole project has been developed for mobile first and all pages are fully responsive across all devices: [Galaxy Fold](./assets/images/ux/responsive-galaxyfold.webp); [iphone12](./assets/images/ux/responsive-iphone12.webp); [midsized screens](./assets/images/ux/responsive-midsized.webp); [large screens](./assets/images/ux/responsive-large.webp).
+#### Returning Visitor Goals
+* As a Returning Visitor, I want to try see more quotes.
+The players are able to load more quotes by clicking the [new quote button](./assets/images/ux/feature-quotes.webp).
+*  As a Returning Visitor, I want to be able to find out [how much I know about Star Trek](./assets/images/ux/quiz-score.webp) and by being able to replay the quiz. 
+#### Frequent Visitor Goals
+* As a Frequent Visitor, I want to be able to share my favourite quotes on social media
+The users are able to do just that at the click of the twitter button. They are also able to load a new quote by clicking on the [new quote button](./assets/images/ux/quotes-buttons.webp); [tweet sample](./assets/images/ux/quotes-tweet.webp)
+* As a Frequent Visitor, I want to be able to give my feedback to the developer.
+The [feedback form](./assets/images/ux/trekkies-modal.webp) allows the users to send the message and feedback about the games. 
+#### Further Testing
 
-## Deployment
-### GitHub Pages
+### Future Developments
+* Planned future developments include:
+    - adding more questions to the quiz game
+    - add another game such as a rescue mission 
+    - additional developments may also include a find Trekkies in your area 
+
+## Deployment & Local Development
+### Deployment
+* The project was deployed to GitHub Pages using the following steps:
+1. Login or signup to GitHub and locate the GitHub Repository [GitHub Repository](https://github.com/JoyZadan/star-trek-voyager).
+2. On the repository page, navigate to Settings and click on it.
+3. Within the Settings page, under Source choose Branch: main, then /root and click Save.
+4. After about a minute, the site is published.
+
+### Local Development
+* How to Fork 
+To fork the repository, use the following steps:
+1. Login or signup to Github and locate the repository.
+2. Click the Fork button in the top right corner
 
 ## Credits
 ### Code
+* Credit and thanks belong to numerous tutorials on YouTube by seasoned developers.
+    - Thanks to FlorinPop's [Create a Modal (Popup) with HTML/CSS and JavaScript](https://www.youtube.com/watch?v=XH5OW46yO8I);
+    [Code:](./assets/images/snippets/florinpop-js.webp)
+     - Thanks to WebDev Simplified's [Build A Quiz App With JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k);
+    [Code:](./assets/images/snippets/webdevsimplified-js.webp)  
+    - Thanks to NetNinja's Udemy course for the code snippet on animating scores [Code:](./assets/images/snippets/netninja-js.webp) 
+    - Also thanks to Jacinto Wong's Udemy course for the code snippet on how to Tweet quotes at one click of a button [Code:](./assets/images/snippets/jacintowong-js.webp)
+    
 ### Content
-* PNG - pngegg for the Voyager spaceship png
+* The quiz questions written by the developer, based on the knowledge of having watched the Star Trek shows previously. The quotes were gathered from Inc.com's [50 Star Trek Quotes Inspiring You to Boldly Go Into Your Future](https://www.inc.com/kevin-daum/50-star-trek-inspiring-you-to-boldly-go-into-your-future.html). Credit for the content (questions and quotes) ultimately belongs to Star Trek and Paramount. 
+
 ### Media
+* All images were licensed from Adobe Stock
+* PNG - [pngegg](https://www.pngegg.com/) for the Voyager spaceship png
 
 ## Acknowledgements
+Thanks to Jo Bowden and the team at South Devon College for your help with this project, it's really appreciated.
+Special mention and thanks to my mentor, Dario Carrasquel, for his support, invaluable insights and patience with me 
+on this project.
 
 ## Copyrights
+[Joy Zadan](www.linkedin.com/in/joy-araneta-zadan)
 

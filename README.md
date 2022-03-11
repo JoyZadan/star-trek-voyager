@@ -41,7 +41,6 @@
 ### Code
 ### Content
 * PNG - pngegg for the Voyager spaceship png
-* Milky Way image - by [PeachLover94](https://www.deviantart.com/peachlover94/art/Olympus-Milky-Way-Galaxy-Map-791210131) [@DeviantArt](https://www.deviantart.com/)
 ### Media
 
 ## Acknowledgements

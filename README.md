@@ -63,12 +63,62 @@ Trekkies Games has two main features: a quiz game on Voyager where fans can test
 
 ## Technologies Used
 ### Languages Used
-### Frameworks, Libraries and Programmes Used
+#### HTML5
+#### CSS
+#### JavaScript
 
+### Frameworks, Libraries and Programmes Used
+- Google Fonts used to import the Montserrat and Fira Sans fonts into the style.css file and are used on all pages of the application
+- Lineicons used for the twitter button on the quotes page.
+- Photoshop was used to optimize the home/ landing page, the quiz and for the quotes page. 
+- Online-Convert was used to convert the png images to webp
+- Adobe Stock - the developer has an existing account with Adobe Stock and all images used on the site are all licensed for use.
+- Git was used for version control.
+- GitPod was used as online IDE for GitHub and the terminal was used to add and commit to Git and push to GitHub.
+- GitHub was and is being used as repository of the project source code and for deploying the site/ application.
+- Balsamiq was used to create the wireframes for Trekkies Games project.
+- Favicon was used to create favicon.
+- Chrome DevTools was used to test the code and debug the code during the development process.
+- Microsoft Edge DevTools was used to test the code and debug the code during the development process.
+- Safari DevTools was used to test the code and debug the code during the development process.
+- a11y was used to test accessibility
+- W3C Markup Validation was used to test HTML code
+- W3C CSS Validation Service was used to test CSS code
+- JSHint was used to test JavaScript code
 ## Testing
+Testing was carried out at every point in the development to check for issues with the code, responsiveness, design, interactivity and accessibility. The developer tools used primarily were Chrome DevTools, with the console playing a key factor in testing and debugging.
+
 ### Bugs and Solutions
 ### Remaining Bugs
 ### Validation Results
+
+The W3C Markup Validator and the W3C CSS Validator were used to test and validate every all six pages of 
+the Trekkies Games interactive project to ensure that there were no syntax errors in the code. Chrome's 
+Lighthouse DevTool was also used to test for Performance, Accessibility, Best Practices and SEO. 
+JSHint was used to test JavaScript code quality.
+
+* W3C Markup Validator Test Results: 
+    - [Home page](./assets/images/validation/nuhtml-index.webp)
+    - [Quiz page](./assets/images/validation/nuhtml-quiz.webp)
+    - [Quotes page](./assets/images/validation/nuhtml-quotes.webp)
+    - [Quotes page](./assets/images/validation/nuhtml-redirect.webp)
+* W3C CSS Validator Test Results:
+    - [Results](./assets/images/validation/css-validation.webp)
+    - [Warning](./assets/images/validation/css-warnings.webp)
+* JSHint Linting Results:
+    - [main.js](./assets/images/validation/jshint-mainjs.webp)
+    - [quiz.js](./assets/images/validation/jshint-quizjs.webp)    
+    - [quote.js](./assets/images/validation/jshint-quotejs.webp)
+* Lighthouse Test Results:
+    - [Mobile - home page](./assets/images/validation/mobile-index.webp)
+    - [Mobile - quiz page](./assets/images/validation/mobile-quiz.webp) 
+    - [Mobile - quotes page](./assets/images/validation/mobile-quotes.webp)   
+    - [Mobile - 404 redirect page](./assets/images/validation/mobile-redirect.webp)
+    - [Desktop - home page](./assets/images/validation/desktop-index.webp)
+    - [Desktop - quiz page](./assets/images/validation/desktop-quiz.webp)
+    - [Desktop - home page](./assets/images/validation/desktop-quotes.webp)
+    - [Desktop - home page](./assets/images/validation/desktop-redirect.webp)    
+
 ### Testing User Stories from User Experience (UX) Section
 ### Further Testing
 ### Future Developments

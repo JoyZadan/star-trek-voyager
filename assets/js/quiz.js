@@ -206,7 +206,7 @@ function setStatusClass(element, correct) {
 }
 
 
-// DISPLAYS SCORES
+// DISPLAYS AND INCREMENTS SCORES (CORRECT AND WRONG ANSWERS)
 // Code from Code Institute Love Maths JS lessons
 // Amended to include code from Modern JavaScript by The Net Ninja (Shaun Pelling)
 function incrementScore() {
@@ -224,6 +224,7 @@ function incrementScore() {
     }, 10);
 }
 
+// INCREMENTS WRONG ANSWERS
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.querySelector("#incorrect").innerText);
     document.querySelector("#incorrect").innerText = oldScore + 10;

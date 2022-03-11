@@ -442,7 +442,7 @@ Modal uses flex for responsiveness and centers contents
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     opacity: 0;  
     pointer-events: none;
 }
@@ -505,7 +505,7 @@ Modal uses flex for responsiveness and centers contents
 .feedback-text {    
     font-family: "Exo 2", sans-serif;
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 1.75rem;
     text-align: center;
     max-width: 80%;
     color: #d08504;
@@ -542,7 +542,7 @@ Modal uses flex for responsiveness and centers contents
     text-transform: uppercase;
     font-family: "Exo 2", sans-serif;
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 1rem auto;
     width: 90%;
 }

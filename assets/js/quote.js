@@ -120,7 +120,8 @@ const quotes = [
 	}
 ];
 
-// SELECTING ALL REQUIRED ELEMENTS BY DECLARING CONSTANTS
+
+// SELECTING ALL REQUIRED ELEMENTS BY STORING THEM IN CONSTANTS
 const quoteText = document.getElementById("quote");
 const authorText = document.getElementById("author");
 const twitterBtn = document.getElementById("twitter");
